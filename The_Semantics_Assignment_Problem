@@ -232,8 +232,6 @@
 	<div class="mw-content-container">
 <main id="content" class="mw-body" role="main">
 	<a id="top"></a>
-	<div id="siteNotice"><!-- CentralNotice --></div>
-
 
 	<header class="mw-body-header">
 			
@@ -319,31 +317,8 @@
 </p><p>One of the key properties of free software as defined by the GNU FSF is that the source code is available, the GNU FSDL guidelines also recommend that binaries provided can be built with a free software compiler. It could be argued either way whether or not a self hosted compiler fits in or outside of this!
 </p><p>If we want to avoid painting ourselves into a corner we should ensure that self hosted systems can also be built from a lower system (also known as the <a href="/wiki/Descent_principle" title="Descent principle">Descent principle</a>). Like how the go compiler is self hosted, but can be built by gccgo. And the rustc compiler is self hosted but can be built by mrustc. For GNU/linux the situation is much more complex. tinycc can build gcc but there's also binutils and glibc, and the linux kernel, and all the surrounding autotools involved. The <a rel="nofollow" class="external text" href="https://www.gnu.org/software/mes/">mes</a> project is currently working on resolving all of these loops right up from a trivial hex assembler.
 </p>
-<!-- 
-NewPP limit report
-Parsed by mw102
-Cached time: 20220703171705
-Cache expiry: 864000
-Reduced expiry: false
-Complications: []
-CPU time usage: 0.010 seconds
-Real time usage: 0.018 seconds
-Preprocessor visited node count: 26/1000000
-Post‐expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Highest expansion depth: 2/100
-Expensive parser function count: 0/99
-Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
--->
-<!--
-Transclusion expansion time report (%,ms,calls,template)
-100.00%    0.000      1 -total
--->
 
-<!-- Saved in parser cache with key bootstrappingwiki:pcache:idhash:19-0!canonical and timestamp 20220703171705 and revision id 252. Serialized with JSON.
- -->
-</div><noscript><img src="https://bootstrapping.miraheze.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+</div>
 <div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=The_Semantics_Assignment_Problem&amp;oldid=252">https://bootstrapping.miraheze.org/w/index.php?title=The_Semantics_Assignment_Problem&amp;oldid=252</a>"</div></div>
 		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
 	</div>

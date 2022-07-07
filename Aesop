@@ -232,9 +232,6 @@
 	<div class="mw-content-container">
 <main id="content" class="mw-body" role="main">
 	<a id="top"></a>
-	<div id="siteNotice"><!-- CentralNotice --></div>
-
-
 	<header class="mw-body-header">
 			
 		<h1 id="firstHeading" class="firstHeading mw-first-heading">Aesop</h1>
@@ -251,31 +248,7 @@
 </p><p>This compiler will be written in C and produce unoptimized assembly code for AMD64 and RISCV64.
 </p><p>Ultimately, the goal is to <a href="/wiki/Bootstrapping_Nim" title="Bootstrapping Nim">bootstrap the Nim language</a>.
 </p>
-<!-- 
-NewPP limit report
-Parsed by mw121
-Cached time: 20220627083157
-Cache expiry: 864000
-Reduced expiry: false
-Complications: []
-CPU time usage: 0.003 seconds
-Real time usage: 0.005 seconds
-Preprocessor visited node count: 1/1000000
-Post‐expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Highest expansion depth: 1/100
-Expensive parser function count: 0/99
-Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
--->
-<!--
-Transclusion expansion time report (%,ms,calls,template)
-100.00%    0.000      1 -total
--->
-
-<!-- Saved in parser cache with key bootstrappingwiki:pcache:idhash:37-0!canonical and timestamp 20220627083156 and revision id 415. Serialized with JSON.
- -->
-</div><noscript><img src="https://bootstrapping.miraheze.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+</div>
 <div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=Aesop&amp;oldid=415">https://bootstrapping.miraheze.org/w/index.php?title=Aesop&amp;oldid=415</a>"</div></div>
 		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
 	</div>

@@ -232,9 +232,6 @@
 	<div class="mw-content-container">
 <main id="content" class="mw-body" role="main">
 	<a id="top"></a>
-	<div id="siteNotice"><!-- CentralNotice --></div>
-
-
 	<header class="mw-body-header">
 			
 		<h1 id="firstHeading" class="firstHeading mw-first-heading">Live-bootstrap</h1>
@@ -935,31 +932,7 @@ of the programming language Scheme.
 </p><p>We use <code><a rel="nofollow" class="external text" href="https://github.com/schierlm/guile-psyntax-bootstrapping">guile-psyntax-bootstrapping</a></code> project to bootstrap Guile's <code>psyntax.pp</code>
 without relying on pre-expanded code.
 </p>
-<!-- 
-NewPP limit report
-Parsed by mw122
-Cached time: 20220705111033
-Cache expiry: 864000
-Reduced expiry: false
-Complications: []
-CPU time usage: 0.074 seconds
-Real time usage: 0.079 seconds
-Preprocessor visited node count: 318/1000000
-Post‐expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Highest expansion depth: 2/100
-Expensive parser function count: 0/99
-Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
--->
-<!--
-Transclusion expansion time report (%,ms,calls,template)
-100.00%    0.000      1 -total
--->
-
-<!-- Saved in parser cache with key bootstrappingwiki:pcache:idhash:36-0!canonical and timestamp 20220705111032 and revision id 427. Serialized with JSON.
- -->
-</div><noscript><img src="https://bootstrapping.miraheze.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+</div>
 <div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=Live-bootstrap&amp;oldid=427">https://bootstrapping.miraheze.org/w/index.php?title=Live-bootstrap&amp;oldid=427</a>"</div></div>
 		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
 	</div>

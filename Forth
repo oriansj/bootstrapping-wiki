@@ -232,9 +232,6 @@
 	<div class="mw-content-container">
 <main id="content" class="mw-body" role="main">
 	<a id="top"></a>
-	<div id="siteNotice"><!-- CentralNotice --></div>
-
-
 	<header class="mw-body-header">
 			
 		<h1 id="firstHeading" class="firstHeading mw-first-heading">Forth</h1>
@@ -268,31 +265,7 @@
 <li>tiny C interpreter in forth: <a rel="nofollow" class="external free" href="https://groups.google.com/forum/#!msg/comp.lang.forth/lBYFfVJ1qhc/BxvaTHCX_JgJ">https://groups.google.com/forum/#!msg/comp.lang.forth/lBYFfVJ1qhc/BxvaTHCX_JgJ</a></li>
 <li>BASIC in a few screens of code: <a rel="nofollow" class="external free" href="http://www.nicholson.com/rhn/files/Tiny_BASIC_in_Forth.txt">http://www.nicholson.com/rhn/files/Tiny_BASIC_in_Forth.txt</a></li>
 <li>A scheme interpreter with a GC and macros in forth: <a rel="nofollow" class="external free" href="https://github.com/tgvaughan/scheme.forth.jl">https://github.com/tgvaughan/scheme.forth.jl</a></li></ul>
-<!-- 
-NewPP limit report
-Parsed by mw101
-Cached time: 20220627041023
-Cache expiry: 864000
-Reduced expiry: false
-Complications: []
-CPU time usage: 0.008 seconds
-Real time usage: 0.015 seconds
-Preprocessor visited node count: 6/1000000
-Post‐expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Highest expansion depth: 2/100
-Expensive parser function count: 0/99
-Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 0/5000000 bytes
--->
-<!--
-Transclusion expansion time report (%,ms,calls,template)
-100.00%    0.000      1 -total
--->
-
-<!-- Saved in parser cache with key bootstrappingwiki:pcache:idhash:22-0!canonical and timestamp 20220627041022 and revision id 289. Serialized with JSON.
- -->
-</div><noscript><img src="https://bootstrapping.miraheze.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+</div>
 <div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=Forth&amp;oldid=289">https://bootstrapping.miraheze.org/w/index.php?title=Forth&amp;oldid=289</a>"</div></div>
 		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
 	</div>

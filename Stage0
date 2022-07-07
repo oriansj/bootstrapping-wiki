@@ -232,9 +232,6 @@
 	<div class="mw-content-container">
 <main id="content" class="mw-body" role="main">
 	<a id="top"></a>
-	<div id="siteNotice"><!-- CentralNotice --></div>
-
-
 	<header class="mw-body-header">
 			
 		<h1 id="firstHeading" class="firstHeading mw-first-heading">Stage0</h1>
@@ -423,31 +420,7 @@ Thus one can write:
 </p><p>It is possible to leverage existing work: <a rel="nofollow" class="external free" href="https://github.com/oriansj/stage0-posix">https://github.com/oriansj/stage0-posix</a>
 To skip directly to this level on posix compatible systems. (on non-posix systems, only system calls need to be updated)
 </p>
-<!-- 
-NewPP limit report
-Parsed by mw111
-Cached time: 20220630184839
-Cache expiry: 864000
-Reduced expiry: false
-Complications: []
-CPU time usage: 0.017 seconds
-Real time usage: 0.032 seconds
-Preprocessor visited node count: 51/1000000
-Post‐expand include size: 0/2097152 bytes
-Template argument size: 0/2097152 bytes
-Highest expansion depth: 2/100
-Expensive parser function count: 0/99
-Unstrip recursion depth: 0/20
-Unstrip post‐expand size: 2208/5000000 bytes
--->
-<!--
-Transclusion expansion time report (%,ms,calls,template)
-100.00%    0.000      1 -total
--->
-
-<!-- Saved in parser cache with key bootstrappingwiki:pcache:idhash:2-0!canonical and timestamp 20220630184839 and revision id 361. Serialized with JSON.
- -->
-</div><noscript><img src="https://bootstrapping.miraheze.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+</div>
 <div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=Stage0&amp;oldid=361">https://bootstrapping.miraheze.org/w/index.php?title=Stage0&amp;oldid=361</a>"</div></div>
 		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
 	</div>
