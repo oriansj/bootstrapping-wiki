@@ -1,287 +1,142 @@
 <!DOCTYPE html>
 <html class="client-nojs" lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8"/>
-<title>stage0</title>
-<link rel="stylesheet" href="styles.css"/>
+	<meta charset="UTF-8"/>
+	<title>stage0</title>
+	<link rel="stylesheet" href="styles.css"/>
 </head>
-<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Stage0 rootpage-Stage0 skin-vector-2022 action-view"><div class="mw-page-container">
-	<a class="mw-jump-link" href="#content">Jump to content</a>
-	<div class="mw-page-container-inner ">
-
-<input
-	type="checkbox"
-	id="mw-sidebar-checkbox"
-	class="mw-checkbox-hack-checkbox"
-	checked>
-
-<header class="mw-header">
-	<label
-		id="mw-sidebar-button"
-		class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element"
-		for="mw-sidebar-checkbox"
-		role="button"
-		aria-controls="mw-panel"
-		data-event-name="ui.sidebar"
-		tabindex="0"
-		title="Main menu">
-		Toggle sidebar
-	</label>
-	
-<a href="index.html" class="mw-logo">
-	<span class="mw-logo-container">
-		<strong class="mw-logo-wordmark">bootstrapping</strong>
-	</span>
-</a>
-
-	
-<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
-	<div>
-		<form action="/w/index.php" id="searchform"
-			class="vector-search-box-form">
-			<div id="simpleSearch"
-				class="vector-search-box-inner"
-				 data-search-loc="header-moved">
-				<input class="vector-search-box-input"
-					 type="search" name="search" placeholder="Search bootstrapping" aria-label="Search bootstrapping" autocapitalize="sentences" title="Search bootstrapping [f]" accesskey="f" id="searchInput"
-				/>
-				<input type="hidden" name="title" value="Special:Search"/>
-				<input id="mw-searchButton"
-					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
-				<input id="searchButton"
-					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
-			</div>
-		</form>
-	</div>
-	<a href="/wiki/Special:Search"
-	
-		
-		
-		
-		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-search search-toggle">
-		<span>Search</span>
-	</a>
-	
-</div>
-
-	<div class="vector-user-links">
-	
-<nav id="p-personal-more" class="mw-portlet mw-portlet-personal-more vector-menu vector-user-menu-more" aria-labelledby="p-personal-more-label" role="navigation" 
-	 >
-	<label id="p-personal-more-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
-		<span class="vector-menu-heading-label">User links</span>
-	</label>
-	<div class="vector-menu-content">
-		
-		<ul class="vector-menu-content-list">
-	<li id="p-createaccount" class="user-links-collapsible-item">
-		<a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Stage0" class="mw-ui-button mw-ui-quiet" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a>
-	</li>
-</ul>
-		
-	</div>
-</nav>
-
-	
-<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu vector-user-menu-logged-out vector-menu vector-menu-dropdown" aria-labelledby="p-personal-label" role="navigation"  title="More options"
-	 >
-	<input type="checkbox"
-		id="p-personal-checkbox"
-		role="button"
-		aria-haspopup="true"
-		data-event-name="ui.dropdown-p-personal"
-		class="vector-menu-checkbox" aria-labelledby="p-personal-label" />
-	<label id="p-personal-label" aria-label="" class="vector-menu-heading mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-ellipsis" aria-hidden="true">
-		<span class="vector-menu-heading-label">Personal tools</span>
-			<span class="vector-menu-checkbox-expanded">expanded</span>
-			<span class="vector-menu-checkbox-collapsed">collapsed</span>
-	</label>
-	<div class="vector-menu-content">
-		<div class="vector-user-menu-create-account"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Stage0" class="user-links-collapsible-item vector-menu-content-item mw-ui-icon mw-ui-icon-before" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></div>
-<div class="vector-user-menu-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Stage0" icon="logIn" class="vector-menu-content-item vector-menu-content-item-login mw-ui-icon mw-ui-icon-before mw-ui-icon-wikimedia-logIn" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></div>
-<div class="vector-user-menu-anon-editor">
-	<p>
-		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
-	</p>
-</div>
-
-		<ul class="vector-menu-content-list"><li id="pt-anonuserpage" class="mw-list-item"><span>Not logged in</span></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li><li id="pt-darkmode-toggle" class="darkmode-link mw-list-item"><a href="#"><span>Dark mode</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Stage0" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Stage0" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
-		
-	</div>
-</nav>
-
-</div>
-
-</header>
-
-<div class="mw-workspace-container">
-	<div id="mw-navigation">
-		<div id="mw-head">
-			<div class="mw-article-toolbar-container">
-				<div id="left-navigation">
-					
-<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
-	 >
-	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
-		<span class="vector-menu-heading-label">Namespaces</span>
-	</label>
-	<div class="vector-menu-content">
-		
-		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/Stage0" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="/w/index.php?title=Talk:Stage0&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
-		
-	</div>
-</nav>
-
-					
-<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
-	 >
-	<input type="checkbox"
-		id="p-variants-checkbox"
-		role="button"
-		aria-haspopup="true"
-		data-event-name="ui.dropdown-p-variants"
-		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
-	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading" aria-hidden="true">
-		<span class="vector-menu-heading-label">English</span>
-			<span class="vector-menu-checkbox-expanded">expanded</span>
-			<span class="vector-menu-checkbox-collapsed">collapsed</span>
-	</label>
-	<div class="vector-menu-content">
-		
-		<ul class="vector-menu-content-list"></ul>
-		
-	</div>
-</nav>
-
-				</div>
-				<div id="right-navigation">
-					
-<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
-	 >
-	<label id="p-views-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
-		<span class="vector-menu-heading-label">Views</span>
-	</label>
-	<div class="vector-menu-content">
-		
-		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="/wiki/Stage0"><span>Read</span></a></li><li id="ca-edit" class="mw-list-item"><a href="/w/index.php?title=Stage0&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="mw-list-item"><a href="/w/index.php?title=Stage0&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
-		
-	</div>
-</nav>
-
-					
-<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
-	 >
-	<input type="checkbox"
-		id="p-cactions-checkbox"
-		role="button"
-		aria-haspopup="true"
-		data-event-name="ui.dropdown-p-cactions"
-		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
-	<label id="p-cactions-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
-		<span class="vector-menu-heading-label">More</span>
-			<span class="vector-menu-checkbox-expanded">expanded</span>
-			<span class="vector-menu-checkbox-collapsed">collapsed</span>
-	</label>
-	<div class="vector-menu-content">
-		
-		<ul class="vector-menu-content-list"></ul>
-		
-	</div>
-</nav>
-
-				</div>
-			</div>
-		</div>
-		
-
-<div id="mw-panel" class="mw-sidebar">
-	
-<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
-	 >
-	<label id="p-navigation-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
-		<span class="vector-menu-heading-label">Navigation</span>
-	</label>
-	<div class="vector-menu-content">
-		
-		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="index.html" icon="home" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help about MediaWiki</span></a></li></ul>
-		
-	</div>
-</nav>
-
-	
-	
-<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
-	 >
-	<label id="p-tb-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
-		<span class="vector-menu-heading-label">Tools</span>
-	</label>
-	<div class="vector-menu-content">
-		
-		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Stage0" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Stage0" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Stage0&amp;oldid=361" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Stage0&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fbootstrapping.miraheze.org%2Fwiki%2FStage0"><span>Get shortened URL</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Stage0&amp;id=361&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li></ul>
-		
-	</div>
-</nav>
-
-	
-</div>
-
-	</div>
-	<div class="mw-table-of-contents-container mw-sticky-header-element">
-		
-	</div>
-	<div class="mw-content-container">
-<main id="content" class="mw-body" role="main">
-	<a id="top"></a>
-	<header class="mw-body-header">
-			
-		<h1 id="firstHeading" class="firstHeading mw-first-heading">Stage0</h1>
-		<div class="mw-indicators">
-		</div>
-			<div id="siteSub" class="noprint">From bootstrapping</div>
-	</header>
-
-	<div id="bodyContent" class="vector-body">
-		<div id="contentSub"></div>
-		<div id="contentSub2"></div>
-		
-		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
-<ul>
-<li class="toclevel-1 tocsection-1"><a href="#Purpose"><span class="tocnumber">1</span> <span class="toctext">Purpose</span></a></li>
-<li class="toclevel-1 tocsection-2"><a href="#Design"><span class="tocnumber">2</span> <span class="toctext">Design</span></a></li>
-<li class="toclevel-1 tocsection-3"><a href="#What_is_with_the_weird_file_extensions?"><span class="tocnumber">3</span> <span class="toctext">What is with the weird file extensions?</span></a></li>
-<li class="toclevel-1 tocsection-4"><a href="#hex0"><span class="tocnumber">4</span> <span class="toctext">hex0</span></a></li>
-<li class="toclevel-1 tocsection-5"><a href="#hex2"><span class="tocnumber">5</span> <span class="toctext">hex2</span></a></li>
-<li class="toclevel-1 tocsection-6"><a href="#line_macros"><span class="tocnumber">6</span> <span class="toctext">line macros</span></a></li>
-<li class="toclevel-1 tocsection-7"><a href="#Variations"><span class="tocnumber">7</span> <span class="toctext">Variations</span></a></li>
-<li class="toclevel-1 tocsection-8"><a href="#cc_*_+_family"><span class="tocnumber">8</span> <span class="toctext">cc_* + family</span></a></li>
-<li class="toclevel-1 tocsection-9"><a href="#M2-Planet_+_mescc-tools"><span class="tocnumber">9</span> <span class="toctext">M2-Planet + mescc-tools</span></a></li>
-</ul>
-</div>
-
-<h2><span class="mw-headline" id="Purpose">Purpose</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=1" title="Edit section: Purpose">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Bootstrapping is hard, like insanely hard. So hard in fact that everyone who has ever done it, never wants to do it again.
-The problem of course is that all of the technical infrastructure we have today depends upon binaries that we can't actually trust since there is no way to reproduce them from trusted sources, since we have no absolutely trusted sources.
-</p><p>Stage0 is aimed at making those absolutely trusted sources easier, like less than 400 hours of work total easier.
-</p>
-<h2><span class="mw-headline" id="Design">Design</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=2" title="Edit section: Design">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Stage0 starts with only 1 thing:
-</p><p>1) A sub 500 byte hex monitor [How you create it is up to you; I like toggling it in manually myself]
-</p><p>from that starting point, I have provided in easy to audit form (direct mapping between Hex, its effective assembly and a C implementation) a series of hex utilities that are required for basic development work. These files are in the stage1 folder.
-</p>
-<h2><span id="What_is_with_the_weird_file_extensions.3F"></span><span class="mw-headline" id="What_is_with_the_weird_file_extensions?">What is with the weird file extensions?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=3" title="Edit section: What is with the weird file extensions?">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>File extensions are very important in stage0, they directly indicate the level of infrastructure required to build them.
-</p>
-<pre>* HEX0 - indicates that the file can be built using the stage0 hex monitor or any other tool that supports the minimal commented hex syntax
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Stage0 rootpage-Stage0 skin-vector-2022 action-view">
+	<div class="mw-page-container">
+		<a class="mw-jump-link" href="#content">Jump to content</a>
+		<div class="mw-page-container-inner ">
+			<input type="checkbox" id="mw-sidebar-checkbox" class="mw-checkbox-hack-checkbox" checked>
+			<div class="mw-workspace-container">
+				<div class="mw-table-of-contents-container mw-sticky-header-element"></div>
+				<div class="mw-content-container">
+					<main id="content" class="mw-body" role="main">
+					<a id="top"></a>
+						<header class="mw-body-header">
+							<h1 id="firstHeading" class="firstHeading mw-first-heading">Stage0</h1>
+							<div class="mw-indicators"></div>
+							<div id="siteSub" class="noprint">From bootstrapping</div>
+						</header>
+						<div id="bodyContent" class="vector-body">
+							<div id="contentSub"></div>
+							<div id="contentSub2"></div>
+							<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr">
+								<div class="mw-parser-output">
+									<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+										<input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" />
+										<div class="toctitle" lang="en" dir="ltr">
+											<h2 id="mw-toc-heading">Contents</h2>
+											<span class="toctogglespan">
+												<label class="toctogglelabel" for="toctogglecheckbox"></label>
+											</span>
+										</div>
+										<ul>
+											<li class="toclevel-1 tocsection-1">
+												<a href="#Purpose">
+													<span class="tocnumber">1</span>
+													<span class="toctext">Purpose</span>
+												</a>
+											</li>
+											<li class="toclevel-1 tocsection-2">
+												<a href="#Design">
+													<span class="tocnumber">2</span>
+													<span class="toctext">Design</span>
+												</a>
+											</li>
+											<li class="toclevel-1 tocsection-3">
+												<a href="#What_is_with_the_weird_file_extensions?">
+													<span class="tocnumber">3</span>
+													<span class="toctext">What is with the weird file extensions?</span>
+												</a>
+											</li>
+											<li class="toclevel-1 tocsection-4">
+												<a href="#hex0">
+													<span class="tocnumber">4</span>
+													<span class="toctext">hex0</span>
+												</a>
+											</li>
+											<li class="toclevel-1 tocsection-5">
+												<a href="#hex2">
+													<span class="tocnumber">5</span>
+													<span class="toctext">hex2</span>
+												</a>
+											</li>
+											<li class="toclevel-1 tocsection-6">
+												<a href="#line_macros">
+													<span class="tocnumber">6</span>
+													<span class="toctext">line macros</span>
+												</a>
+											</li>
+											<li class="toclevel-1 tocsection-7">
+												<a href="#Variations">
+													<span class="tocnumber">7</span>
+													<span class="toctext">Variations</span>
+												</a>
+											</li>
+											<li class="toclevel-1 tocsection-8">
+												<a href="#cc_*_+_family">
+													<span class="tocnumber">8</span>
+													<span class="toctext">cc_* + family</span>
+												</a>
+											</li>
+											<li class="toclevel-1 tocsection-9">
+												<a href="#M2-Planet_+_mescc-tools">
+													<span class="tocnumber">9</span>
+													<span class="toctext">M2-Planet + mescc-tools</span>
+												</a>
+											</li>
+										</ul>
+									</div>
+									<h2>
+										<span class="mw-headline" id="Purpose">Purpose</span>
+										<span class="mw-editsection">
+											<span class="mw-editsection-bracket">[</span>
+											<a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=1" title="Edit section: Purpose">edit</a>
+											<span class="mw-editsection-bracket">]</span>
+										</span>
+									</h2>
+									<p>Bootstrapping is hard, like insanely hard. So hard in fact that everyone who has ever done it, never wants to do it again. The problem of course is that all of the technical infrastructure we have today depends upon binaries that we can't actually trust since there is no way to reproduce them from trusted sources, since we have no absolutely trusted sources. </p>
+									<p>Stage0 is aimed at making those absolutely trusted sources easier, like less than 400 hours of work total easier.</p>
+									<h2>
+										<span class="mw-headline" id="Design">Design</span>
+										<span class="mw-editsection">
+											<span class="mw-editsection-bracket">[</span>
+											<a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=2" title="Edit section: Design">edit</a>
+											<span class="mw-editsection-bracket">]</span>
+										</span>
+									</h2>
+									<p>Stage0 starts with only 1 thing:</p>
+									<p>1) A sub 500 byte hex monitor [How you create it is up to you; I like toggling it in manually myself]</p>
+									<p>from that starting point, I have provided in easy to audit form (direct mapping between Hex, its effective assembly and a C implementation) a series of hex utilities that are required for basic development work. These files are in the stage1 folder.</p>
+									<h2>
+										<span id="What_is_with_the_weird_file_extensions.3F"></span>
+										<span class="mw-headline" id="What_is_with_the_weird_file_extensions?">What is with the weird file extensions?</span>
+										<span class="mw-editsection">
+											<span class="mw-editsection-bracket">[</span>
+											<a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=3" title="Edit section: What is with the weird file extensions?">edit</a>
+											<span class="mw-editsection-bracket">]</span>
+										</span>
+									</h2>
+									<p>File extensions are very important in stage0, they directly indicate the level of infrastructure required to build them.</p>
+									<pre>* HEX0 - indicates that the file can be built using the stage0 hex monitor or any other tool that supports the minimal commented hex syntax
 * HEX1 - indicates that the file also requires support for 1 character labels and a single size (commonly 16bit) relative displacements.
 * HEX2 - indicates that the file also requires support for long labels, 16bit absolute displacements and 32bit pointers for manual object creation.
 * M0/M1/S - indicates that the file can either be built by the platform specific M0 macro assembler or the platform neutral M1 macro assembler
 * c/h - indicates that the file contains C code
-</pre>
-<h2><span class="mw-headline" id="hex0">hex0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=4" title="Edit section: hex0">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>Hex0 is trivial to implement <a rel="nofollow" class="external autonumber" href="http://git.savannah.nongnu.org/cgit/stage0.git/tree/stage1/stage1_assembler-0.s">[1]</a>
-It just needs to read 2 hex nybbles and output a byte, you can ignore all non-hex characters but you need to support 2 types of line comments{# and&#160;;}
-</p>
-<pre>; This is a line comment
+									</pre>
+									<h2>
+										<span class="mw-headline" id="hex0">hex0</span>
+										<span class="mw-editsection">
+											<span class="mw-editsection-bracket">[</span>
+												<a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=4" title="Edit section: hex0">edit</a>
+												<span class="mw-editsection-bracket">]</span>
+										</span>
+									</h2>
+									<p>Hex0 is trivial to implement <a rel="nofollow" class="external autonumber" href="http://git.savannah.nongnu.org/cgit/stage0.git/tree/stage1/stage1_assembler-0.s">[1]</a> It just needs to read 2 hex nybbles and output a byte, you can ignore all non-hex characters but you need to support 2 types of line comments{# and&#160;;} </p>
+									<pre>; This is a line comment
 # So it is
 ;; And this
 ## And this
@@ -292,26 +147,32 @@ It just needs to read 2 hex nybbles and output a byte, you can ignore all non-he
 48 c7 c7 00 00 00 00 # mov $0x0,%rdi
 48 c7 c0 3c 00 00 00 # mov $0x3c,%rax
 0f 05                # syscall
-</pre>
-<p>Example of .hex0 code from <a rel="nofollow" class="external text" href="https://github.com/oriansj/stage0-posix/blob/master/x86/hex0_x86.hex0">hex0</a>
-This maps out an ELF file for linux which implements a compiler for hex (!).
-</p><p>A reduced subset of hex0 is called boot0 and lacks support for line comments and restricts input to only numbers, upper case A-F, space and the enter key; as it expects humans to be entering input and know not to also type the comments. (All boot0 files are valid hex0 and all hex0 files being manually typed in can be converted to boot0 at enter time by the humans performing that input)
-</p>
-<h2><span class="mw-headline" id="hex2">hex2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=5" title="Edit section: hex2">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>(hex1 is a simpler version of this, where labels are limited to 1 char long and only 1 size (commonly 16bit) relative addressing. It is used to build hex2)
-hex2 extends that language with labels and pointers.
-</p>
-<ul><li>! - 8 bit relative address</li>
-<li>@ - 16 bit relative address</li>
-<li>~ -  architecture specific relative</li>
-<li>$ - 16 bit absolute address</li>
-<li>&amp; - 32 bit absolute address (for pointers)</li></ul>
-<p>Some exotic architectures with alignment and other messy details include:
-</p>
-<ul><li>&lt; pad to alignment</li>
-<li>. insert to word</li>
-<li>^ aligned calculation</li></ul>
-<pre>#&#160;;; Set p-&gt;Next = p-&gt;Next-&gt;Next-&gt;Next
+									</pre>
+									<p>Example of .hex0 code from <a rel="nofollow" class="external text" href="https://github.com/oriansj/stage0-posix/blob/master/x86/hex0_x86.hex0">hex0</a> This maps out an ELF file for linux which implements a compiler for hex (!).</p>
+									<p>A reduced subset of hex0 is called boot0 and lacks support for line comments and restricts input to only numbers, upper case A-F, space and the enter key; as it expects humans to be entering input and know not to also type the comments. (All boot0 files are valid hex0 and all hex0 files being manually typed in can be converted to boot0 at enter time by the humans performing that input)</p>
+									<h2>
+										<span class="mw-headline" id="hex2">hex2</span>
+										<span class="mw-editsection">
+											<span class="mw-editsection-bracket">[</span>
+											<a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=5" title="Edit section: hex2">edit</a>
+											<span class="mw-editsection-bracket">]</span>
+										</span>
+									</h2>
+									<p>(hex1 is a simpler version of this, where labels are limited to 1 char long and only 1 size (commonly 16bit) relative addressing. It is used to build hex2) hex2 extends that language with labels and pointers. </p>
+									<ul>
+										<li>! - 8 bit relative address</li>
+										<li>@ - 16 bit relative address</li>
+										<li>~ -  architecture specific relative</li>
+										<li>$ - 16 bit absolute address</li>
+										<li>&amp; - 32 bit absolute address (for pointers)</li>
+									</ul>
+									<p>Some exotic architectures with alignment and other messy details include:</p>
+									<ul>
+										<li>&lt; pad to alignment</li>
+										<li>. insert to word</li>
+										<li>^ aligned calculation</li>
+									</ul>
+									<pre>#&#160;;; Set p-&gt;Next = p-&gt;Next-&gt;Next-&gt;Next
 18020000	# LOAD32 R0 R2 0&#160;; Get Next-&gt;Next-&gt;Next
 23010000	# STORE32 R0 R1 0&#160;; Set Next = Next-&gt;Next-&gt;Next
 :Identify_Macros_1
@@ -329,20 +190,23 @@ A0300000	# CMPSKIPI.NE R0 0&#160;; If node-&gt;next is NULL
 0D01001F	# RET R15
 :Identify_Macros_string
 444546494E450000	# "DEFINE"
-</pre>
-<p>Example of .hex2 code from <a rel="nofollow" class="external text" href="https://github.com/oriansj/stage0-posix/blob/master/x86/M0_x86.hex2">M0</a>
-</p>
-<h2><span class="mw-headline" id="line_macros">line macros</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=6" title="Edit section: line macros">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The M0 macro assembler is implemented in .hex2 <a rel="nofollow" class="external autonumber" href="http://git.savannah.nongnu.org/cgit/stage0.git/tree/stage1/M0-macro.hex2">[2]</a>
-Such that using a <a rel="nofollow" class="external text" href="http://git.savannah.nongnu.org/cgit/stage0.git/tree/High_level_prototypes/defs">defs</a> file like this:
-</p>
-<pre>DEFINE LOADR 2E0
+									</pre>
+									<p>Example of .hex2 code from <a rel="nofollow" class="external text" href="https://github.com/oriansj/stage0-posix/blob/master/x86/M0_x86.hex2">M0</a></p>
+									<h2>
+										<span class="mw-headline" id="line_macros">line macros</span>
+										<span class="mw-editsection">
+											<span class="mw-editsection-bracket">[</span>
+											<a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=6" title="Edit section: line macros">edit</a>
+											<span class="mw-editsection-bracket">]</span>
+										</span>
+									</h2>
+									<p>The M0 macro assembler is implemented in .hex2 <a rel="nofollow" class="external autonumber" href="http://git.savannah.nongnu.org/cgit/stage0.git/tree/stage1/M0-macro.hex2">[2]</a> Such that using a <a rel="nofollow" class="external text" href="http://git.savannah.nongnu.org/cgit/stage0.git/tree/High_level_prototypes/defs">defs</a> file like this:</p>
+									<pre>DEFINE LOADR 2E0
 DEFINE LOADR8 2E1
 DEFINE LOADRU8 2E2
-</pre>
-<p>you can now program with the mnemonics instead of raw hexadecimal codes. This creates a new ".s" assembly language which looks like this:
-</p>
-<pre># We still support these comments
+									</pre>
+									<p>you can now program with the mnemonics instead of raw hexadecimal codes. This creates a new ".s" assembly language which looks like this:</p>
+									<pre># We still support these comments
 ;; We also added support for hex inserts like so
 :My_Global
 '00440044'
@@ -357,88 +221,94 @@ DEFINE LOADRU8 2E2
 	FPUTC                      &#160;; Write it to TTY
 	ADDUI R3 R3 1              &#160;; Move to next char
 	JUMP @Prompt_Loop          &#160;; And loop again
-</pre>
-<p>and supports all of the syntax support of Hex2 to allow
-sample taken from <a rel="nofollow" class="external text" href="http://git.savannah.nongnu.org/cgit/stage0.git/tree/stage1/CAT.s">CAT.s</a>
-</p>
-<h2><span class="mw-headline" id="Variations">Variations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=7" title="Edit section: Variations">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>The most common variation is to extend hex2 with additional functionality, such as extending the standard set to include
-</p>
-<ul><li>! - 8 bit relative address (short jumps for 8086 or small immediate values)</li>
-<li>@ - 16 bit relative address (ironically not really used in x86)</li>
-<li>$ - 16 bit absolute address (rare use in x86)</li>
-<li>% - 32 bit relative address (long jumps for x86)</li>
-<li>&amp; - 32 bit absolute address (for pointers)</li></ul>
-<p>more exotic mixes may replace hex with octal (for x86 but not AMD64) because it is a better match for the underlying opcode space.
-</p>
-<h2><span id="cc_.2A_.2B_family"></span><span class="mw-headline" id="cc_*_+_family">cc_* + family</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=8" title="Edit section: cc * + family">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>These are C compilers targeting a single architecture written in assembly
-</p><p>that support the following primitive types:
-</p>
-<pre>   void (and void*)
+									</pre>
+									<p>and supports all of the syntax support of Hex2 to allow sample taken from <a rel="nofollow" class="external text" href="http://git.savannah.nongnu.org/cgit/stage0.git/tree/stage1/CAT.s">CAT.s</a></p>
+									<h2>
+										<span class="mw-headline" id="Variations">Variations</span>
+										<span class="mw-editsection">
+											<span class="mw-editsection-bracket">[</span>
+											<a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=7" title="Edit section: Variations">edit</a>
+											<span class="mw-editsection-bracket">]</span>
+										</span>
+									</h2>
+									<p>The most common variation is to extend hex2 with additional functionality, such as extending the standard set to include</p>
+									<ul>
+										<li>! - 8 bit relative address (short jumps for 8086 or small immediate values)</li>
+										<li>@ - 16 bit relative address (ironically not really used in x86)</li>
+										<li>$ - 16 bit absolute address (rare use in x86)</li>
+										<li>% - 32 bit relative address (long jumps for x86)</li>
+										<li>&amp; - 32 bit absolute address (for pointers)</li>
+									</ul>
+									<p>more exotic mixes may replace hex with octal (for x86 but not AMD64) because it is a better match for the underlying opcode space.</p>
+									<h2>
+										<span id="cc_.2A_.2B_family"></span>
+										<span class="mw-headline" id="cc_*_+_family">cc_* + family</span>
+										<span class="mw-editsection">
+											<span class="mw-editsection-bracket">[</span>
+											<a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=8" title="Edit section: cc * + family">edit</a>
+											<span class="mw-editsection-bracket">]</span>
+										</span>
+									</h2>
+									<p>These are C compilers targeting a single architecture written in assembly</p>
+									<p>that support the following primitive types:</p>
+									<pre>   void (and void*)
    int (and int*)
    char (char* and char**)
    FILE (and FILE*)
    FUNCTION (and FUNCTION*)
    unsigned (and unsigned*)
    long (and long*)
-</pre>
-<p>Which can be combined with struct and within structs, one may union members.
-</p><p>To support #define declarations; the keyword CONSTANT can be used as # starts line comments and // is ignored.
-Thus one can write:
-</p>
-<pre>   //CONSTANT foo 4
+									</pre>
+									<p>Which can be combined with struct and within structs, one may union members.</p>
+									<p>To support #define declarations; the keyword CONSTANT can be used as # starts line comments and // is ignored. Thus one can write:</p>
+									<pre>   //CONSTANT foo 4
    #define foo 4
-</pre>
-<p>and the code will behave the same way in both GCC and cc_*
-</p><p>For conditional execution, if and else are available.
-</p>
-<pre>   if(foo) do_something();
+									</pre>
+									<p>and the code will behave the same way in both GCC and cc_*</p>
+									<p>For conditional execution, if and else are available.</p>
+									<pre>   if(foo) do_something();
    else if(bar) do_it_differently();
    else something_different();
-</pre>
-<p>For looping primitives, there is for, do and while loops; with continue (treated like a NOP) and break (behaves like C)
-</p><p>For flow control there is goto and the ability to have labels: just like in regular C. With the only warning to make sure not to define variables inside of a goto loop.
-</p><p>For those needing something special like system calls; asm("add r0 r1 r2" "sub r3 r2 r1"); is supported and not fully gcc compatible so you will likely want uses of it in separate files, so that an alternate which works with gcc can be used for development.
-</p><p>For those needing to do allocation of memory sizeof(type) behaves exactly like C.
-</p><p>For those doing common C code, +, -, /,&#160;%, &lt;, &gt;, &lt;&lt;, &gt;&gt;, &lt;=, &gt;=, ==,&#160;!=, &amp;, &amp;&amp;, |, || and ^ behave the same as C (signed version of the instructions; should you require the unsigned behavior, leverage the later M2-Planet stage)
-</p><p>For those dealing with assignment = works exactly like in C.
-</p><p>For those dealing with structs or arrays. both array[index] and structure-&gt;member work exactly like in C.
-</p>
-<h2><span id="M2-Planet_.2B_mescc-tools"></span><span class="mw-headline" id="M2-Planet_+_mescc-tools">M2-Planet + mescc-tools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=9" title="Edit section: M2-Planet + mescc-tools">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
-<p>M2-Planet is written in the cc_* subset and extends the primitives of cc_* into full C compliance with proper type behavior and cross-platform support by default; while providing additionally useful C primitives such as C multi-string support.
-</p>
-<pre>   char* s =  /* comment1 */
+									</pre>
+									<p>For looping primitives, there is for, do and while loops; with continue (treated like a NOP) and break (behaves like C)</p>
+									<p>For flow control there is goto and the ability to have labels: just like in regular C. With the only warning to make sure not to define variables inside of a goto loop.</p>
+									<p>For those needing something special like system calls; asm("add r0 r1 r2" "sub r3 r2 r1"); is supported and not fully gcc compatible so you will likely want uses of it in separate files, so that an alternate which works with gcc can be used for development.</p>
+									<p>For those needing to do allocation of memory sizeof(type) behaves exactly like C.</p>
+									<p>For those doing common C code, +, -, /,&#160;%, &lt;, &gt;, &lt;&lt;, &gt;&gt;, &lt;=, &gt;=, ==,&#160;!=, &amp;, &amp;&amp;, |, || and ^ behave the same as C (signed version of the instructions; should you require the unsigned behavior, leverage the later M2-Planet stage)</p>
+									<p>For those dealing with assignment = works exactly like in C.</p>
+									<p>For those dealing with structs or arrays. both array[index] and structure-&gt;member work exactly like in C.</p>
+									<h2>
+										<span id="M2-Planet_.2B_mescc-tools"></span>
+										<span class="mw-headline" id="M2-Planet_+_mescc-tools">M2-Planet + mescc-tools</span>
+										<span class="mw-editsection">
+											<span class="mw-editsection-bracket">[</span>
+											<a href="/w/index.php?title=Stage0&amp;action=edit&amp;section=9" title="Edit section: M2-Planet + mescc-tools">edit</a>
+											<span class="mw-editsection-bracket">]</span>
+										</span>
+									</h2>
+									<p>M2-Planet is written in the cc_* subset and extends the primitives of cc_* into full C compliance with proper type behavior and cross-platform support by default; while providing additionally useful C primitives such as C multi-string support.</p>
+									<pre>   char* s =  /* comment1 */
    "hello"    /* comment2 */
    "world"    /* comment3 */
    "how"      /* comment4 */
    "are you?" /* commentN */
   &#160;;
-</pre>
-<p>and mechanisms to enable adding most useful C primitives easily in C if the need exists.
-</p><p>At this time M2-Planet can generate fully standards compliant ELF binaries that work on Linux, NetBSD and FreeBSD; along with supporting armv7l, RISC-V (64bit), AArch64, x86, AMD64, knight-native and knight-posix targets.
-</p><p>It is possible to leverage existing work: <a rel="nofollow" class="external free" href="https://github.com/oriansj/stage0-posix">https://github.com/oriansj/stage0-posix</a>
-To skip directly to this level on posix compatible systems. (on non-posix systems, only system calls need to be updated)
-</p>
-</div>
-<div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=Stage0&amp;oldid=361">https://bootstrapping.miraheze.org/w/index.php?title=Stage0&amp;oldid=361</a>"</div></div>
-		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+									</pre>
+									<p>and mechanisms to enable adding most useful C primitives easily in C if the need exists.</p>
+									<p>At this time M2-Planet can generate fully standards compliant ELF binaries that work on Linux, NetBSD and FreeBSD; along with supporting armv7l, RISC-V (64bit), AArch64, x86, AMD64, knight-native and knight-posix targets.</p>
+									<p>It is possible to leverage existing work: <a rel="nofollow" class="external free" href="https://github.com/oriansj/stage0-posix">https://github.com/oriansj/stage0-posix</a> To skip directly to this level on posix compatible systems. (on non-posix systems, only system calls need to be updated)</p>
+								</div>
+								<div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=Stage0&amp;oldid=361">https://bootstrapping.miraheze.org/w/index.php?title=Stage0&amp;oldid=361</a>"</div>
+							</div>
+							<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+						</div>
+					</main>
+				</div>
+			</div>
+			<div class="mw-workspace-container mw-footer-container">
+				<div class="mw-content-container"></div>
+			</div>
+		</div>
 	</div>
-
-
-</main>
-	</div> 
-</div> 
-
-<div class="mw-workspace-container mw-footer-container">
-	<div class="mw-content-container">
-		
-<footer>
-</footer>
-
-	</div>
-</div>
-	</div> 
-</div> 
 </body>
 </html>
