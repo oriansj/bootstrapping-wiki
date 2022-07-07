@@ -312,36 +312,13 @@ Transclusion expansion time report (%,ms,calls,template)
 
 
 </main>
-<div id='mw-data-after-content'>
-	<div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Cookies help us deliver our services. By using our services, you agree to our use of cookies.</span></div><form method="POST"><div class='oo-ui-layout oo-ui-horizontalLayout'><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-progressive oo-ui-buttonWidget'><a role='button' tabindex='0' href='https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy#4._Cookies' rel='nofollow' class='oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-progressive'></span><span class='oo-ui-labelElement-label'>More information</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-progressive'></span></a></span><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-primary oo-ui-flaggedElement-progressive oo-ui-buttonInputWidget'><button type='submit' tabindex='0' name='disablecookiewarning' value='OK' class='oo-ui-inputWidget-input oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-invert'></span><span class='oo-ui-labelElement-label'>OK</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-invert'></span></button></span></div></form></div>
-</div>
-
 	</div> 
 </div> 
 
 <div class="mw-workspace-container mw-footer-container">
 	<div class="mw-content-container">
 		
-<footer id="footer" class="mw-footer" role="contentinfo" >
-	<ul id="footer-info">
-	<li id="footer-info-lastmod"> This page was last edited on 5 June 2019, at 12:56.</li>
-	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> unless otherwise noted.</li>
-</ul>
-
-	<ul id="footer-places">
-	<li id="footer-places-privacy"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy" class="extiw" title="m:Special:MyLanguage/Privacy Policy">Privacy policy</a></li>
-	<li id="footer-places-about"><a href="/wiki/bootstrapping:About" title="bootstrapping:About">About bootstrapping</a></li>
-	<li id="footer-places-disclaimer"><a href="/wiki/bootstrapping:General_disclaimer" title="bootstrapping:General disclaimer">Disclaimers</a></li>
-	<li id="footer-places-termsofservice"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Terms_of_Use" class="extiw" title="m:Special:MyLanguage/Terms of Use">Terms of Use</a></li>
-	<li id="footer-places-donate"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Donate" class="extiw" title="m:Special:MyLanguage/Donate">Donate to Miraheze</a></li>
-	<li id="footer-places-mobileview"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Descent_principle&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
-</ul>
-
-	<ul id="footer-icons" class="noprint">
-	<li id="footer-poweredbyico"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze"><img src="https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg" alt="Hosted by Miraheze" width="88" height="31" loading="lazy"/></a><a href="https://www.mediawiki.org/"><img src="/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
-	<li id="footer-copyrightico"><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png" alt="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" width="88" height="31" loading="lazy"/></a></li>
-</ul>
-
+<footer>
 </footer>
 
 	</div>
