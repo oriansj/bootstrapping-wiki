@@ -300,32 +300,5 @@ Transclusion expansion time report (%,ms,calls,template)
 </div>
 	</div> 
 </div> 
-
-<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.003","walltime":"0.006","ppvisitednodes":{"value":6,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":99},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"origin":"mw101","timestamp":"20220629201453","ttl":864000,"transientcontent":false}}});});</script>
-				<script>
-				var _paq = window._paq = window._paq || [];
-				if ( 1 ) {
-					_paq.push(['disableCookies']);
-				}
-				if ( 0 ) {
-					_paq.push(['setRequestMethod', 'GET']);
-				}
-				_paq.push(['trackPageView']);
-				_paq.push(['enableLinkTracking']);
-				(function() {
-					var u = "https://matomo.miraheze.org/";
-					_paq.push(['setTrackerUrl', u+'matomo.php']);
-					_paq.push(['setDocumentTitle', "bootstrappingwiki" + " - " + "Investigate"]);
-					_paq.push(['setSiteId', 498]);
-					_paq.push(['setCustomVariable', 1, 'userType', "Anonymous", "visit"]);
-					if ( 8590 ) {
-					    _paq.push(['addTracker', u + 'matomo.php', 8590]);
-					}
-					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-					g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-				})();
-				</script>
-				<noscript><p><img src="https://matomo.miraheze.org/matomo.php?idsite=498&amp;rec=1&amp;action_name=Investigate" style="border:0;" alt="" /></p></noscript>
-<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":317,"wgHostname":"mw112"});});</script>
 </body>
 </html>
