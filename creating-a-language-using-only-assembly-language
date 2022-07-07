@@ -1,0 +1,2263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Creating a language using only assembly language - Speaker Deck</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+  <body class="sd-app">
+    
+      <div class="alert alert-banner">
+            <a class="d-block text-center text-white" href="/pro">
+      <span class="text-warning">Upgrade to Pro</span> &mdash; share decks privately, control downloads, hide ads and more &hellip;
+</a>
+      </div>
+    <div class="sd-menu d-md-none">
+  <div class="container sd-menu-fixed-container">
+    <div class="sd-brand">
+      <a class="sd-brand-logo" href="/">
+        <img alt="Speaker Deck" width="32" height="20" src="https://d1eu30co0ohy4w.cloudfront.net/assets/mark-f4be6df1e05965cac9f98e664a6c35f5ffdd0207385d07464a9214d6cdf76082.svg" /> <span class="d-none d-md-inline">Speaker Deck</span>
+</a>    </div>
+
+      <nav class="sd-fixed-nav" aria-label="Primary">
+        <div class="sd-nav-main js-toggle-container">
+          <ul class="sd-nav-fixed-group nav toggle-flex-when-off">
+            <li class="sd-nav-item d-md-block d-none">
+              <form action="https://www.google.com/cse" id="cse-search-box" class="form-inline ml-5 ml-md-3">
+                <input type="hidden" name="cx" value="010150859881542981030:hqhxyxpwtc4">
+                <input type="hidden" name="ie" value="UTF-8">
+                <input type="text" name="q" id="q" value="" placeholder="Search..." class="form-control search-input mr-2">
+                <input type="submit" name="sa" value="Search" class="btn btn-outline-primary d-inline-block d-md-none d-lg-inline-block">
+              </form>
+            </li>
+            <li class="sd-nav-item nav-item">
+                <a class="sd-nav-link nav-link" href="/pro">
+                  <span class="d-none d-md-inline">Speaker Deck</span>
+                  <div class="badge badge-pro-prominent">PRO</div>
+</a>            </li>
+            <li class="sd-nav-item nav-item">
+              <a class="sd-nav-link nav-link" href="/signin">
+                Sign in
+</a>            </li>
+            <li class="sd-nav-item nav-item">
+              <a class="btn btn-primary" href="/signup">
+                Sign up for free
+</a>            </li>
+            <li class="sd-nav-item d-block d-md-none">
+              <button class="btn btn-link mr-2 js-toggle-trigger" aria-label="Toggle Search">
+                <svg class="icon icon-search "><use xlink:href="/icons/icons.svg#icon-search"></use></svg>
+              </button>
+            </li>
+          </ul>
+          <ul class="sd-nav-fixed-group nav toggle-flex-when-on">
+            <li class="sd-nav-item">
+              <form action="https://www.google.com/cse" id="cse-search-box-main" class="form-inline ml-5 ml-md-3">
+                <input type="hidden" name="cx" value="010150859881542981030:hqhxyxpwtc4">
+                <input type="hidden" name="ie" value="UTF-8">
+                <div class="row">
+                  <div class="col col-auto pr-0">
+                    <input type="text" name="q" id="q-main" value="" placeholder="Search..." class="form-control search-input mr-2">
+                  </div>
+                  <div class="col col-auto">
+                    <input type="submit" name="sa" value="Search" class="btn btn-outline-primary d-inline-block d-md-none d-lg-inline-block">
+                  </div>
+                </div>
+              </form>
+            </li>
+            <li class="sd-nav-item pr-2">
+              <button class="btn btn-link js-toggle-trigger">
+                <svg class="icon icon-x "><use xlink:href="/icons/icons.svg#icon-x"></use></svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+  </div>
+</div>
+
+    
+    
+    <div class="sd-main">
+      
+
+
+
+<div class="deck deck-with-banner">
+  <div class="deck-background" style="background-image: url('https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/preview_slide_0.jpg?4941353')"></div>
+  
+  <div class="deck-header d-none d-md-block js-toggle-container">
+    <div class="container d-flex align-items-center w-100">
+      <div class="deck-header-logo py-3 flex-grow-0">
+        <a class="sd-brand-logo" href="/">
+          <img alt="Speaker Deck" width="32" height="21" src="https://d1eu30co0ohy4w.cloudfront.net/assets/mark-white-8d908558fe78e8efc8118c6fe9b9b1a9846b182c503bdc6902f97df4ddc9f3af.svg" />
+</a>      </div>
+      <h4 class="deck-header-title flex-grow-1 w-100 d-none mx-3 d-md-block p-3 text-center m-0 text-white text-truncate toggle-block-when-off">
+
+
+
+
+        Creating a language using only assembly language
+      </h4>
+      <div class="deck-header-user-nav toggle-block-when-on ml-auto">
+        <form action="https://www.google.com/cse" id="cse-search-box-deck" class="form-inline ml-5 ml-md-3">
+          <input type="hidden" name="cx" value="010150859881542981030:hqhxyxpwtc4">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="text" name="q" id="q-deck" value="" placeholder="Search..." class="form-control form-control-inverse search-input mr-2">
+          <input type="submit" name="sa" value="Search" class="btn btn-success d-inline-block d-md-none d-lg-inline-block">
+        </form>
+      </div>
+      <div class="deck-header-user-nav toggle-block-when-on">
+        <button class="btn btn-link mr-2 js-toggle-trigger">
+          <svg class="icon icon-x "><use xlink:href="/icons/icons.svg#icon-x"></use></svg>
+        </button>
+      </div>
+      <div class="deck-header-user-nav toggle-block-when-off">
+        <button class="btn btn-link mr-2 js-toggle-trigger" aria-label="Toggle Search">
+          <svg class="icon icon-search "><use xlink:href="/icons/icons.svg#icon-search"></use></svg>
+        </button>
+      </div>
+      <div class="deck-header-user-nav flex-grow-0 dropdown py-3">
+        
+      </div>
+    </div>
+  </div>
+
+  
+<div class="deck-embed js-deck-embed" style="aspect-ratio:1024/575;" data-ratio="1.77777777777778" data-state="processed">
+    <div class="speakerdeck-embed" data-title="false" data-skip-resize="true" data-id="96611d1a95244aa2bd76158ccd43657d" data-name="Creating a language using only assembly language" data-ratio="1.77777777777778" data-host="speakerdeck.com"></div>
+</div>
+
+
+  <div class="deck-meta">
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md-auto col-12 py-3">
+          <div class="row align-items-center justify-content-between justify-content-md-start">
+            <a class="d-flex align-items-center font-weight-bold text-white col-auto" href="/nineties">
+              <span class="mr-2">
+                <img class="avatar" width="47" height="47" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=47" alt="386c31c9e9ce2d3ee001e967f9353d65?s=47" />
+              </span>
+              <span>
+                Koichi Nakamura
+                
+              </span>
+</a>            <div class="col-auto deck-date">
+              June 11, 2015
+            </div>
+            <div class="col-auto d-none d-md-block">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-auto col-12 py-md-3 pb-3">
+          <div class="row justify-content-between justify-content-md-start">
+              <div class="col-auto mr-auto mr-md-0">
+                <a class="text-white font-weight-bold" href="/c/programming">
+                  <svg class="icon icon-folder "><use xlink:href="/icons/icons.svg#icon-folder"></use></svg> Programming
+</a>              </div>
+            <div class="row col-auto text-white font-weight-bold">
+              <div class="col-auto pr-0 pr-lg-2"><div class="js-stargazer animated">
+      <a class="text-white font-weight-bold" title="Star this deck" href="/signin?return_to=%2Fnineties%2Fcreating-a-language-using-only-assembly-language">
+        <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 54
+</a></div>
+</div>
+
+              <div class="col-auto pr-0 pr-lg-2" title="43,687 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 44k</div>
+
+                <div class="col-auto pr-0 pr-lg-2"><a title="Download PDF" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/KernelVM%E6%8E%A2%E6%A4%9C%E9%9A%8A11-nineties_-_%E8%8B%B1%E8%AA%9E%E7%89%88.pdf"><svg class="icon icon-download "><use xlink:href="/icons/icons.svg#icon-download"></use></svg></a></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style media="screen">
+.native-js  {
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.native-js .native-banner {
+  display: flex;
+  padding: 20px 20px;
+  text-decoration: none;
+
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.native-js .native-banner .native-img {
+  margin-right: 20px;
+  max-height: 50px;
+  line-height: 0;
+}
+
+.native-js .native-banner .native-main {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+
+  flex-grow: 1;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.native-js .native-banner .native-details {
+  display: flex;
+  margin-right: 20px;
+
+  flex-flow: column nowrap;
+}
+
+.native-js .native-banner .native-company {
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.native-js .native-banner .native-desc {
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.native-js .native-banner .native-cta {
+  padding: 10px 16px;
+  border-radius: 3px;
+  box-shadow: 0 6px 13px 0 hsla(0, 0%, 0%, .15);
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 12px;
+  transition: all .3s ease-in-out;
+  transform: translateY(-1px);
+}
+
+.native-js .native-banner .native-cta:hover {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+
+.native-js .native-source {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  border-top: 0;
+  border-top-left-radius: 3px;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-weight: 600;
+  font-size: 7px;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 759px) {
+  .native-js .native-banner,
+  .native-js .native-banner .native-main {
+    flex-flow: column nowrap;
+  }
+
+  .native-js .native-banner .native-img,
+  .native-js .native-banner .native-details {
+    margin: 0;
+  }
+
+  .native-js .native-banner .native-img {
+    display: none;
+  }
+
+  .native-js .native-banner .native-company {
+    letter-spacing: 1px;
+  }
+
+  .native-js .native-banner .native-details {
+    text-align:  left;
+    font-size: 14px;
+  }
+
+  .native-js .native-banner .native-cta {
+    display: none;
+  }
+}
+</style>
+<script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+<div class="native-js"></div>
+<script>
+(function(){
+  if(typeof _bsa !== 'undefined' && _bsa) {
+      _bsa.init('custom', 'CK7I4K3Y', 'placement:speakerdeckcom',
+        {
+          target: '.native-js',
+          template: `
+<a href="##link##" class="native-banner" style="background: linear-gradient(-30deg, ##backgroundColor##E5, ##backgroundColor##E5 45%, ##backgroundColor## 45%) #fff;">
+    <div class="native-main">
+      <img class="native-img" img src="##logo##">
+      <div class="native-details" style="color: ##textColor##">
+        <span class="native-company">Sponsored by ##company##</span>
+        <span class="native-desc">##description##</span>
+      </div>
+      <span class="native-cta" style="color: ##ctaTextColor##; background-color: ##ctaBackgroundColor##;">##callToAction##</span>
+    </div>
+  </a>
+`,
+        }
+      );
+    }
+})();
+</script>
+
+<div class="container container-lg py-md-5 py-3">
+  <h1 class="mb-4 text-break">Creating a language using only assembly language</h1>
+  <div class="row align-items-center mb-4">
+    <div class="col-md-auto col-12 mr-md-auto mb-4 mb-md-0">
+      <div class="row align-items-center">
+        <div class="col-auto">
+          <a href="/nineties"><img class="avatar avatar-large" width="128" height="128" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=128" alt="386c31c9e9ce2d3ee001e967f9353d65?s=128" /></a>
+        </div>
+        <div class="col-auto pl-0">
+          <h2 class="m-0 h4">
+            <a class="text-dark" href="/nineties">Koichi Nakamura</a>
+            
+          </h2>
+          <div class="text-muted">
+              June 11, 2015
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-auto col-12">
+      <div class="btn-group btn-group-flex d-flex" role="group">
+        
+        <a href="https://twitter.com/intent/tweet?url=https://speakerdeck.com/nineties/creating-a-language-using-only-assembly-language&text=Creating+a+language+using+only+assembly+language" class="btn btn-outline-primary w-100">
+          <svg class="icon icon-twitter "><use xlink:href="/icons/icons.svg#icon-twitter"></use></svg> Tweet
+        </a>
+        <button class="facebook-share btn btn-outline-primary w-100">
+          <svg class="icon icon-facebook "><use xlink:href="/icons/icons.svg#icon-facebook"></use></svg> Share
+        </button>
+      </div>
+    </div>
+  </div>
+
+  
+        <div class="carbon-container">
+          <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CK7D553I&placement=speakerdeckcom" id="_carbonads_js"></script>
+        </div>
+      
+</div>
+
+<div class="bg-lightest border-top">
+  <div class="container py-md-4 py-3">
+
+
+        <div class="row mb-4 align-items-center">
+          <div class="col-12 col-lg-9 mb-3 mb-lg-0">
+            <h2 class="m-0">More Decks by Koichi Nakamura</h2>
+          </div>
+          <div class="col-12 col-lg-3 text-lg-right">
+            <a class="btn btn-outline-primary btn-break" href="/nineties">
+              See All by Koichi Nakamura <svg class="icon icon-chevron-right "><use xlink:href="/icons/icons.svg#icon-chevron-right"></use></svg>
+</a>          </div>
+        </div>
+        <div class="row">
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/nineties/etuzidldebaisufalsexuan-ding-nioitekao-lu-surukoto-ml-at-loft" title="エッジDLデバイスの選定において考慮すること ML@Loft">
+      <div class="card deck-preview" data-id="f2d6a715a9c6441caf88862befd59115" data-slide-count="25" data-cover-image="https://files.speakerdeck.com/presentations/f2d6a715a9c6441caf88862befd59115/preview_slide_0.jpg?15429102">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/f2d6a715a9c6441caf88862befd59115/preview_slide_0.jpg?15429102');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/f2d6a715a9c6441caf88862befd59115/preview_slide_0.jpg?15429102');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          エッジDLデバイスの選定において考慮すること ML@Loft
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=48" alt="386c31c9e9ce2d3ee001e967f9353d65?s=48" />
+              nineties
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 2
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="1,251 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 1.3k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/nineties/deep-learningtui-lun-wogao-su-hua-surusohutoueaji-shu" title="Deep Learning推論を高速化するソフトウェア技術">
+      <div class="card deck-preview" data-id="462ec0092cd54a3ca45f9215fa3e6f02" data-slide-count="34" data-cover-image="https://files.speakerdeck.com/presentations/462ec0092cd54a3ca45f9215fa3e6f02/preview_slide_0.jpg?11674937">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/462ec0092cd54a3ca45f9215fa3e6f02/preview_slide_0.jpg?11674937');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/462ec0092cd54a3ca45f9215fa3e6f02/preview_slide_0.jpg?11674937');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Deep Learning推論を高速化するソフトウェア技術
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=48" alt="386c31c9e9ce2d3ee001e967f9353d65?s=48" />
+              nineties
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 8
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="7,362 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 7.4k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/nineties/actcast-en" title="What is Actcast? / actcast-en">
+      <div class="card deck-preview" data-id="ba02615cfe96473f85a819f9b9bc2984" data-slide-count="15" data-cover-image="https://files.speakerdeck.com/presentations/ba02615cfe96473f85a819f9b9bc2984/preview_slide_0.jpg?11059897">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/ba02615cfe96473f85a819f9b9bc2984/preview_slide_0.jpg?11059897');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/ba02615cfe96473f85a819f9b9bc2984/preview_slide_0.jpg?11059897');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          What is Actcast? / actcast-en
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=48" alt="386c31c9e9ce2d3ee001e967f9353d65?s=48" />
+              nineties
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 2
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="569 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 570</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/nineties/actcast-ja" title="Actcast紹介資料 / actcast-ja">
+      <div class="card deck-preview" data-id="04571b5fd5fe4e829eff5f1d7586338b" data-slide-count="15" data-cover-image="https://files.speakerdeck.com/presentations/04571b5fd5fe4e829eff5f1d7586338b/preview_slide_0.jpg?11059822">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/04571b5fd5fe4e829eff5f1d7586338b/preview_slide_0.jpg?11059822');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/04571b5fd5fe4e829eff5f1d7586338b/preview_slide_0.jpg?11059822');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Actcast紹介資料 / actcast-ja
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=48" alt="386c31c9e9ce2d3ee001e967f9353d65?s=48" />
+              nineties
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 4
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="1,925 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 1.9k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/nineties/ideinfalseshao-jie-at-dllab-tui-lun-naito" title=" Ideinの紹介 @ DLLab 推論ナイト">
+      <div class="card deck-preview" data-id="294bc46a1b334e2090bef29bb732f3aa" data-slide-count="31" data-cover-image="https://files.speakerdeck.com/presentations/294bc46a1b334e2090bef29bb732f3aa/preview_slide_0.jpg?10629009">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/294bc46a1b334e2090bef29bb732f3aa/preview_slide_0.jpg?10629009');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/294bc46a1b334e2090bef29bb732f3aa/preview_slide_0.jpg?10629009');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+           Ideinの紹介 @ DLLab 推論ナイト
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=48" alt="386c31c9e9ce2d3ee001e967f9353d65?s=48" />
+              nineties
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 11
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="3,323 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 3.3k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/nineties/convolutionfalseshu-li-toarugorizumu" title="Convolutionの数理とアルゴリズム">
+      <div class="card deck-preview" data-id="90455aab4a9144d48c1ffa851ac45a3a" data-slide-count="62" data-cover-image="https://files.speakerdeck.com/presentations/90455aab4a9144d48c1ffa851ac45a3a/preview_slide_0.jpg?8502805">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/90455aab4a9144d48c1ffa851ac45a3a/preview_slide_0.jpg?8502805');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/90455aab4a9144d48c1ffa851ac45a3a/preview_slide_0.jpg?8502805');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Convolutionの数理とアルゴリズム
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=48" alt="386c31c9e9ce2d3ee001e967f9353d65?s=48" />
+              nineties
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 10
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="15,812 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 16k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/nineties/convolutionfalsearugorizumu" title="Convolutionのアルゴリズム">
+      <div class="card deck-preview" data-id="156ecf39d4c645348805a823de5ebc35" data-slide-count="31" data-cover-image="https://files.speakerdeck.com/presentations/156ecf39d4c645348805a823de5ebc35/preview_slide_0.jpg?8232491">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/156ecf39d4c645348805a823de5ebc35/preview_slide_0.jpg?8232491');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/156ecf39d4c645348805a823de5ebc35/preview_slide_0.jpg?8232491');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Convolutionのアルゴリズム
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=48" alt="386c31c9e9ce2d3ee001e967f9353d65?s=48" />
+              nineties
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 1
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="1,269 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 1.3k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/nineties/bootstrap" title="bootstrap">
+      <div class="card deck-preview" data-id="21919cedbfca4820908bf43ae1d228d7" data-slide-count="73" data-cover-image="https://files.speakerdeck.com/presentations/21919cedbfca4820908bf43ae1d228d7/preview_slide_0.jpg?5111948">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/21919cedbfca4820908bf43ae1d228d7/preview_slide_0.jpg?5111948');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/21919cedbfca4820908bf43ae1d228d7/preview_slide_0.jpg?5111948');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          bootstrap
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/386c31c9e9ce2d3ee001e967f9353d65?s=48" alt="386c31c9e9ce2d3ee001e967f9353d65?s=48" />
+              nineties
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 47
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="13,993 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 14k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+        </div>
+
+        <div class="row mb-4 align-items-center">
+          <div class="col-12 col-lg-9 mb-3 mb-lg-0">
+            <h2 class="m-0">Other Decks in Programming</h2>
+          </div>
+          <div class="col-12 col-lg-3 text-lg-right">
+            <a class="btn btn-outline-primary" href="/c/programming">
+              See All in Programming <svg class="icon icon-chevron-right "><use xlink:href="/icons/icons.svg#icon-chevron-right"></use></svg>
+</a>          </div>
+        </div>
+        <div class="row">
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/akino/marutipurodakutoxfei-gou-zao-hua-detaxji-jie-xue-xi-wozhi-erudetaxin-lai-xing" title="マルチプロダクト×非構造化データ×機械学習を支えるデータ信頼性">
+      <div class="card deck-preview" data-id="830475eadf044b7182d1d1ae45b2c903" data-slide-count="50" data-cover-image="https://files.speakerdeck.com/presentations/830475eadf044b7182d1d1ae45b2c903/preview_slide_0.jpg?21882970">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/830475eadf044b7182d1d1ae45b2c903/preview_slide_0.jpg?21882970');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/830475eadf044b7182d1d1ae45b2c903/preview_slide_0.jpg?21882970');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          マルチプロダクト×非構造化データ×機械学習を支えるデータ信頼性
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/9b95bbde8856da418c299333b312da3f?s=48" alt="9b95bbde8856da418c299333b312da3f?s=48" />
+              akino
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="162 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 160</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/msato/amazon-ecsfalsenetutowakuguan-lian-kosutofalsehua" title="Amazon ECSのネットワーク関連コストの話">
+      <div class="card deck-preview" data-id="dd7b1cce64574fd6b764ab9ff2d8b934" data-slide-count="19" data-cover-image="https://files.speakerdeck.com/presentations/dd7b1cce64574fd6b764ab9ff2d8b934/preview_slide_0.jpg?21746541">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/dd7b1cce64574fd6b764ab9ff2d8b934/preview_slide_0.jpg?21746541');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/dd7b1cce64574fd6b764ab9ff2d8b934/preview_slide_0.jpg?21746541');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Amazon ECSのネットワーク関連コストの話
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/d4d93646eedaaf5a9551cfc0ccd5b020?s=48" alt="D4d93646eedaaf5a9551cfc0ccd5b020?s=48" />
+              msato
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="664 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 660</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/falken/how-we-run-a-realtime-puzzle-fighting-game-on-aws-serverless" title="How we run a Realtime Puzzle Fighting Game on AWS Serverless">
+      <div class="card deck-preview" data-id="c9be85ba1f294bdd8c548d6e2773e9cd" data-slide-count="25" data-cover-image="https://files.speakerdeck.com/presentations/c9be85ba1f294bdd8c548d6e2773e9cd/preview_slide_0.jpg?21735291">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/c9be85ba1f294bdd8c548d6e2773e9cd/preview_slide_0.jpg?21735291');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/c9be85ba1f294bdd8c548d6e2773e9cd/preview_slide_0.jpg?21735291');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          How we run a Realtime Puzzle Fighting Game on AWS Serverless
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/3a488be96753f7e2232f3a3d79b83083?s=48" alt="3a488be96753f7e2232f3a3d79b83083?s=48" />
+              falken
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="254 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 250</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/ichimichi/kosokosoaziyairudao-ru-siyouze" title="こそこそアジャイル導入しようぜ！">
+      <div class="card deck-preview" data-id="80ee4f1f403f4557b247168ecf77062c" data-slide-count="60" data-cover-image="https://files.speakerdeck.com/presentations/80ee4f1f403f4557b247168ecf77062c/preview_slide_0.jpg?21790896">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/80ee4f1f403f4557b247168ecf77062c/preview_slide_0.jpg?21790896');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/80ee4f1f403f4557b247168ecf77062c/preview_slide_0.jpg?21790896');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          こそこそアジャイル導入しようぜ！
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/08c43eecaeb20bad17d63e0e6964d9c2?s=48" alt="08c43eecaeb20bad17d63e0e6964d9c2?s=48" />
+              ichimichi
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="1,275 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 1.3k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/yosuke_furukawa/a-philosophy-of-software-design-hou-ban" title="A Philosophy of Software Design 後半">
+      <div class="card deck-preview" data-id="9f746342e8924659937f8bb475a29545" data-slide-count="55" data-cover-image="https://files.speakerdeck.com/presentations/9f746342e8924659937f8bb475a29545/preview_slide_0.jpg?21833852">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/9f746342e8924659937f8bb475a29545/preview_slide_0.jpg?21833852');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/9f746342e8924659937f8bb475a29545/preview_slide_0.jpg?21833852');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          A Philosophy of Software Design 後半
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/d76231a2114896dfcc7b79ac69558b79?s=48" alt="D76231a2114896dfcc7b79ac69558b79?s=48" />
+              yosuke_furukawa
+            </div>
+              <div class="pr-2 mr-auto py-3">
+                  <div class="badge badge-pro ">PRO</div>
+
+              </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 10
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="2,863 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 2.9k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/usamik26/swift-regex" title="Swift Regex">
+      <div class="card deck-preview" data-id="76e1976743aa4e2899786d07d69e4475" data-slide-count="20" data-cover-image="https://files.speakerdeck.com/presentations/76e1976743aa4e2899786d07d69e4475/preview_slide_0.jpg?21873197">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/76e1976743aa4e2899786d07d69e4475/preview_slide_0.jpg?21873197');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/76e1976743aa4e2899786d07d69e4475/preview_slide_0.jpg?21873197');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Swift Regex
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/0b26590a0a8b0f1da140ed5de9b68379?s=48" alt="0b26590a0a8b0f1da140ed5de9b68379?s=48" />
+              usamik26
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="210 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 210</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/takakitojo/o-lthui" title="Jetpack Compose best practices 動画紹介 ＠GoogleI/O LT会">
+      <div class="card deck-preview" data-id="d7baa653d7534ff5a1c9a1a9baf54ad6" data-slide-count="28" data-cover-image="https://files.speakerdeck.com/presentations/d7baa653d7534ff5a1c9a1a9baf54ad6/preview_slide_0.jpg?21849027">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/d7baa653d7534ff5a1c9a1a9baf54ad6/preview_slide_0.jpg?21849027');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/d7baa653d7534ff5a1c9a1a9baf54ad6/preview_slide_0.jpg?21849027');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Jetpack Compose best practices 動画紹介 ＠GoogleI/O LT会
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/d46ece3c06abca01b4920592f80c0ba4?s=48" alt="D46ece3c06abca01b4920592f80c0ba4?s=48" />
+              takakitojo
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="402 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 400</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/manfredsteyer/angulars-future-without-ngmodules-architectures-with-standalone-components-at-enterjs" title="Angular‘s Future without NgModules: Architectures with Standalone Components @enterJS">
+      <div class="card deck-preview" data-id="345aec0ad36b48f8a123e621f19f4721" data-slide-count="63" data-cover-image="https://files.speakerdeck.com/presentations/345aec0ad36b48f8a123e621f19f4721/preview_slide_0.jpg?21833741">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/345aec0ad36b48f8a123e621f19f4721/preview_slide_0.jpg?21833741');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/345aec0ad36b48f8a123e621f19f4721/preview_slide_0.jpg?21833741');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Angular‘s Future without NgModules: Architectures with Standalone Components @enterJS
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/15934fa2aa7b2ce21f091e9b7cffa856?s=48" alt="15934fa2aa7b2ce21f091e9b7cffa856?s=48" />
+              manfredsteyer
+            </div>
+              <div class="pr-2 mr-auto py-3">
+                  <div class="badge badge-pro ">PRO</div>
+
+              </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="246 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 250</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/mmmommm/node-dot-jsdezainpatanwodu-nde" title="Node.jsデザインパターンを読んで">
+      <div class="card deck-preview" data-id="ab2c24db3f874864a552ec7a8a1f3f49" data-slide-count="35" data-cover-image="https://files.speakerdeck.com/presentations/ab2c24db3f874864a552ec7a8a1f3f49/preview_slide_0.jpg?21860783">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/ab2c24db3f874864a552ec7a8a1f3f49/preview_slide_0.jpg?21860783');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/ab2c24db3f874864a552ec7a8a1f3f49/preview_slide_0.jpg?21860783');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Node.jsデザインパターンを読んで
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/3d06fa4b3230d37a8d940405cc4abcc6?s=48" alt="3d06fa4b3230d37a8d940405cc4abcc6?s=48" />
+              mmmommm
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="2,843 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 2.8k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/forcia_dev_pr/gitlab-cidemrwozi-dong-sheng-cheng-suru" title="Gitlab CIでMRを自動生成する">
+      <div class="card deck-preview" data-id="a1e14181250b4504b79e35f09fcc2c9b" data-slide-count="11" data-cover-image="https://files.speakerdeck.com/presentations/a1e14181250b4504b79e35f09fcc2c9b/preview_slide_0.jpg?21744441">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/a1e14181250b4504b79e35f09fcc2c9b/preview_slide_0.jpg?21744441');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/a1e14181250b4504b79e35f09fcc2c9b/preview_slide_0.jpg?21744441');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Gitlab CIでMRを自動生成する
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/1a2f29252240936c0ac4db4edab36d41?s=48" alt="1a2f29252240936c0ac4db4edab36d41?s=48" />
+              forcia_dev_pr
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="118 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 120</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/datarian/weolgan-deiteorian-semina-6weol-seuseuro-seongjanghaneun-bunseogga-keorieo-iyagi" title="[월간 데이터리안 세미나 6월] 스스로 성장하는 분석가 커리어 이야기">
+      <div class="card deck-preview" data-id="1e33062b69564ebdb537f78c9bde4487" data-slide-count="164" data-cover-image="https://files.speakerdeck.com/presentations/1e33062b69564ebdb537f78c9bde4487/preview_slide_0.jpg?21879437">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/1e33062b69564ebdb537f78c9bde4487/preview_slide_0.jpg?21879437');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/1e33062b69564ebdb537f78c9bde4487/preview_slide_0.jpg?21879437');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          [월간 데이터리안 세미나 6월] 스스로 성장하는 분석가 커리어 이야기
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/fc03caed2b0f2a29992487fcf50dfd81?s=48" alt="Fc03caed2b0f2a29992487fcf50dfd81?s=48" />
+              datarian
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="246 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 250</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/smt7174/es2022no" title="ES2022の新機能">
+      <div class="card deck-preview" data-id="5a13b0415c81459c923f6cde83b26b4b" data-slide-count="17" data-cover-image="https://files.speakerdeck.com/presentations/5a13b0415c81459c923f6cde83b26b4b/preview_slide_0.jpg?21870464">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/5a13b0415c81459c923f6cde83b26b4b/preview_slide_0.jpg?21870464');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/5a13b0415c81459c923f6cde83b26b4b/preview_slide_0.jpg?21870464');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          ES2022の新機能
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/a3efba75cfbb0b7d5248eb74d1d29d79?s=48" alt="A3efba75cfbb0b7d5248eb74d1d29d79?s=48" />
+              smt7174
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 0
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="273 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 270</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+        </div>
+
+        <div class="row mb-4 align-items-center">
+          <div class="col-12 col-lg-9 mb-3 mb-lg-0">
+            <h2 class="m-0">Featured</h2>
+          </div>
+          <div class="col-12 col-lg-3 text-lg-right">
+            <a class="btn btn-outline-primary" href="/p/featured">
+              See All Featured <svg class="icon icon-chevron-right "><use xlink:href="/icons/icons.svg#icon-chevron-right"></use></svg>
+</a>          </div>
+        </div>
+        <div class="row">
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/zakiwarfel/designing-with-data" title="Designing with Data">
+      <div class="card deck-preview" data-id="4fb6838e98523b068800e086" data-slide-count="51" data-cover-image="https://files.speakerdeck.com/presentations/4fb6838e98523b068800e086/preview_slide_0.jpg?383325">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/4fb6838e98523b068800e086/preview_slide_0.jpg?383325');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/4fb6838e98523b068800e086/preview_slide_0.jpg?383325');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Designing with Data
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/f57e2136eb9895eb95ff5dc8a1c02677?s=48" alt="F57e2136eb9895eb95ff5dc8a1c02677?s=48" />
+              zakiwarfel
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 91
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="3,917 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 3.9k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/lara/designing-for-performance" title="Designing for Performance">
+      <div class="card deck-preview" data-id="64c73790385101315ae85eae0478e863" data-slide-count="159" data-cover-image="https://files.speakerdeck.com/presentations/64c73790385101315ae85eae0478e863/preview_slide_0.jpg?6544775">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/64c73790385101315ae85eae0478e863/preview_slide_0.jpg?6544775');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/64c73790385101315ae85eae0478e863/preview_slide_0.jpg?6544775');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Designing for Performance
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/245cee81a9c424266e5e401d844ea881?s=48" alt="245cee81a9c424266e5e401d844ea881?s=48" />
+              lara
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 597
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="63,173 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 63k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/akmur/atom-resistance-is-futile" title="Atom: Resistance is Futile">
+      <div class="card deck-preview" data-id="5c499bf3c2fe44ae87fa899e227be7a3" data-slide-count="39" data-cover-image="https://files.speakerdeck.com/presentations/5c499bf3c2fe44ae87fa899e227be7a3/preview_slide_0.jpg?6062508">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/5c499bf3c2fe44ae87fa899e227be7a3/preview_slide_0.jpg?6062508');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/5c499bf3c2fe44ae87fa899e227be7a3/preview_slide_0.jpg?6062508');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Atom: Resistance is Futile
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/7fa6101cd43067653cf4ac6c7ca54305?s=48" alt="7fa6101cd43067653cf4ac6c7ca54305?s=48" />
+              akmur
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 255
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="20,152 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 20k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/marcelosomers/fight-the-zombie-pattern-library-rwd-summit-2016" title="Fight the Zombie Pattern Library - RWD Summit 2016">
+      <div class="card deck-preview" data-id="1f957e89563b440d96c16986507b790f" data-slide-count="134" data-cover-image="https://files.speakerdeck.com/presentations/1f957e89563b440d96c16986507b790f/preview_slide_0.jpg?6057032">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/1f957e89563b440d96c16986507b790f/preview_slide_0.jpg?6057032');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/1f957e89563b440d96c16986507b790f/preview_slide_0.jpg?6057032');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Fight the Zombie Pattern Library - RWD Summit 2016
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/9fa239b3154a0169d99ab7bf1422dd12?s=48" alt="9fa239b3154a0169d99ab7bf1422dd12?s=48" />
+              marcelosomers
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 226
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="15,332 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 15k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/deanohume/faster-mobile-websites" title="Faster Mobile Websites">
+      <div class="card deck-preview" data-id="600b86a7a8884e0ea0ae7677381ba0b6" data-slide-count="165" data-cover-image="https://files.speakerdeck.com/presentations/600b86a7a8884e0ea0ae7677381ba0b6/preview_slide_0.jpg?4829592">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/600b86a7a8884e0ea0ae7677381ba0b6/preview_slide_0.jpg?4829592');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/600b86a7a8884e0ea0ae7677381ba0b6/preview_slide_0.jpg?4829592');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Faster Mobile Websites
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/c620790ae5bf5b50c245b2e0ef95f338?s=48" alt="C620790ae5bf5b50c245b2e0ef95f338?s=48" />
+              deanohume
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 294
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="28,441 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 28k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/kneath/a-better-future-with-kss" title="A better future with KSS">
+      <div class="card deck-preview" data-id="4fb3b252561c880022026800" data-slide-count="102" data-cover-image="https://files.speakerdeck.com/presentations/4fb3b252561c880022026800/preview_slide_0.jpg?379522">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/4fb3b252561c880022026800/preview_slide_0.jpg?379522');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/4fb3b252561c880022026800/preview_slide_0.jpg?379522');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          A better future with KSS
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/5f2da528927a2ec9ba4fec2069cbc958?s=48" alt="5f2da528927a2ec9ba4fec2069cbc958?s=48" />
+              kneath
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 225
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="15,469 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 15k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/chrisshort/the-illustrated-childrens-guide-to-kubernetes" title="The Illustrated Children&#39;s Guide to Kubernetes">
+      <div class="card deck-preview" data-id="cf618e05077149bfa85e5c1a381497c4" data-slide-count="23" data-cover-image="https://files.speakerdeck.com/presentations/cf618e05077149bfa85e5c1a381497c4/preview_slide_0.jpg?15825853">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/cf618e05077149bfa85e5c1a381497c4/preview_slide_0.jpg?15825853');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/cf618e05077149bfa85e5c1a381497c4/preview_slide_0.jpg?15825853');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          The Illustrated Children&#39;s Guide to Kubernetes
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/0438ae60cde4c7add6f9da48f28c15cc?s=48" alt="0438ae60cde4c7add6f9da48f28c15cc?s=48" />
+              chrisshort
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 15
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="36,076 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 36k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/bkeepers/the-world-runs-on-bad-software" title="The World Runs on Bad Software">
+      <div class="card deck-preview" data-id="4e455cac5c2c9c00010076f4" data-slide-count="100" data-cover-image="https://files.speakerdeck.com/presentations/4e455cac5c2c9c00010076f4/preview_slide_0.jpg?528719">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/4e455cac5c2c9c00010076f4/preview_slide_0.jpg?528719');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/4e455cac5c2c9c00010076f4/preview_slide_0.jpg?528719');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          The World Runs on Bad Software
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/20bfe76b3d6105641f879fe45cfc9272?s=48" alt="20bfe76b3d6105641f879fe45cfc9272?s=48" />
+              bkeepers
+            </div>
+              <div class="pr-2 mr-auto py-3">
+                  <div class="badge badge-pro ">PRO</div>
+
+              </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 57
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="5,294 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 5.3k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/chrislema/done-done" title="Done Done">
+      <div class="card deck-preview" data-id="50711dcdd28953000200e976" data-slide-count="25" data-cover-image="https://files.speakerdeck.com/presentations/50711dcdd28953000200e976/preview_slide_0.jpg?188511">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/50711dcdd28953000200e976/preview_slide_0.jpg?188511');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/50711dcdd28953000200e976/preview_slide_0.jpg?188511');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Done Done
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/282d599b414022eba5096510f675b6e2?s=48" alt="282d599b414022eba5096510f675b6e2?s=48" />
+              chrislema
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 174
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="14,250 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 14k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/brad_frost/for-a-future-friendly-web" title="For a Future-Friendly Web">
+      <div class="card deck-preview" data-id="4e893993a91c17005300fd54" data-slide-count="72" data-cover-image="https://files.speakerdeck.com/presentations/4e893993a91c17005300fd54/preview_slide_0.jpg?566740">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/4e893993a91c17005300fd54/preview_slide_0.jpg?566740');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/4e893993a91c17005300fd54/preview_slide_0.jpg?566740');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          For a Future-Friendly Web
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/f68cb25ae3e5c2106997454b13b7737d?s=48" alt="F68cb25ae3e5c2106997454b13b7737d?s=48" />
+              brad_frost
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 166
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="7,444 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 7.4k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/bkeepers/git-the-nosql-database" title="Git: the NoSQL Database">
+      <div class="card deck-preview" data-id="4f926da9cb4cd0001f00a1ff" data-slide-count="96" data-cover-image="https://files.speakerdeck.com/presentations/4f926da9cb4cd0001f00a1ff/preview_slide_0.jpg?800362">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/4f926da9cb4cd0001f00a1ff/preview_slide_0.jpg?800362');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/4f926da9cb4cd0001f00a1ff/preview_slide_0.jpg?800362');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Git: the NoSQL Database
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/20bfe76b3d6105641f879fe45cfc9272?s=48" alt="20bfe76b3d6105641f879fe45cfc9272?s=48" />
+              bkeepers
+            </div>
+              <div class="pr-2 mr-auto py-3">
+                  <div class="badge badge-pro ">PRO</div>
+
+              </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 415
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="58,997 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 59k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+              <div class="col-12 col-md-6 col-lg-4 mb-5">
+    <a href="/skipperchong/six-lessons-from-altmba" title="Six Lessons from altMBA">
+      <div class="card deck-preview" data-id="ce03a1f7723c42aca1d4629c8af45575" data-slide-count="28" data-cover-image="https://files.speakerdeck.com/presentations/ce03a1f7723c42aca1d4629c8af45575/preview_slide_0.jpg?15520613">
+        <div class="deck-preview-image">
+          <div class="content"></div>
+          <div class="deck-preview-slide" style="background-image: url('https://files.speakerdeck.com/presentations/ce03a1f7723c42aca1d4629c8af45575/preview_slide_0.jpg?15520613');"></div>
+          <div class="deck-preview-background" style="background-image: url('https://files.speakerdeck.com/presentations/ce03a1f7723c42aca1d4629c8af45575/preview_slide_0.jpg?15520613');"></div>
+          <div class="deck-preview-slide deck-preview-scrub-slide"></div>
+          <div class="deck-preview-background deck-preview-scrub-background"></div>
+          <div class="deck-preview-scrubber"></div>
+        </div>
+        <div class="deck-title px-3 pt-3 text-truncate">
+          Six Lessons from altMBA
+        </div>
+        <div class="deck-preview-meta d-flex px-2">
+            <div class="text-truncate py-3 px-2">
+              <img class="avatar avatar-sm" width="48" height="48" loading="lazy" src="https://secure.gravatar.com/avatar/766b9746b59e6f09e280cd33cf4ed419?s=48" alt="766b9746b59e6f09e280cd33cf4ed419?s=48" />
+              skipperchong
+            </div>
+            <div class="px-2 mr-auto py-3">
+              <svg class="icon icon-star "><use xlink:href="/icons/icons.svg#icon-star"></use></svg> 14
+            </div>
+            <div class="px-2 ml-auto py-3">
+              <span title="1,364 views"><svg class="icon icon-eye "><use xlink:href="/icons/icons.svg#icon-eye"></use></svg> 1.4k</span>
+            </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+        </div>
+  </div>
+</div>
+
+  <div id="transcript" class="container py-4 transcript text-break">
+    <h2 class="mb-4">Transcript</h2>
+    <ol>
+        <li class="mb-2">
+            <h3>
+              <a alt="Creating a language
+using only
+assembly languag..." title="Creating a language using only assembly language Creating a language
+using only
+assembly languag..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_0.jpg">Creating a language using only assembly language. Kernel/VM Tanken-tai #11</a>
+            </h3>
+            Koichi Nakamura
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Codes
+•https://github.com/nineties/amber
+" title="Creating a language using only assembly language Codes
+•https://github.com/nineties/amber
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_1.jpg">Codes •https://github.com/nineties/amber</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Profile
+• Koichi Nakamura
+• twitter: @9_ties
+• ..." title="Creating a language using only assembly language Profile
+• Koichi Nakamura
+• twitter: @9_ties
+• ..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_2.jpg">Profile • Koichi Nakamura • twitter: @9_ties • developing an</a>
+            </h3>
+            IoT device • http://idein.jp
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="I was a compiler writer
+• wrote compilers at st..." title="Creating a language using only assembly language I was a compiler writer
+• wrote compilers at st..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_3.jpg">I was a compiler writer • wrote compilers at student</a>
+            </h3>
+            experiment • minCaml compiler by O’Caml • minCaml compiler by Haskell https://github.com/nineties/Choco • studied optimizing compilers at graduate school • wrote compilers for special purpose CPUs
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wanted to create my own language
+• name: “Amber..." title="Creating a language using only assembly language Wanted to create my own language
+• name: “Amber..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_4.jpg">Wanted to create my own language • name: “Amber” •</a>
+            </h3>
+            It was ‘“rowl” at first. • I wanted to enjoy the creation process itself. • How could I?
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Let’s play with limitations
+1. Use assembly lan..." title="Creating a language using only assembly language Let’s play with limitations
+1. Use assembly lan..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_5.jpg">Let’s play with limitations 1. Use assembly language only. 2.</a>
+            </h3>
+            No libraries. 3. No code generators. libc etc. High-level langs. like C flex/bison etc.
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Strategy：Bootstrapping
+Write language 1 by asse..." title="Creating a language using only assembly language Strategy：Bootstrapping
+Write language 1 by asse..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_6.jpg">Strategy：Bootstrapping Write language 1 by assembly language Write a little</a>
+            </h3>
+            bit high-level language 2 by language 1 Write Amber by language k Write Amber by Amber here now
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="What’s the point?
+• For fun.
+• To cultivate kno..." title="Creating a language using only assembly language What’s the point?
+• For fun.
+• To cultivate kno..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_7.jpg">What’s the point? • For fun. • To cultivate knowledge,</a>
+            </h3>
+            techniques, know-hows of compiler-writing. • But it’s not cost-effective study method... • To feel a sense of gratitude and respect for predecessors.
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="I’ll show the outline of my development process.
+" title="Creating a language using only assembly language I’ll show the outline of my development process.
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_8.jpg">I’ll show the outline of my development process.</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="1. Created “rowl0” by assembly language
+" title="Creating a language using only assembly language 1. Created “rowl0” by assembly language
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_9.jpg">1. Created “rowl0” by assembly language</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Made a little bit high-level lang. more than as..." title="Creating a language using only assembly language Made a little bit high-level lang. more than as..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_10.jpg">Made a little bit high-level lang. more than asm. •</a>
+            </h3>
+            language name: rowl0 • compiler name: rlc
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="From regular expressions of tokens
+" title="Creating a language using only assembly language From regular expressions of tokens
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_11.jpg">From regular expressions of tokens</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote a state transition diagram
+" title="Creating a language using only assembly language Wrote a state transition diagram
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_12.jpg">Wrote a state transition diagram</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Converted to jump table
+" title="Creating a language using only assembly language Converted to jump table
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_13.jpg">Converted to jump table</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="And wrote the lexer
+" title="Creating a language using only assembly language And wrote the lexer
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_14.jpg">And wrote the lexer</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote rowl0’s syntax by BNF
+" title="Creating a language using only assembly language Wrote rowl0’s syntax by BNF
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_15.jpg">Wrote rowl0’s syntax by BNF</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Then wrote the parser
+• recursive descent method
+" title="Creating a language using only assembly language Then wrote the parser
+• recursive descent method
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_16.jpg">Then wrote the parser • recursive descent method</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Generates codes together with parsing
+• writing..." title="Creating a language using only assembly language Generates codes together with parsing
+• writing..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_17.jpg">Generates codes together with parsing • writing memory management is</a>
+            </h3>
+            difficult here. • generates codes without building syntax trees. code generation parsing
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Completed the first language “rowl0”!
+• no symb..." title="Creating a language using only assembly language Completed the first language “rowl0”!
+• no symb..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_18.jpg">Completed the first language “rowl0”! • no symbol tables. •</a>
+            </h3>
+            function params must be p0,p1,p2,... • to use local variables, allocate stack mems by “allocate(n)” then use x0,x1,x2,...
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="2.Created a LISP “rowl-core” by “rowl0”
+" title="Creating a language using only assembly language 2.Created a LISP “rowl-core” by “rowl0”
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_19.jpg">2.Created a LISP “rowl-core” by “rowl0”</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Made a LISP temporarily
+• language name: rowl-c..." title="Creating a language using only assembly language Made a LISP temporarily
+• language name: rowl-c..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_20.jpg">Made a LISP temporarily • language name: rowl-core • interpreter</a>
+            </h3>
+            name: rlci • easy to implement • productivity improvement
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote lexer and parser
+" title="Creating a language using only assembly language Wrote lexer and parser
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_21.jpg">Wrote lexer and parser</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Writing became more comfortable
+" title="Creating a language using only assembly language Writing became more comfortable
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_22.jpg">Writing became more comfortable</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote eval
+" title="Creating a language using only assembly language Wrote eval
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_23.jpg">Wrote eval</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="No memory management
+• mmap and munmap is the o..." title="Creating a language using only assembly language No memory management
+• mmap and munmap is the o..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_24.jpg">No memory management • mmap and munmap is the only</a>
+            </h3>
+            function 1. Does not recovery garbage memories 2. Allocates fresh memories for new objects 3. So, it will die eventually • When it can compile the next generation compilers, it’s no problem. malloc, free
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Completed a LISP “rowl-core”!
+• rich functions
+..." title="Creating a language using only assembly language Completed a LISP “rowl-core”!
+• rich functions
+..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_25.jpg">Completed a LISP “rowl-core”! • rich functions • lambda, map</a>
+            </h3>
+            etc. • macros
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="3.Created a language to write “VM” by “rowl-cor..." title="Creating a language using only assembly language 3.Created a language to write “VM” by “rowl-cor..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_26.jpg">3.Created a language to write “VM” by “rowl-core”</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Decided to create a VM for the next generation
+..." title="Creating a language using only assembly language Decided to create a VM for the next generation
+..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_27.jpg">Decided to create a VM for the next generation •</a>
+            </h3>
+            Created a language just for writing the virtual machine. • Defined it as a DSL in the LISP “rowl-core” • No need of writing lexer and parser!
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote the compiler like this
+" title="Creating a language using only assembly language Wrote the compiler like this
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_28.jpg">Wrote the compiler like this</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Now I could use higher-order functions
+• produc..." title="Creating a language using only assembly language Now I could use higher-order functions
+• produc..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_29.jpg">Now I could use higher-order functions • productivity was improved</a>
+            </h3>
+            a lot
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="4.Created a virtual machine “rlvm” by the DSL
+" title="Creating a language using only assembly language 4.Created a virtual machine “rlvm” by the DSL
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_30.jpg">4.Created a virtual machine “rlvm” by the DSL</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote codes of VM with the DSL like this
+" title="Creating a language using only assembly language Wrote codes of VM with the DSL like this
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_31.jpg">Wrote codes of VM with the DSL like this</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote a garbage collector
+• Copying GC
+• Cheney..." title="Creating a language using only assembly language Wrote a garbage collector
+• Copying GC
+• Cheney..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_32.jpg">Wrote a garbage collector • Copying GC • Cheney’s algorithm</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote primitive functions
+" title="Creating a language using only assembly language Wrote primitive functions
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_33.jpg">Wrote primitive functions</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="An application of meta-programming
+• The table ..." title="Creating a language using only assembly language An application of meta-programming
+• The table ..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_34.jpg">An application of meta-programming • The table of instructions of</a>
+            </h3>
+            the VM
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Generates various codes from the table
+• reflec..." title="Creating a language using only assembly language Generates various codes from the table
+• reflec..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_35.jpg">Generates various codes from the table • reflects changes of</a>
+            </h3>
+            instructions automatically • It is very easy to make this kind of mechanism with LISP vm_instructions eval loop of the VM Linker Disassembler Assembler Assembler used internally in Amber
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote instruction sets
+" title="Creating a language using only assembly language Wrote instruction sets
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_36.jpg">Wrote instruction sets</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Floating point arithmetics
+" title="Creating a language using only assembly language Floating point arithmetics
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_37.jpg">Floating point arithmetics</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Multi-precision integer arithmetics
+" title="Creating a language using only assembly language Multi-precision integer arithmetics
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_38.jpg">Multi-precision integer arithmetics</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Exception handling
+" title="Creating a language using only assembly language Exception handling
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_39.jpg">Exception handling</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Delimited Continuation
+" title="Creating a language using only assembly language Delimited Continuation
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_40.jpg">Delimited Continuation</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Completed the virtual machine “rlvm”!
+• 186 ins..." title="Creating a language using only assembly language Completed the virtual machine “rlvm”!
+• 186 ins..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_41.jpg">Completed the virtual machine “rlvm”! • 186 instructions • stack</a>
+            </h3>
+            machine • copying GC • exception handling • shift/reset delimited continuation • floating-point arithmetics, multi-precision arithmetics
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="5.Created a tool chain for “rlvm”
+" title="Creating a language using only assembly language 5.Created a tool chain for “rlvm”
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_42.jpg">5.Created a tool chain for “rlvm”</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="There was no programming tools for “rlvm”
+• Cre..." title="Creating a language using only assembly language There was no programming tools for “rlvm”
+• Cre..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_43.jpg">There was no programming tools for “rlvm” • Created a</a>
+            </h3>
+            tool chain for the VM • a programming language “rowl1” • its compiler • assembler • disassembler • linker
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote “rowl1”, assembler and compiler
+• Defined..." title="Creating a language using only assembly language Wrote “rowl1”, assembler and compiler
+• Defined..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_44.jpg">Wrote “rowl1”, assembler and compiler • Defined as a DSL</a>
+            </h3>
+            of “rowl-core”
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote linker and disassembler
+• Wrote these too..." title="Creating a language using only assembly language Wrote linker and disassembler
+• Wrote these too..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_45.jpg">Wrote linker and disassembler • Wrote these tools by “rowl1”,</a>
+            </h3>
+            so they run on “rlvm” • The linker requires GC since it uses a lot of memory
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Example outputs of the disassembler
+" title="Creating a language using only assembly language Example outputs of the disassembler
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_46.jpg">Example outputs of the disassembler</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Ready to program on “rlvm”!
+• writing programs ..." title="Creating a language using only assembly language Ready to program on “rlvm”!
+• writing programs ..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_47.jpg">Ready to program on “rlvm”! • writing programs for rlvm</a>
+            </h3>
+            • disassembling of byte-codes • supports separate compilation • Reached the starting line
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="6.Wrote “Amber” by “rowl1”
+" title="Creating a language using only assembly language 6.Wrote “Amber” by “rowl1”
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_48.jpg">6.Wrote “Amber” by “rowl1”</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Started developing “Amber”
+• dynamic scripting ..." title="Creating a language using only assembly language Started developing “Amber”
+• dynamic scripting ..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_49.jpg">Started developing “Amber” • dynamic scripting language • instance-based object-oriented</a>
+            </h3>
+            system • run on rlvm
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote an assembler
+• The former assembler
+assem..." title="Creating a language using only assembly language Wrote an assembler
+• The former assembler
+assem..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_50.jpg">Wrote an assembler • The former assembler assembles codes ahead</a>
+            </h3>
+            of time and run on rlci • This assembler assembles codes just in time and run on rlvm • fills addresses by backpatching
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote the object system
+• slots, messages and p..." title="Creating a language using only assembly language Wrote the object system
+• slots, messages and p..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_51.jpg">Wrote the object system • slots, messages and parent delegation</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote Amber’s core feature on the system
+• dyna..." title="Creating a language using only assembly language Wrote Amber’s core feature on the system
+• dyna..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_52.jpg">Wrote Amber’s core feature on the system • dynamic pattern-matching</a>
+            </h3>
+            engine • mechanism of partial function fusion
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote the compiler
+• Made Amber compiler as one..." title="Creating a language using only assembly language Wrote the compiler
+• Made Amber compiler as one..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_53.jpg">Wrote the compiler • Made Amber compiler as one of</a>
+            </h3>
+            Amber objects VM object system pattern-matching engine compiler Amber’s core system matching of syntax tree resource management
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote closure-conversion
+" title="Creating a language using only assembly language Wrote closure-conversion
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_54.jpg">Wrote closure-conversion</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Wrote parsers
+• compiles parsers at run-time
+• ..." title="Creating a language using only assembly language Wrote parsers
+• compiles parsers at run-time
+• ..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_55.jpg">Wrote parsers • compiles parsers at run-time • each parser</a>
+            </h3>
+            is a usual Amber object (closure) VM object system pattern-matching engine compiler Amber core system compile parsers
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="very simple syntax
+1. literals are expressions
+..." title="Creating a language using only assembly language very simple syntax
+1. literals are expressions
+..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_56.jpg">very simple syntax 1. literals are expressions 2. for a</a>
+            </h3>
+            symbol h and expressions e1,..,en (n&gt;=0), h{e1, ..., en} is an expression 3. no other form of Amber’s expression
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Used Packrat parsing method
+• scanner less
+" title="Creating a language using only assembly language Used Packrat parsing method
+• scanner less
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_57.jpg">Used Packrat parsing method • scanner less</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Encoding/decoding floating-point literal was di..." title="Creating a language using only assembly language Encoding/decoding floating-point literal was di..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_58.jpg">Encoding/decoding floating-point literal was difficult • wrote them by my</a>
+            </h3>
+            self because of “no libc” limitation • require multi-precision integer arithmetic which I wrote before “3.14” 0x40091eb851eb851f strtod, sprintf
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Amber interpreter is completed!
+• dynamic scrip..." title="Creating a language using only assembly language Amber interpreter is completed!
+• dynamic scrip..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_59.jpg">Amber interpreter is completed! • dynamic scripting language • run</a>
+            </h3>
+            on rlvm • instance-based object oriented system • dynamic pattern-matching engine • partial function fusion • lexical closure • I got modern programming language!
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="7. Created Amber’s standard library
+" title="Creating a language using only assembly language 7. Created Amber’s standard library
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_60.jpg">7. Created Amber’s standard library</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Amber has strong self extensibility
+• Amber’s s..." title="Creating a language using only assembly language Amber has strong self extensibility
+• Amber’s s..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_61.jpg">Amber has strong self extensibility • Amber’s simple syntax is</a>
+            </h3>
+            extended in a standard library • amber/lib/syntax/parse.ab • Builds its syntax during boot sequence
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Only has very simple syntax at first
+used strin..." title="Creating a language using only assembly language Only has very simple syntax at first
+used strin..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_62.jpg">Only has very simple syntax at first used string literal</a>
+            </h3>
+            for comments because there is no syntax for comments
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Defines a syntax for defining syntaxes
+" title="Creating a language using only assembly language Defines a syntax for defining syntaxes
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_63.jpg">Defines a syntax for defining syntaxes</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Defines Amber’s syntax with the syntax
+" title="Creating a language using only assembly language Defines Amber’s syntax with the syntax
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_64.jpg">Defines Amber’s syntax with the syntax</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Builds macro system
+" title="Creating a language using only assembly language Builds macro system
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_65.jpg">Builds macro system</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Gives meanings to syntaxes by macros
+" title="Creating a language using only assembly language Gives meanings to syntaxes by macros
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_66.jpg">Gives meanings to syntaxes by macros</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Now Amber got rich syntax
+" title="Creating a language using only assembly language Now Amber got rich syntax
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_67.jpg">Now Amber got rich syntax</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Extends object system
+" title="Creating a language using only assembly language Extends object system
+" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_68.jpg">Extends object system</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Now Amber got rich object system
+• Inheritence,..." title="Creating a language using only assembly language Now Amber got rich object system
+• Inheritence,..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_69.jpg">Now Amber got rich object system • Inheritence, mix-in etc.</a>
+            </h3>
+            
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Now the development is under suspension
+• No pl..." title="Creating a language using only assembly language Now the development is under suspension
+• No pl..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_70.jpg">Now the development is under suspension • No plans of</a>
+            </h3>
+            further updates • Try following commands to invoke Amber shell (Linux only) • See the outputs of the make command % git clone https://github.com/nineties/amber.git % cd amber % make; sudo make install % amber
+
+
+        </li>
+        <li class="mb-2">
+            <h3>
+              <a alt="Summary
+rowl0
+rlc rlci
+rowl-core
+as
+lang. for
+w..." title="Creating a language using only assembly language Summary
+rowl0
+rlc rlci
+rowl-core
+as
+lang. for
+w..." href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_71.jpg">Summary rowl0 rlc rlci rowl-core as lang. for writing VM</a>
+            </h3>
+            rlvm rowl1 linker disassembler compiler compiler Amber interpreter impl. impl. run self-extension language tool • I could reach relatively high-level language. Feel satisfied.
+
+
+        </li>
+        <li class="mb-2">
+            <a class="text-muted font-italic" href="https://files.speakerdeck.com/presentations/96611d1a95244aa2bd76158ccd43657d/slide_72.jpg">None</a>
+        </li>
+    </ol>
+  </div>
+
+    </div>
+
+    <footer class="d-block bg-black sd-footer">
+  <img alt="" class="footer-logo-bg" loading="lazy" src="https://d1eu30co0ohy4w.cloudfront.net/assets/mark-f4be6df1e05965cac9f98e664a6c35f5ffdd0207385d07464a9214d6cdf76082.svg" />
+  <div class="container">
+    <div class="row py-3 py-md-5 justify-content-lg-between">
+
+      <div class="col-12 col-md-4 col-lg-3 text-center mb-2">
+        <a href="/">
+          <img alt="Speaker Deck" class="footer-logo mb-2" loading="lazy" src="https://d1eu30co0ohy4w.cloudfront.net/assets/mark-f4be6df1e05965cac9f98e664a6c35f5ffdd0207385d07464a9214d6cdf76082.svg" width="70" height="44" />
+          <p class="speaker-deck">SpeakerDeck</p>
+        </a>
+        <a class="footer-icon mx-1" title="SpeakerDeck on Facebook" href="https://www.facebook.com/speakerdeck"><svg class="icon icon-facebook "><use xlink:href="/icons/icons.svg#icon-facebook"></use></svg></a>
+        <a class="footer-icon mx-1" title="SpeakerDeck on Twitter" href="https://twitter.com/speakerdeck"><svg class="icon icon-twitter "><use xlink:href="/icons/icons.svg#icon-twitter"></use></svg></a>
+      </div>
+      <div class="col-12 col-md-4 col-lg-auto py-2">
+        <nav aria-label="Top Categories">
+          <h2>Top Categories</h2>
+          <ul class="nav-footer">
+            <li><a href="c/programming">Programming</a></li>
+            <li><a href="/c/technology">Technology</a></li>
+            <li class="mb-3"><a href="/c/storyboards">Storyboards</a></li>
+            <li><a href="/p/featured">Featured Decks</a></li>
+            <li><a href="/s/featured">Featured Speakers</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-12 col-md-4 col-lg-auto py-2">
+        <nav aria-label="Legal">
+          <h2>Legal</h2>
+          <ul class="nav-footer">
+            <li><a href="/tos">Terms</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/dmca">DMCA</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-12 col-md-4 col-lg-auto offset-md-4 offset-lg-0 py-2">
+        <nav aria-label="Support">
+          <h2>Support</h2>
+          <ul class="nav-footer">
+            <li><a href="https://help.speakerdeck.com/">Knowledgebase</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="col-12 col-md-4 col-lg-auto py-2">
+        <nav aria-label="Features">
+          <h2>Features</h2>
+          <ul class="nav-footer">
+            <li><a href="/features/privacy-controls">Private URLs</a></li>
+            <li><a href="/features/password-protection">Password Protection</a></li>
+            <li><a href="/features/custom-urls">Custom URLS</a></li>
+            <li><a href="/features/scheduled-publishing">Scheduled Publishing</a></li>
+            <li><a href="/features/remove-branding">Remove Branding</a></li>
+            <li><a href="/features/slide-notes">Notes</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="row text-center border-top">
+      <div class="col-12 py-3">
+        <div class="copyright-text">Copyright &copy; 2022 Speaker Deck, LLC.</div>
+        <div>All slide content and descriptions are owned by their creators.</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+      <script src="https://d1eu30co0ohy4w.cloudfront.net/assets/stats-8d4484159e6bd7cb6cdc.js"></script>
+  <script data-turbolinks-eval="false">
+    Stats.host = 'speakerdeck.com';
+  </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-19290517-1']);
+      _gaq.push(['_setDomainName', '.speakerdeck.com']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WD0LC0MP9"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8WD0LC0MP9');
+    </script>
+
+
+    <script>
+      !function(f,b,e,v,n,t,s) {
+        if(f.fbq) return;
+        n=f.fbq=function() { n.callMethod? n.callMethod.apply(n,arguments) : n.queue.push(arguments) };
+        if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0'; n.queue=[];
+        t=b.createElement(e); t.async=!0; t.src=v;
+        s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+      fbq('init', '2893765844191276');
+      fbq('track', 'PageView');
+
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2893765844191276&ev=PageView&noscript=1" />
+    </noscript>
+
+    <script async type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+<script>
+Array.from(document.querySelectorAll('.facebook-share')).forEach((element) => {
+  element.addEventListener('click', function(e){
+    e.preventDefault()
+    let title = encodeURIComponent(document.title)
+    let url = encodeURIComponent(document.location.href)
+    window.open('https://www.facebook.com/dialog/share?app_id=1428152667543587&display=popup&href=' + url + '&title=' + title, "_blank", "toolbar=no,menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes,width=600,height=400,modal=yes,alwaysRaised=yes");
+  }, false)
+})
+</script>
+
+  </body>
+</html>

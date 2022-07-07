@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>bootstrapping</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Main_Page rootpage-Main_Page skin-vector-2022 action-view"><div class="mw-page-container">
+	<a class="mw-jump-link" href="Main_Page.html#content">Jump to content</a>
+	<div class="mw-page-container-inner ">
+
+<input
+	type="checkbox"
+	id="mw-sidebar-checkbox"
+	class="mw-checkbox-hack-checkbox"
+	checked>
+
+<header class="mw-header">
+	<label
+		id="mw-sidebar-button"
+		class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element"
+		for="mw-sidebar-checkbox"
+		role="button"
+		aria-controls="mw-panel"
+		data-event-name="ui.sidebar"
+		tabindex="0"
+		title="Main menu">
+		Toggle sidebar
+	</label>
+	
+<a href="Main_Page.html" class="mw-logo">
+	<span class="mw-logo-container">
+		<strong class="mw-logo-wordmark">bootstrapping</strong>
+	</span>
+</a>
+
+	
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+		<form action="https://bootstrapping.miraheze.org/w/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-moved">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search bootstrapping" aria-label="Search bootstrapping" autocapitalize="sentences" title="Search bootstrapping [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+	<a href="./Special:Search"
+	
+		
+		
+		
+		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-search search-toggle">
+		<span>Search</span>
+	</a>
+	
+</div>
+
+	<div class="vector-user-links">
+	
+<nav id="p-personal-more" class="mw-portlet mw-portlet-personal-more vector-menu vector-user-menu-more" aria-labelledby="p-personal-more-label" role="navigation" 
+	 >
+	<label id="p-personal-more-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">User links</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+	<li id="p-createaccount" class="user-links-collapsible-item">
+		<a href="https://bootstrapping.miraheze.org/w/index.php?title=Special:CreateAccount&amp;returnto=Main+Page" class="mw-ui-button mw-ui-quiet" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a>
+	</li>
+</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu vector-user-menu-logged-out vector-menu vector-menu-dropdown" aria-labelledby="p-personal-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-personal-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-personal"
+		class="vector-menu-checkbox" aria-labelledby="p-personal-label" />
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-ellipsis" aria-hidden="true">
+		<span class="vector-menu-heading-label">Personal tools</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		<div class="vector-user-menu-create-account"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Special:CreateAccount&amp;returnto=Main+Page" class="user-links-collapsible-item vector-menu-content-item mw-ui-icon mw-ui-icon-before" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></div>
+<div class="vector-user-menu-login"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Special:UserLogin&amp;returnto=Main+Page" icon="logIn" class="vector-menu-content-item vector-menu-content-item-login mw-ui-icon mw-ui-icon-before mw-ui-icon-wikimedia-logIn" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></div>
+<div class="vector-user-menu-anon-editor">
+	<p>
+		Pages for logged out editors <a href="./Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</p>
+</div>
+
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage" class="mw-list-item"><span>Not logged in</span></li><li id="pt-anontalk" class="mw-list-item"><a href="./Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li><li id="pt-darkmode-toggle" class="darkmode-link mw-list-item"><a href="Main_Page.html#"><span>Dark mode</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="./Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Special:CreateAccount&amp;returnto=Main+Page" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Special:UserLogin&amp;returnto=Main+Page" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</header>
+
+<div class="mw-workspace-container">
+	<div id="mw-navigation">
+		<div id="mw-head">
+			<div class="mw-article-toolbar-container">
+				<div id="left-navigation">
+					
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="Main_Page.html" title="View the content page [c]" accesskey="c"><span>Main Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Talk:Main_Page&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+					
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+				</div>
+				<div id="right-navigation">
+					
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="Main_Page.html"><span>Read</span></a></li><li id="ca-edit" class="mw-list-item"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="mw-list-item"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+					
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+				</div>
+			</div>
+		</div>
+		
+
+<div id="mw-panel" class="mw-sidebar">
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="Main_Page.html" icon="home" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="./Special:RecentChanges" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="./Special:Random" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help about MediaWiki</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="./Special:WhatLinksHere/Main_Page" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="./Special:RecentChangesLinked/Main_Page" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="./Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;oldid=428" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fbootstrapping.miraheze.org%2Fwiki%2FMain_Page"><span>Get shortened URL</span></a></li><li id="t-cite" class="mw-list-item"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Special:CiteThisPage&amp;page=Main_Page&amp;id=428&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+	</div>
+	<div class="mw-table-of-contents-container mw-sticky-header-element">
+		
+	</div>
+	<div class="mw-content-container">
+<main id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><!-- CentralNotice --></div>
+
+
+	<header class="mw-body-header">
+		<h1 id="firstHeading" class="firstHeading mw-first-heading">Main Page</h1>
+		<div class="mw-indicators">
+		</div>
+			<div id="siteSub" class="noprint">From bootstrapping</div>
+	</header>
+
+	<div id="bodyContent" class="vector-body">
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Main_Page.html#Welcome_to_the_bootstrapping_wiki!"><span class="tocnumber">1</span> <span class="toctext">Welcome to the bootstrapping wiki!</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="Main_Page.html#Current_Topics"><span class="tocnumber">1.1</span> <span class="toctext">Current Topics</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-3"><a href="Main_Page.html#Past_Research"><span class="tocnumber">2</span> <span class="toctext">Past Research</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="Main_Page.html#Past_Research_/_intray"><span class="tocnumber">3</span> <span class="toctext">Past Research / intray</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="Main_Page.html#Groups"><span class="tocnumber">4</span> <span class="toctext">Groups</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="Main_Page.html#Karger-Thompson_Attack"><span class="tocnumber">4.1</span> <span class="toctext">Karger-Thompson Attack</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Main_Page.html#Ubiquitous_Implementations"><span class="tocnumber">4.2</span> <span class="toctext">Ubiquitous Implementations</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="Main_Page.html#Small_C_Compilers"><span class="tocnumber">4.3</span> <span class="toctext">Small C Compilers</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="Main_Page.html#Grammars,_Parsing,_and_Term_Rewriting"><span class="tocnumber">4.4</span> <span class="toctext">Grammars, Parsing, and Term Rewriting</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="Main_Page.html#Virtual_Machines,_Instruction_Sets"><span class="tocnumber">4.5</span> <span class="toctext">Virtual Machines, Instruction Sets</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="Main_Page.html#CPU&#39;s_for_Bootstrapping:_The_Simple,_The_Verified,_and_The_Necessarily_Complex"><span class="tocnumber">4.6</span> <span class="toctext">CPU's for Bootstrapping: The Simple, The Verified, and The Necessarily Complex</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="Main_Page.html#Minimal_Operating_Systems"><span class="tocnumber">4.7</span> <span class="toctext">Minimal Operating Systems</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="Main_Page.html#Biology/Other?"><span class="tocnumber">4.8</span> <span class="toctext">Biology/Other?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-14"><a href="Main_Page.html#Helpful_Links"><span class="tocnumber">5</span> <span class="toctext">Helpful Links</span></a></li>
+</ul>
+</div>
+
+<h2><span id="Welcome_to_the_bootstrapping_wiki.21"></span><span class="mw-headline" id="Welcome_to_the_bootstrapping_wiki!">Welcome to the bootstrapping wiki!</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=1" title="Edit section: Welcome to the bootstrapping wiki!">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>This wiki is about bootstrapping, i.e., building up compilers and interpreters and tools from nothing.
+</p>
+<blockquote>"Recipe for yogurt: Add yogurt to milk." - Anon.</blockquote>
+<p>short sci fi story <a rel="nofollow" class="external text" href="https://www.teamten.com/lawrence/writings/coding-machines/">Coding Machines</a> by <i>Lawrence Kesteloot, January 2009</i>
+</p><p>Also see <a rel="nofollow" class="external free" href="http://bootstrappable.org">http://bootstrappable.org</a>, which has pointers to a mailing list and IRC channel.
+</p>
+<blockquote>
+<p>Simple explanation: bootstrapping is about building a compiler using tools smaller than itself, as opposed to building a compiler using an already built version of itself. The problem with the second is: Where did that prebuilt binary come from?
+</p>
+</blockquote>
+<h3><span class="mw-headline" id="Current_Topics">Current Topics</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=2" title="Edit section: Current Topics">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a rel="nofollow" class="external text" href="https://gitlab.com/janneke/mes">mes</a> by janneke, <a href="./Mes" title="Mes">mes</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/fosslinux/live-bootstrap">live-bootstrap</a> by fossy and stikonas <a href="./Live-bootstrap" title="Live-bootstrap">live-bootstrap</a></li>
+<li><a rel="nofollow" class="external text" href="http://git.savannah.nongnu.org/cgit/stage0.git/">stage0</a> by Jeremiah Orians <a href="./Stage0" title="Stage0">stage0</a></li>
+<li><a rel="nofollow" class="external autonumber" href="https://github.com/ironmeld/boot2now">[1]</a> by Rick Masters <a href="./Boot2Now" title="Boot2Now">Boot2Now</a></li>
+<li><a href="./Coquillage" title="Coquillage">Coquillage</a> by bms_</li>
+<li><a href="./Aesop" title="Aesop">Aesop</a> by unmatched-paren</li>
+<li><a href="./Descent_principle" title="Descent principle">Descent principle</a></li>
+<li><a href="./The_Semantics_Assignment_Problem" title="The Semantics Assignment Problem">The Semantics Assignment Problem</a></li>
+<li><a href="./Self-Extension" title="Self-Extension">Self-Extension</a></li>
+<li><a href="./Self-Hosting" title="Self-Hosting">Self-Hosting</a></li>
+<li><a href="./Build_Systems" title="Build Systems">Build Systems</a></li>
+<li><a href="./Build_Inputs" title="Build Inputs">Build Inputs</a></li>
+<li><a href="./C_compilers" title="C compilers">C compilers</a></li>
+<li><a href="./Below_C_Level" title="Below C Level">Below C Level</a></li>
+<li><a href="./Boostrapping_Specific_Languages" class="mw-redirect" title="Boostrapping Specific Languages">Boostrapping Specific Languages</a></li>
+<li><a href="./Discarded_options_and_why" title="Discarded options and why">discarded options and why</a></li>
+<li><a href="./Investigate" title="Investigate">Investigate</a></li>
+<li><a href="./Projects_List" title="Projects List">Projects List</a></li>
+<li><a href="./Documents" title="Documents">Documents</a></li>
+<li><a href="./Forth" title="Forth">Forth</a></li></ul>
+<h2><span class="mw-headline" id="Past_Research">Past Research</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=3" title="Edit section: Past Research">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://github.com/certik/bcompiler">bcompiler</a> by Grimley Evans
+</th></tr>
+<tr>
+<td>This is a detailed log of the process of bootstrapping a series of languages up starting from just a hex assembler written using a hex editor.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="http://www.vpri.org/pdf/tr2015004_cuneiform.pdf">The Cuneiform Tablets of 2015</a> by Long Tien Nguyen, Alan Kay
+</th></tr>
+<tr>
+<td>This discusses methods of long term software preservation. Briefly about hardware that will not degrade over time, but the majority of the paper is about how to design a software stack that can be executed in the far future. In order to achieve this they recommend build everything in terms of a machine with a short simple specification.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://github.com/nornagon/jonesforth/blob/master/jonesforth.S">jonesforth.S</a> by Richard W.M. Jones
+</th></tr>
+<tr>
+<td>In depth literate programming describing a complete implementation of forth. Bootstrapped from intel 32 bit assembly with lots of assembler macros into a fully self extensible forth. This is a really illuminating read, teaching a lot of details about forth as well as showing just how minimal a runtime it is possible to make a programming language with.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://github.com/kragen/stoneknifeforth">stoneknifeforth</a> by Kragen
+</th></tr>
+<tr>
+<td>Kragen (again) doing amazing bootstrapping/self hosting work. This forth is implemented in a screenful of code, able to emit ELF files directly. Self extensible. Single char word names.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://github.com/blynn/compiler">blynn compiler</a>
+</th></tr>
+<tr>
+<td>This is a mini haskell compiler bootstrapped from C.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://speakerdeck.com/nineties/creating-a-language-using-only-assembly-language">amber</a> by nineties
+</th></tr>
+<tr>
+<td>These slides outline the developement of rowl and amber. This is a programming language bootstrapped up from assembly. rowl is implemented directly in assembly then parts of the amber vm and compiler are implemented in rowl, then the rest of amber is implemented by self hosting.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://github.com/akkartik/mu">Mu</a> by Kartik Agaram
+</th></tr>
+<tr>
+<td>A statement-oriented programming language (<a rel="nofollow" class="external text" href="https://github.com/akkartik/mu/blob/main/mu.md">docs</a>) that bootstraps up from x86 machine code, using just a handful of Linux syscalls (no libc). The language is memory-safe, and <a rel="nofollow" class="external text" href="http://akkartik.github.io/mu/html/mu_instructions.html">most statements translate 1:1 to x86 machine code</a>. Implemented in 60k lines of a notation for x86 machine code, 40k of which are automated tests.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://pkelchte.wordpress.com/2013/12/31/scm-go/">SCM-Go</a> by pkelcjte
+</th></tr>
+<tr>
+<td>This project builds a SICP-style, Scheme interpreter with a REPL in Go. The blog post describes each phase. They're simple-looking. The Github integrates it into a total of 240 lines of code. Being a simple language, the Go implementation could be ported to anything else in our collection or straight hand-assemblied. Then, more complex stuff built on it like nineties or other LISPers do.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://github.com/rain-1/src/blob/master/jrp.c">jrp.c</a> by curtism
+</th></tr>
+<tr>
+<td>A very small x86 JIT stack calculator implemented in C. All of the instructions are coded in a clever way to make them each a double word or a quad word.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://github.com/cameronswinoga/yabfc">Yet Another BrainFuck Compiler</a> by cameronswinoga
+</th></tr>
+<tr>
+<td>This is a brainfuck compiler implemented in C. It produces an elf file directly.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://lists.linuxfoundation.org/pipermail/celinux-dev/2009-December/000217.html">qcc</a>
+</th></tr>
+<tr>
+<td>The QCC project: hooking tcc frontend up with qcc's code generator and creating a toybox style set of cc, as, ld tools.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://www.schneier.com/blog/archives/2013/09/surreptitiously.html#c1762647">List of Diverse Hardware</a>
+</th></tr>
+<tr>
+<td>A big concern in dealing with trust in hardware is whether it's subverted or not. Intel, AMD, and many other big names have backdoors in their chips for management purposes. Among other things...&#160;;) One cheat to get trustworthy image is to just use a computer you have no reason to believe is subverted. Acquire it under a boring buyer, it itself is a boring tech, do your bootstrapping thing in it air gapped, and use what it produces. It will likely *not* be subverted *by default* since the interdictors and TAO folks have limited resources w/ no reason to target the system. Use several that are different for best results. To help with that, I (Nick P.) put together a list of all kinds of CPU's and execution strategies on Schneier's blog. Something I left off the list are old TI-82 calculators, Palm Pilots, etc. Lots of old stuff lying around you can get in person with cash that is probably unsubverted.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://www.youtube.com/watch?v=QIE5nV5fDwA">golang talk</a> golang transpiled from c to go
+</th></tr>
+<tr>
+<td>"It's time for the Go compilers to be written in Go, not in C. I'll talk about the unusual process the Go team has adopted to make that happen: mechanical conversion of the existing C compilers into idiomatic Go code". They wrote the compiler in C then translated the source code from C into Go almost automatically (had to do some manual fixing up). This is an interesting approach. Let's name it the transpile approach to self hosting.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="http://asm.sourceforge.net/asmutils.html">asmutils</a> a linux distro/userland implemented in assembly
+</th></tr>
+<tr>
+<td>This is a linux distribution implemented entirely in assembly. It doesn't depend on libc or anything.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://pdfs.semanticscholar.org/f2bb/c26d34d2093ca0e6b9a9024573c95a8d7768.pdf">COMFY-65</a> a macro assembler hosted on lisp
+</th></tr>
+<tr>
+<td>Henry G. Baker implements COMFY-65, a macro assembler hosted on lisp. <blockquote>With the power of the entire Lisp language available for use within COMFY-65  macros,  the  amount  of  intelligence  one  can  embed in  these  macros is  limitless<blockquote>
+</blockquote></blockquote></td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="http://www.bradrodriguez.com/papers/tcjassem.txt">B.Y.O assembler in forth</a> by Brad Rodriguez
+</th></tr>
+<tr>
+<td>This is a teaching document that explains how to make an assembler in forth! It shows a very forth-idiomatic style of programming, and how easy it is to make an advanced assembler once you have a working forth.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://github.com/thepowersgang/mrustc">mrustc</a> by thepowersgang
+</th></tr>
+<tr>
+<td>This is a rust compiler written in C++, it translates rust to C. it makes the normal self hosted rustc compiler bootstrappable! It neglects the borrow checker but is still able to compile valid input source correctly.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="http://www.bdsoft.com/resources/bdsc.html">bsdc</a> by Leor Zolman
+</th></tr>
+<tr>
+<td>A C compiler (for CP/M) implemented in assembly. 25k lines of asm.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="http://piumarta.com/software/maru/">maru</a> by Ian Piumarta
+</th></tr>
+<tr>
+<td>This is the real deal. Ian Piumarta implemented a fully bootstrappable scheme here starting from C, then self hosting to a compiler that emits binary directly. Very impressive!
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://cakeml.org/">CakeML</a> by Myreen et al
+</th></tr>
+<tr>
+<td>CakeML is really really fascinating. They have created a theory of SML programs inside HOL, allowing them to prove properties of SML programs embedded inside HOL. They have created a (serious) compiler from SML down to assembly and proved that it preserves semantics all the way. They are then able to compile the compile simultaneously bootstrapping the proof to create a verified compiler binary for which it is proven that it compiles input programs and preserves their semantics. To my knowledge this is the first such development.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://github.com/ras52/bootstrap">bootstrap</a> by Richard Smith
+</th></tr>
+<tr>
+<td>This is an incredibly well developed bootstrapping project. hex assembler. elf maker. x86 assembler. linker. B compiler. C compiler. Includes implementations of various POSIX style libc functions along the way. It is extremely well written and worth studying!
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://gitlab.com/giomasce/asmc">asmc</a> by Giovanni Mascellani
+</th></tr>
+<tr>
+<td>The asmc project is a small bootable kernel that loads up a payload which. payloads exist for assembly compilers and "G language" compilers. The G language is a low level lang below C which was invented to ease bootstrapping. An assembler (which can build the kernel) has been implemented in G.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://pimgooss.home.xs4all.nl/">blc</a> by Pim Goossens
+</th></tr>
+<tr>
+<td>cmeta - Using ideas from META compiler compiler Pim builds the meta language up from raw hex. blc - binary lambda calculus implementation, capable of computing matt mights factorial program. built using the cmeta system. Incredibly terse. Surprising that the techniques of metacompiler compilers can be applied at such a low level. The amount of leverage may be highest in this project.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://sourceforge.net/p/pascalp5/wiki/Home/">pascal-p</a> by Pascal-P Porting Kit
+</th></tr>
+<tr>
+<td>"It compiles and runs a subset of the Revised Pascal language. That subset was designed to be the minimum language required to self compile for a new machine implementation. It was part of a "bootstrapping" kit designed to facilitate porting Pascal to new machines.". The pascal language was implemented with bootstrapping intention in mind. They have a simple "p code" bytecode language that eases the process.
+</td></tr></tbody></table>
+<table class="wikitable" style="text-align: left;">
+<tbody><tr>
+<th style="text-align: left;"><a rel="nofollow" class="external text" href="https://davazp.net/2012/12/08/eulex-forth-implementation.html">eulex</a> by David Vázquez Púa
+</th></tr>
+<tr>
+<td>This is a forth operating system with emacs like editor and lisp interpreter built in it. It's a 1700 line assembly script for the bootable forth compiler/interpreter and then the whole rest of the system is implemented in forth. I have not tried but apparently it can build itself with the assembler. This is very impressive work.
+</td></tr></tbody></table>
+<h2><span id="Past_Research_.2F_intray"></span><span class="mw-headline" id="Past_Research_/_intray">Past Research / intray</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=4" title="Edit section: Past Research / intray">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<p>important: try to summarize lessons learned from each.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://www.eah-jena.de/~kleine/history/languages/Wirth-PascalS.pdf">Pascal-S</a> by Wirth (Small, self-contained subset w/ great error reporting)</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20191214175617/http://www.ethoberon.ethz.ch/WirthPubl/CBEAll.pdf">Compiler Construction</a> by Wirth (Oberon-0 language in book is well-suited to bootstrapping)</li>
+<li><a rel="nofollow" class="external text" href="http://brinch-hansen.net/papers/1981b.pdf">Edison</a> by Hansen (Language w/ 5 statements &amp; small OS on PDP-11)</li>
+<li><a rel="nofollow" class="external text" href="http://www.projectoberon.com/">Project Oberon</a> by Wirth et al (Simple language, compiler, OS, and RISC CPU w/ source laid out like a book.)</li>
+<li><a rel="nofollow" class="external text" href="https://www.computer.org/web/csdl/index/-/csdl/trans/ts/1976/02/01702350.pdf">ML/I and Sal</a> by Tannenbaum (Macro system bootstrapping low-level language, Sal, they built an OS with)</li>
+<li><a rel="nofollow" class="external text" href="http://piumarta.com/papers/colas-whitepaper.pdf">COLA whitepaper</a> by Ian Piumarta</li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/PreScheme">PreScheme</a> using an low level s-exp IL to implement scheme.</li>
+<li><a rel="nofollow" class="external text" href="http://scheme2006.cs.uchicago.edu/11-ghuloum.pdf">Incremental, Scheme Compiler</a> by Ghuloum (Build Scheme-to-ASM compiler in "24, small steps;" Githubs available)</li>
+<li><a rel="nofollow" class="external text" href="http://www.red-lang.org/p/about.html">Red Language</a> by Rakocevic et al (LISP-like power/DSL's, can do low-level, batteries included, 1MB standalone)</li>
+<li><a rel="nofollow" class="external text" href="https://esumii.github.io/min-caml/index-e.html">MinCaml</a> by IPA (Efficient compiler for minimal, functional language in 2000 lines &amp; 14-week segments)</li>
+<li><a rel="nofollow" class="external text" href="http://www.sprylang.org">Spry</a> by Krampe (Combines traits of LISP, Rebol, Smalltalk, and Forth; hosted on Nim; 2300loc)</li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/LCC_(compiler)">LCC</a> by Hanson and Fraser (A 20Kloc compiler w/ book describing its workings; literate code; non-FOSS, but free non-commercial)</li>
+<li><a rel="nofollow" class="external text" href="http://www.cs.princeton.edu/research/techreps/TR-451-94">Axiomatic Bootstrapping: A Guide for Compiler Hackers</a> by Andrew Appel (bootstrapping SML)</li>
+<li><a rel="nofollow" class="external text" href="http://www.merlintec.com/lsi/jabs7.html">Merlin: Just Add Reflection</a> (bootstrapping object oriented merlin)</li>
+<li><a rel="nofollow" class="external text" href="http://www.gtoal.com/languages/bcpl/amiga/bcpl/booting.txt">booting BCPL</a> (bootstrapping BCPL using intcode)</li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/High_Level_Assembly">High-level Assembly</a> by Hyde (Assembly w/ high-level data types, control flow &amp; a stdlib; use/check just what you need)</li>
+<li><a rel="nofollow" class="external text" href="https://en.wikibooks.org/wiki/Linoleum">Linoleum</a> by Ghignola (Cross-platform, lean, fast, assembly-like language)</li>
+<li><a rel="nofollow" class="external text" href="https://wingolog.org/archives/2016/01/11/the-half-strap-self-hosting-and-guile">wingolog</a> about the guile compiler (all brilliant posts!)</li>
+<li><a rel="nofollow" class="external text" href="http://zserge.com/blog/tcl-interpreter.html">Partcl</a> by Zaitsev (Tiny TCL; TCL's parse &amp; interpret easily; also references Picol etc)</li>
+<li><a rel="nofollow" class="external autonumber" href="http://repo.or.cz/ld.git/blob/HEAD:/nld.c">[2]</a> neatld linker by ali grudi (and also <a rel="nofollow" class="external text" href="http://repo.or.cz/neatas.git">neatas</a> <a rel="nofollow" class="external text" href="http://repo.or.cz/neatcc.git">neatcc</a>)</li>
+<li><a rel="nofollow" class="external text" href="https://www.cs.indiana.edu/scheme-repository/code.lang.html">SchemeRepo</a> by Univ. of Indiana (Pile of source for Scheme lexers, parsers, comilers, etc.)</li>
+<li><a rel="nofollow" class="external free" href="https://www.youtube.com/watch?v=Sk9TatW9ino">https://www.youtube.com/watch?v=Sk9TatW9ino</a> Tutorial: Building the Simplest Possible Linux System - Rob Landley</li>
+<li><a rel="nofollow" class="external text" href="https://sparist.github.io/Om/">Om Language</a> by sparist (Prefix, typeless language with three operators; concatenative like Forth)</li>
+<li><a rel="nofollow" class="external autonumber" href="http://tratt.net/laurie/blog/entries/the_bootstrapped_compiler_and_the_damage_done.html">[3]</a> by Laurence Tratt</li>
+<li><a rel="nofollow" class="external text" href="http://www.doc.gold.ac.uk/~mas01cr/papers/s32008/sbcl.pdf">SBCL: a Sanely-Bootstrappable Common Lisp</a> by Christophe Rhodes</li>
+<li>prescheme to c compiler - <a rel="nofollow" class="external free" href="https://github.com/nineties-retro/sps">https://github.com/nineties-retro/sps</a></li>
+<li><a rel="nofollow" class="external text" href="http://canonical.org/~kragen/sw/urscheme/">Ur-Scheme</a> by Kragen Sitaker</li>
+<li><a rel="nofollow" class="external text" href="https://cr.yp.to/qhasm.html">qhasm</a> by Daniel Bernstein (portable form of Assembly language that standardizes machine instruction syntax across CPUs)</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.debian.org/HelmutGrohne/rebootstrap">debian rebootstrap</a> a project with the idea that bootstrapping debian should be a repeatable process, not a hacky one off thing</li>
+<li><a rel="nofollow" class="external free" href="http://t3x.org/t3x/">http://t3x.org/t3x/</a> - minimal procedural language with self hosted tiny compiler</li>
+<li><a rel="nofollow" class="external autonumber" href="https://github.com/skarnet/lh-bootstrap">[4]</a> - bootstrapping a linux system from source</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20171227153720/https://www.owlfolio.org/research/bootstrapping-trust-in-compilers/">bootstrapping trust in compilers</a> blog post by Owl's portfolio</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20170503045724/https://www.reddit.com/r/programming/comments/9x15g/programming_thought_experiment_stuck_in_a_room/c0ewj2c/">programming thought experiment</a> kragen comment on reddit</li>
+<li><a rel="nofollow" class="external text" href="https://code.google.com/archive/p/scheme-from-scratch/">scheme from scratch</a></li>
+<li><a rel="nofollow" class="external free" href="http://interim-os.com/">http://interim-os.com/</a></li>
+<li><a rel="nofollow" class="external free" href="https://github.com/m4tx/uefi-jitfuck">https://github.com/m4tx/uefi-jitfuck</a> UEFI JIT brainfuck</li>
+<li><a rel="nofollow" class="external free" href="https://miyuki.github.io/2017/10/04/gcc-archaeology-1.html">https://miyuki.github.io/2017/10/04/gcc-archaeology-1.html</a> gcc archaeology</li>
+<li><a rel="nofollow" class="external free" href="https://github.com/murisi/L2">https://github.com/murisi/L2</a></li>
+<li><a rel="nofollow" class="external free" href="https://tinygo.org/faq/why-a-new-compiler/">https://tinygo.org/faq/why-a-new-compiler/</a></li>
+<li><a rel="nofollow" class="external free" href="https://github.com/siraben/meta-II">https://github.com/siraben/meta-II</a></li></ul>
+<h2><span class="mw-headline" id="Groups">Groups</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=5" title="Edit section: Groups">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="Karger-Thompson_Attack">Karger-Thompson Attack</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=6" title="Edit section: Karger-Thompson Attack">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Anything related to the karger thompson attack: proof of concept demos, mitigations, theory.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="http://hack.org/mc/texts/classic-multics.pdf">multics</a> the original paper explaining the attack (before thompson!)</li>
+<li><a rel="nofollow" class="external text" href="https://www.dwheeler.com/essays/scm-security.html">SCM Security</a> by Wheeler (Secure distribution &amp; compilation of source fundamentals; Karger advised mastering it)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/rntz/rotten">rotten</a> by rntz (thompson attack demo)</li>
+<li><a rel="nofollow" class="external text" href="https://manishearth.github.io/blog/2016/12/02/reflections-on-rusting-trust/">rust infection</a> by manishearth (thompson attack demo in the rust compiler)</li>
+<li><a rel="nofollow" class="external text" href="https://www.dwheeler.com/trusting-trust/tcc.html">tcc ACSAC</a> by daved wheeler</li>
+<li><a rel="nofollow" class="external text" href="http://compcert.inria.fr/">CompCert</a> by Leroy et al (Mathematically-verified, C compiler whose specs and proofs checked with tiny, verified checker)</li>
+<li><a rel="nofollow" class="external text" href="https://cakeml.org/">CakeML</a> by Myreen et al (Mathematically-verified, SML compiler whose specs and proofs checked with different, tiny, verified checker)</li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/PreScheme">VLISP</a> by Oliva and Wand (Article has links to VLISP which mathematically verified PreScheme and Scheme48)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/kframework/c-semantics">KCC</a> by Rosu et al (Executable, formal semantics for C in rewrite logic; could do that w/ simpler engine)</li>
+<li><a rel="nofollow" class="external text" href="https://www.cs.cornell.edu/talc/">TALC</a> by Cornell (Typed, assembly language to verify safety w/out compiler; checker can be simple; C subset + verified compiler to TALC)</li>
+<li><a rel="nofollow" class="external text" href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/12/coqasm.pdf">CoqASM</a> by Microsoft Research (Bootstrap in verifiably-safe assembly in prover checked by tiny, verified checker)</li></ul>
+<h3><span class="mw-headline" id="Ubiquitous_Implementations">Ubiquitous Implementations</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=7" title="Edit section: Ubiquitous Implementations">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>These are tools written in ubiquitous languages, therefore they can be used in a wide variety of contexts.
+</p>
+<ul><li><a rel="nofollow" class="external text" href="https://lists.gnu.org/archive/html/bug-bash/2001-02/msg00054.html">shasm</a> by Hohensee (x86 assembler written in BASH)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/darius/awklisp">AWKLisp</a> by Bacon (LISP written in Awk; includes Perl version from Perl Avenger)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/alandipert/gherkin/blob/master/README.md">Gherkin</a> by Dipert (LISP written in Bash)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/niieani/bash-oo-framework">BASH Infinity</a> by Brzoska (BASH framework/routines that might help write compilers in it)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/kanaka/mal">mal</a> "make a lisp" implementing a very basic lisp interpreter in hundreds of languages</li>
+<li><a rel="nofollow" class="external autonumber" href="https://github.com/mniip/BOOTSTRA/blob/master/STRAP/STRAP.STR">[5]</a> A new bootstrapping project that is built up to a self host language above assembly from a minimal DOS platform.</li></ul>
+<h3><span class="mw-headline" id="Small_C_Compilers">Small C Compilers</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=8" title="Edit section: Small C Compilers">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a rel="nofollow" class="external text" href="https://github.com/rswier/c4/blob/master/c4.c">c4</a> by rswier (incredibly short c compiler)</li>
+<li><a rel="nofollow" class="external text" href="https://web.archive.org/web/20160402225843/http://homepage.ntlworld.com/edmund.grimley-evans/cc500/">cc500</a> by edmund grimley-evans (tiny c compiler)</li>
+<li><a rel="nofollow" class="external text" href="https://zserge.com/posts/cucu-part1/">CUCU</a> by Zaitsev (Small, C compiler designed for easy understanding)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/alexfru/SmallerC">SmallerC</a> by Frunze (Small, single-pass, C compiler for several ISA's)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/zsaleeba/picoc">picoc</a> interpreter.</li>
+<li><a rel="nofollow" class="external text" href="http://www.drdobbs.com/cpp/building-your-own-c-interpreter/184408184">C Interpreter</a> by Dr Dobbs (Describes building a C interpreter with source)</li>
+<li><a rel="nofollow" class="external autonumber" href="http://www.physics.rutgers.edu/~vitchev/smallc-i386.html">[6]</a> Small C for I386 (IA-32)</li>
+<li><a rel="nofollow" class="external text" href="http://selfie.cs.uni-salzburg.at">Selfie</a>, a tiny self-compiling compiler for a subset of C, a tiny self-executing MIPS emulator, and a tiny self-hosting MIPS hypervisor, all in a single 7kLoC file. <a rel="nofollow" class="external text" href="https://news.ycombinator.com/item?id=13778353">HN discussion.</a> <a rel="nofollow" class="external text" href="http://www.cs.uni-salzburg.at/~ck/content/publications/conferences/Onward17-Selfie.pdf">Paper.</a></li>
+<li><a rel="nofollow" class="external text" href="https://groups.google.com/forum/#!topic/comp.lang.forth/lBYFfVJ1qhc">Tiny C expression compiler Written in Forth</a> based on <a rel="nofollow" class="external text" href="http://www.iro.umontreal.ca/~felipe/IFT2030-Automne2002/Complements/tinyc.c">tinyc.c</a> by marc feeley.</li>
+<li><a rel="nofollow" class="external autonumber" href="https://github.com/rui314/8cc">[7]</a> <a rel="nofollow" class="external autonumber" href="https://github.com/rui314/9cc">[8]</a> C compilers by Rui Ueyama <a rel="nofollow" class="external text" href="https://www.sigbus.info/how-i-wrote-a-self-hosting-c-compiler-in-40-days.html">blog</a></li>
+<li><a rel="nofollow" class="external autonumber" href="https://github.com/Fedjmike/mini-c/blob/master/cc.c">[9]</a> 10 hour self hosting c compiler</li></ul>
+<h3><span id="Grammars.2C_Parsing.2C_and_Term_Rewriting"></span><span class="mw-headline" id="Grammars,_Parsing,_and_Term_Rewriting">Grammars, Parsing, and Term Rewriting</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=9" title="Edit section: Grammars, Parsing, and Term Rewriting">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://www.cs.dartmouth.edu/~mckeeman/cs48/mxcom/gem/html/GrowingCompiler.html">Grammar Executing Machine</a> by McKeeman and He (Incrementally extend languages from simple to complex grammars in interpreter(s))</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/kragen/peg-bootstrap/blob/master/peg.md">peg</a> by kragen (parsing)</li>
+<li><a rel="nofollow" class="external text" href="http://www.vpri.org/pdf/tr2010003_PEG.pdf">PEG-based simple compiler</a> by Ian Piumarta</li>
+<li><a rel="nofollow" class="external text" href="http://www.bayfronttechnologies.com/metaii.html">META II</a> by Bayfront Tech (Original meta-compiler w/ live code and detailed tutorial; OMeta was successor)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/lugon/META-II">META II implementation</a> by Lugon (Looks like a small implementation of META II; also bootstrapped in META II)</li>
+<li><a rel="nofollow" class="external text" href="http://www.moserware.com/2008/06/ometa-who-what-when-where-why.html">OMeta# Intro</a> by Moser (OMeta intro that nicely illustrates the meta approach/advantages)</li></ul>
+<h3><span id="Virtual_Machines.2C_Instruction_Sets"></span><span class="mw-headline" id="Virtual_Machines,_Instruction_Sets">Virtual Machines, Instruction Sets</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=10" title="Edit section: Virtual Machines, Instruction Sets">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/P-code_machine">P-code</a> by Wirth (High-level language &amp; libraries target ultra-simple, portable interpreter)</li>
+<li><a rel="nofollow" class="external text" href="http://www.6502.org/source/interpreters/sweet16.htm">sweet16</a> by Steve Wozniak</li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Tiny_BASIC">Tiny BASIC</a> by Allison (Small BASIC whose original VM took 120, virtual opcodes to implement using 3KB RAM)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/DatCodingGuy/Klip">Klip</a> by Cutting (Compiler &amp; runtime for simple language for students; done in C#; runtime is very readable)</li>
+<li><a rel="nofollow" class="external text" href="https://wiki.xxiivv.com/site/uxntal.html">Uxn</a> by Linvega (Portable VM with 32 mnemonics implemented in 100 lines of C89; self-hosted assembler)</li></ul>
+<h3><span id="CPU.27s_for_Bootstrapping:_The_Simple.2C_The_Verified.2C_and_The_Necessarily_Complex"></span><span class="mw-headline" id="CPU's_for_Bootstrapping:_The_Simple,_The_Verified,_and_The_Necessarily_Complex">CPU's for Bootstrapping: The Simple, The Verified, and The Necessarily Complex</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=11" title="Edit section: CPU&#039;s for Bootstrapping: The Simple, The Verified, and The Necessarily Complex">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a rel="nofollow" class="external text" href="http://nand2tetris.org/">NAND2Tetris</a> by Nisan and Schocken (Guide that teaches hardware step-by-step in fun way with simple CPU emerging)</li>
+<li><a rel="nofollow" class="external text" href="http://www.excamera.com/sphinx/fpga-j1.html">J1</a> by by Bowman (16-bit Forth CPU in 200 lines of Verilog that does 100MIPS on FPGA's)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/howerj/forth-cpu">H2</a> by Howe (Modified, VHDL version of J1 with detailed description and Howe's code MIT-licensed)</li>
+<li><a rel="nofollow" class="external text" href="http://www.projectoberon.com/">RISC-0</a> by Wirth (Simple, RISC CPU &amp; SOC designed for Oberon language with detailed docs and source online)</li>
+<li><a rel="nofollow" class="external text" href="http://jopdesign.com/">JOP</a> by Shoeberl et al (Embedded Java processor that takes up 1830 slices on FPGA)</li>
+<li><a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.57.736&amp;rep=rep1&amp;type=pdf">Scheme Machine</a> by Burger (Scheme interpreter implemented as CPU using formal methods)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/zylin/zpu/tree/master/zpu/docs/presentations">ZPU</a> by Zylin AS (Tiny, 32-bit CPU for deep embedded apps in 440 LUT's)</li>
+<li><a rel="nofollow" class="external text" href="http://j-core.org/">J2</a> by Landley et al (Clone of cost-efficient, SuperH-2 CPU in open-source)</li>
+<li><a rel="nofollow" class="external text" href="http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.217.2251">VAMP</a> by Beyer et al (Formally-verified, DLX-style processor in 18,000 slices on Xilinx)</li>
+<li><a rel="nofollow" class="external text" href="http://soc.microsemi.com/products/ip/search/detail.aspx?id=635">Leon3</a> by Gaisler (Industry-grade, 32-bit SPARC w/ auto-configuration of core and GPL license)</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/freechipsproject/rocket-chip">Rocket</a> by Univ of CA (1.4GHz RISC-V CPU and generator for customization)</li>
+<li><a rel="nofollow" class="external text" href="http://parallel.princeton.edu/piton/#">OpenPITON</a> by Princeton (25-core, shared-memory, SPARC CPU open-sourced and very scalable)</li></ul>
+<h3><span class="mw-headline" id="Minimal_Operating_Systems">Minimal Operating Systems</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=12" title="Edit section: Minimal Operating Systems">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a rel="nofollow" class="external text" href="https://kolibrios.org/en/">KolibriOS</a> - lightweight assembly OS.</li>
+<li><a rel="nofollow" class="external text" href="http://mikeos.sourceforge.net/">MikeOS</a> - same.</li>
+<li><a rel="nofollow" class="external text" href="https://sortix.org/">Sortix</a> - modern reimplementation of POSIX in C. (Note: No perl port and GCC does not build natively on it. (yet.))</li>
+<li><a rel="nofollow" class="external text" href="http://asm.sourceforge.net/">ASMLINUX</a> - linux kernel, but the userspace is implemented entirely in assembly.</li>
+<li><a rel="nofollow" class="external text" href="http://www.linuxfromscratch.org/lfs/view/stable/">LFS</a> - Guide on building Linux and the GNU userspace.</li>
+<li>buildroot</li>
+<li><a rel="nofollow" class="external text" href="http://www.mewburn.net/luke/papers/build.sh.pdf">NetBSD build.sh</a> - Cross-build a complete NetBSD ISO from a foreign OS. There's also a <a rel="nofollow" class="external text" href="https://www.netbsd.org/docs/guide/en/chap-build.html">guide</a> in the official NetBSD docs.</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/skarnet/lh-bootstrap">lh-bootstrap</a> - alternative linux distro, using musl instead of glibc.</li>
+<li><a rel="nofollow" class="external text" href="https://pdos.csail.mit.edu/6.828/2017/xv6.html">xv6</a> - UNIX teaching OS MIT</li>
+<li><a rel="nofollow" class="external text" href="http://os161.eecs.harvard.edu/">OS/161</a> - UNIX teaching OS Harvard</li>
+<li><a rel="nofollow" class="external free" href="https://landley.net/toybox/about.html">https://landley.net/toybox/about.html</a> - Toybox, alternative to Busybox by Robert Landley, see also <a rel="nofollow" class="external text" href="http://landley.net/aboriginal/">Aboriginal Linux</a> and <a rel="nofollow" class="external text" href="https://github.com/landley/mkroot">mkroot</a> by the same author, which are all geared toward a minimal boostrappable system</li>
+<li><a rel="nofollow" class="external free" href="https://github.com/pikhq/bootstrap-linux">https://github.com/pikhq/bootstrap-linux</a> - Another take at a bootstrappable Linux system</li>
+<li><a rel="nofollow" class="external text" href="http://www.projectoberon.com/">Project Oberon</a> - Operating system and programming language Oberon (from the creator of Pascal - Niklaus Wirth)</li>
+<li><a rel="nofollow" class="external text" href="https://tinygo.org/">TinyGo</a> Operating system in programming language Go</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/f-secure-foundry/tamago">TamaGo</a> - Another operating system in programming language Go</li>
+<li><a rel="nofollow" class="external text" href="https://sel4.systems/">seL4 Microkernel</a> - OS kernel in less than 10.000 lines of source code and less than 150 KB binary</li>
+<li><a rel="nofollow" class="external text" href="https://ultibo.org/">Ultibo</a> - Unikernel for Raspberry Pi written in FreePascal</li></ul>
+<h3><span id="Biology.2FOther.3F"></span><span class="mw-headline" id="Biology/Other?">Biology/Other?</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=13" title="Edit section: Biology/Other?">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<ul><li><a rel="nofollow" class="external free" href="https://ds9a.nl/amazing-dna/#bootstrapping">https://ds9a.nl/amazing-dna/#bootstrapping</a> - DNA seen through the eyes of a coder</li></ul>
+<h2><span class="mw-headline" id="Helpful_Links">Helpful Links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;action=edit&amp;section=14" title="Edit section: Helpful Links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external text" href="ftp://publications.ai.mit.edu/ai-publications/pdf/AIM-039.pdf">AIM-039.pdf</a> The first self hosted lisp</li>
+<li><a rel="nofollow" class="external text" href="http://lambda-the-ultimate.org/node/3678">lambda-the-ultimate</a> thread asking for info on bootstrapping</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/aalhour/awesome-compilers">awesome-compilers</a> github list with a lot of information (copy the relevant parts to this wiki)</li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Tombstone_diagram">Tombstone diagram</a></li>
+<li><a rel="nofollow" class="external text" href="http://bootstrappable.org/">bootstrappable</a> a community hub for bootstrapping, with mailing list.</li>
+<li><a rel="nofollow" class="external text" href="https://www.freelists.org/archive/bootstrappable/">bootstrappable mailing list</a></li>
+<li><a rel="nofollow" class="external text" href="https://github.com/cameronswinoga/yabfc/wiki/Generating-executable-files-from-scratch">yabfc</a> - Generating-executable-files-from-scratch</li>
+<li><a rel="nofollow" class="external text" href="http://i.imgur.com/xMyblyM.png">ELF visualization</a></li>
+<li><a rel="nofollow" class="external text" href="https://en.wikipedia.org/wiki/Cfront">Cfront</a> - converts C++ to C; developed by Bjarne Stroustrup.</li>
+<li><a rel="nofollow" class="external free" href="https://sourceware.org/glibc/wiki/FAQ#How_do_I_install_all_of_the_GNU_C_Library_project_libraries_that_I_just_built.3F">https://sourceware.org/glibc/wiki/FAQ#How_do_I_install_all_of_the_GNU_C_Library_project_libraries_that_I_just_built.3F</a></li>
+<li><a rel="nofollow" class="external text" href="http://ssw.jku.at/General/Staff/TW/FormCompilerVerificationACL2.pdf">Formal Compiler Verification with ACL2</a> - proving a compiler correct with ACL2 and discussion about correctness and self compiling.</li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw112
+Cached time: 20220704014528
+Cache expiry: 864000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.097 seconds
+Real time usage: 0.152 seconds
+Preprocessor visited node count: 61/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/99
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key bootstrappingwiki:pcache:idhash:1-0!canonical and timestamp 20220704014528 and revision id 428. Serialized with JSON.
+ -->
+</div><noscript><img src="checkLoggedIn%3Fwikiid=bootstrappingwiki&amp;proto=https&amp;type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;oldid=428">https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;oldid=428</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+
+	
+
+</main>
+<div id='mw-data-after-content'>
+	<div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Cookies help us deliver our services. By using our services, you agree to our use of cookies.</span></div><form method="POST"><div class='oo-ui-layout oo-ui-horizontalLayout'><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-progressive oo-ui-buttonWidget'><a role='button' tabindex='0' href='https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy#4._Cookies' rel='nofollow' class='oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-progressive'></span><span class='oo-ui-labelElement-label'>More information</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-progressive'></span></a></span><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-primary oo-ui-flaggedElement-progressive oo-ui-buttonInputWidget'><button type='submit' tabindex='0' name='disablecookiewarning' value='OK' class='oo-ui-inputWidget-input oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-invert'></span><span class='oo-ui-labelElement-label'>OK</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-invert'></span></button></span></div></form></div>
+</div>
+
+	</div> 
+</div> 
+
+<div class="mw-workspace-container mw-footer-container">
+	<div class="mw-content-container">
+		
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 13 June 2022, at 23:30.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy" class="extiw" title="m:Special:MyLanguage/Privacy Policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="./bootstrapping:About" title="bootstrapping:About">About bootstrapping</a></li>
+	<li id="footer-places-disclaimer"><a href="./bootstrapping:General_disclaimer" title="bootstrapping:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-termsofservice"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Terms_of_Use" class="extiw" title="m:Special:MyLanguage/Terms of Use">Terms of Use</a></li>
+	<li id="footer-places-donate"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Donate" class="extiw" title="m:Special:MyLanguage/Donate">Donate to Miraheze</a></li>
+	<li id="footer-places-mobileview"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Main_Page&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze"><img src="Powered_by_Miraheze.svg" alt="Hosted by Miraheze" width="88" height="31" loading="lazy"/></a><a href="https://www.mediawiki.org/"><img src="poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="poweredby_mediawiki_132x47.png 1.5x, poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-copyrightico"><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="cc-by-sa.png" alt="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+	</div>
+</div>
+	</div> 
+</div> 
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.097","walltime":"0.152","ppvisitednodes":{"value":61,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":99},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"origin":"mw112","timestamp":"20220704014528","ttl":864000,"transientcontent":false}}});});</script>
+				<script>
+				var _paq = window._paq = window._paq || [];
+				if ( 1 ) {
+					_paq.push(['disableCookies']);
+				}
+				if ( 0 ) {
+					_paq.push(['setRequestMethod', 'GET']);
+				}
+				_paq.push(['trackPageView']);
+				_paq.push(['enableLinkTracking']);
+				(function() {
+					var u = "https://matomo.miraheze.org/";
+					_paq.push(['setTrackerUrl', u+'matomo.php']);
+					_paq.push(['setDocumentTitle', "bootstrappingwiki" + " - " + "Main Page"]);
+					_paq.push(['setSiteId', 498]);
+					_paq.push(['setCustomVariable', 1, 'userType', "Anonymous", "visit"]);
+					if ( 8590 ) {
+					    _paq.push(['addTracker', u + 'matomo.php', 8590]);
+					}
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+				})();
+				</script>
+				<noscript><p><img src="matomo.php%3Fidsite=498&amp;rec=1&amp;action_name=Main_Page" style="border:0;" alt="" /></p></noscript>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":1104,"wgHostname":"mw121"});});</script>
+</body>
+</html>

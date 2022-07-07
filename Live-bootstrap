@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>live-bootstrap</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-Live-bootstrap rootpage-Live-bootstrap skin-vector-2022 action-view"><div class="mw-page-container">
+	<a class="mw-jump-link" href="#content">Jump to content</a>
+	<div class="mw-page-container-inner ">
+
+<input
+	type="checkbox"
+	id="mw-sidebar-checkbox"
+	class="mw-checkbox-hack-checkbox"
+	checked>
+
+<header class="mw-header">
+	<label
+		id="mw-sidebar-button"
+		class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element"
+		for="mw-sidebar-checkbox"
+		role="button"
+		aria-controls="mw-panel"
+		data-event-name="ui.sidebar"
+		tabindex="0"
+		title="Main menu">
+		Toggle sidebar
+	</label>
+	
+<a href="/wiki/Main_Page" class="mw-logo">
+	<span class="mw-logo-container">
+		<strong class="mw-logo-wordmark">bootstrapping</strong>
+	</span>
+</a>
+
+	
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+		<form action="/w/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-moved">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search bootstrapping" aria-label="Search bootstrapping" autocapitalize="sentences" title="Search bootstrapping [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+	<a href="/wiki/Special:Search"
+	
+		
+		
+		
+		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-search search-toggle">
+		<span>Search</span>
+	</a>
+	
+</div>
+
+	<div class="vector-user-links">
+	
+<nav id="p-personal-more" class="mw-portlet mw-portlet-personal-more vector-menu vector-user-menu-more" aria-labelledby="p-personal-more-label" role="navigation" 
+	 >
+	<label id="p-personal-more-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">User links</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+	<li id="p-createaccount" class="user-links-collapsible-item">
+		<a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Live-bootstrap" class="mw-ui-button mw-ui-quiet" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a>
+	</li>
+</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu vector-user-menu-logged-out vector-menu vector-menu-dropdown" aria-labelledby="p-personal-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-personal-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-personal"
+		class="vector-menu-checkbox" aria-labelledby="p-personal-label" />
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-ellipsis" aria-hidden="true">
+		<span class="vector-menu-heading-label">Personal tools</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		<div class="vector-user-menu-create-account"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Live-bootstrap" class="user-links-collapsible-item vector-menu-content-item mw-ui-icon mw-ui-icon-before" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></div>
+<div class="vector-user-menu-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Live-bootstrap" icon="logIn" class="vector-menu-content-item vector-menu-content-item-login mw-ui-icon mw-ui-icon-before mw-ui-icon-wikimedia-logIn" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></div>
+<div class="vector-user-menu-anon-editor">
+	<p>
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</p>
+</div>
+
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage" class="mw-list-item"><span>Not logged in</span></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li><li id="pt-darkmode-toggle" class="darkmode-link mw-list-item"><a href="#"><span>Dark mode</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=Live-bootstrap" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=Live-bootstrap" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</header>
+
+<div class="mw-workspace-container">
+	<div id="mw-navigation">
+		<div id="mw-head">
+			<div class="mw-article-toolbar-container">
+				<div id="left-navigation">
+					
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/Live-bootstrap" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="/w/index.php?title=Talk:Live-bootstrap&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+					
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+				</div>
+				<div id="right-navigation">
+					
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="/wiki/Live-bootstrap"><span>Read</span></a></li><li id="ca-edit" class="mw-list-item"><a href="/w/index.php?title=Live-bootstrap&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="mw-list-item"><a href="/w/index.php?title=Live-bootstrap&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+					
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+				</div>
+			</div>
+		</div>
+		
+
+<div id="mw-panel" class="mw-sidebar">
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" icon="home" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help about MediaWiki</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Live-bootstrap" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Live-bootstrap" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Live-bootstrap&amp;oldid=427" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Live-bootstrap&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fbootstrapping.miraheze.org%2Fwiki%2FLive-bootstrap"><span>Get shortened URL</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Live-bootstrap&amp;id=427&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+	</div>
+	<div class="mw-table-of-contents-container mw-sticky-header-element">
+		
+	</div>
+	<div class="mw-content-container">
+<main id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><!-- CentralNotice --></div>
+
+
+	<header class="mw-body-header">
+			
+		<h1 id="firstHeading" class="firstHeading mw-first-heading">Live-bootstrap</h1>
+		<div class="mw-indicators">
+		</div>
+			<div id="siteSub" class="noprint">From bootstrapping</div>
+	</header>
+
+	<div id="bodyContent" class="vector-body">
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#stage0-posix"><span class="tocnumber">1</span> <span class="toctext">stage0-posix</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="#mescc-tools-extra"><span class="tocnumber">2</span> <span class="toctext">mescc-tools-extra</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="#/after"><span class="tocnumber">3</span> <span class="toctext">/after</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="#mes"><span class="tocnumber">4</span> <span class="toctext">mes</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="#tinycc_0.9.26"><span class="tocnumber">5</span> <span class="toctext">tinycc 0.9.26</span></a></li>
+<li class="toclevel-1 tocsection-6"><a href="#gzip_1.2.4"><span class="tocnumber">6</span> <span class="toctext">gzip 1.2.4</span></a></li>
+<li class="toclevel-1 tocsection-7"><a href="#tar_1.12"><span class="tocnumber">7</span> <span class="toctext">tar 1.12</span></a></li>
+<li class="toclevel-1 tocsection-8"><a href="#sed_4.0.9"><span class="tocnumber">8</span> <span class="toctext">sed 4.0.9</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="#patch_2.5.9"><span class="tocnumber">9</span> <span class="toctext">patch 2.5.9</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="#make_3.80"><span class="tocnumber">10</span> <span class="toctext">make 3.80</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="#bzip2_1.0.8"><span class="tocnumber">11</span> <span class="toctext">bzip2 1.0.8</span></a></li>
+<li class="toclevel-1 tocsection-12"><a href="#tinycc_0.9.27"><span class="tocnumber">12</span> <span class="toctext">tinycc 0.9.27</span></a></li>
+<li class="toclevel-1 tocsection-13"><a href="#coreutils_5.0"><span class="tocnumber">13</span> <span class="toctext">coreutils 5.0</span></a></li>
+<li class="toclevel-1 tocsection-14"><a href="#heirloom_devtools"><span class="tocnumber">14</span> <span class="toctext">heirloom devtools</span></a></li>
+<li class="toclevel-1 tocsection-15"><a href="#bash_2.05b"><span class="tocnumber">15</span> <span class="toctext">bash 2.05b</span></a></li>
+<li class="toclevel-1 tocsection-16"><a href="#flex_2.5.11"><span class="tocnumber">16</span> <span class="toctext">flex 2.5.11</span></a></li>
+<li class="toclevel-1 tocsection-17"><a href="#mes_0.23_(libc)"><span class="tocnumber">17</span> <span class="toctext">mes 0.23 (libc)</span></a></li>
+<li class="toclevel-1 tocsection-18"><a href="#tcc_0.9.27"><span class="tocnumber">18</span> <span class="toctext">tcc 0.9.27</span></a></li>
+<li class="toclevel-1 tocsection-19"><a href="#musl_1.1.24"><span class="tocnumber">19</span> <span class="toctext">musl 1.1.24</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#tcc_0.9.27_(musl)"><span class="tocnumber">20</span> <span class="toctext">tcc 0.9.27 (musl)</span></a></li>
+<li class="toclevel-1 tocsection-21"><a href="#musl_1.1.24_(tcc-musl)"><span class="tocnumber">21</span> <span class="toctext">musl 1.1.24 (tcc-musl)</span></a></li>
+<li class="toclevel-1 tocsection-22"><a href="#tcc_0.9.27_(musl_v2)"><span class="tocnumber">22</span> <span class="toctext">tcc 0.9.27 (musl v2)</span></a></li>
+<li class="toclevel-1 tocsection-23"><a href="#sed_4.0.9_2"><span class="tocnumber">23</span> <span class="toctext">sed 4.0.9</span></a></li>
+<li class="toclevel-1 tocsection-24"><a href="#bzip2_1.0.8_2"><span class="tocnumber">24</span> <span class="toctext">bzip2 1.0.8</span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#m4_1.4.7"><span class="tocnumber">25</span> <span class="toctext">m4 1.4.7</span></a></li>
+<li class="toclevel-1 tocsection-26"><a href="#flex_2.6.14"><span class="tocnumber">26</span> <span class="toctext">flex 2.6.14</span></a></li>
+<li class="toclevel-1 tocsection-27"><a href="#bison_3.4.1"><span class="tocnumber">27</span> <span class="toctext">bison 3.4.1</span></a></li>
+<li class="toclevel-1 tocsection-28"><a href="#grep_2.4"><span class="tocnumber">28</span> <span class="toctext">grep 2.4</span></a></li>
+<li class="toclevel-1 tocsection-29"><a href="#diffutils_2.7"><span class="tocnumber">29</span> <span class="toctext">diffutils 2.7</span></a></li>
+<li class="toclevel-1 tocsection-30"><a href="#coreutils_5.0_2"><span class="tocnumber">30</span> <span class="toctext">coreutils 5.0</span></a></li>
+<li class="toclevel-1 tocsection-31"><a href="#coreutils_6.10"><span class="tocnumber">31</span> <span class="toctext">coreutils 6.10</span></a></li>
+<li class="toclevel-1 tocsection-32"><a href="#gawk_3.0.4"><span class="tocnumber">32</span> <span class="toctext">gawk 3.0.4</span></a></li>
+<li class="toclevel-1 tocsection-33"><a href="#perl_5.000"><span class="tocnumber">33</span> <span class="toctext">perl 5.000</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="#perl_5.003"><span class="tocnumber">34</span> <span class="toctext">perl 5.003</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="#perl_5.004_05"><span class="tocnumber">35</span> <span class="toctext">perl 5.004_05</span></a></li>
+<li class="toclevel-1 tocsection-36"><a href="#perl_5.005_03"><span class="tocnumber">36</span> <span class="toctext">perl 5.005_03</span></a></li>
+<li class="toclevel-1 tocsection-37"><a href="#perl_5.6.2"><span class="tocnumber">37</span> <span class="toctext">perl 5.6.2</span></a></li>
+<li class="toclevel-1 tocsection-38"><a href="#autoconf_2.52"><span class="tocnumber">38</span> <span class="toctext">autoconf 2.52</span></a></li>
+<li class="toclevel-1 tocsection-39"><a href="#automake_1.6.3"><span class="tocnumber">39</span> <span class="toctext">automake 1.6.3</span></a></li>
+<li class="toclevel-1 tocsection-40"><a href="#automake_1.4-p6"><span class="tocnumber">40</span> <span class="toctext">automake 1.4-p6</span></a></li>
+<li class="toclevel-1 tocsection-41"><a href="#autoconf_2.52_2"><span class="tocnumber">41</span> <span class="toctext">autoconf 2.52</span></a></li>
+<li class="toclevel-1 tocsection-42"><a href="#autoconf_2.13"><span class="tocnumber">42</span> <span class="toctext">autoconf 2.13</span></a></li>
+<li class="toclevel-1 tocsection-43"><a href="#autoconf_2.12"><span class="tocnumber">43</span> <span class="toctext">autoconf 2.12</span></a></li>
+<li class="toclevel-1 tocsection-44"><a href="#libtool_1.4"><span class="tocnumber">44</span> <span class="toctext">libtool 1.4</span></a></li>
+<li class="toclevel-1 tocsection-45"><a href="#binutils_2.14"><span class="tocnumber">45</span> <span class="toctext">binutils 2.14</span></a></li>
+<li class="toclevel-1 tocsection-46"><a href="#musl_1.1.24_(v3)"><span class="tocnumber">46</span> <span class="toctext">musl 1.1.24 (v3)</span></a></li>
+<li class="toclevel-1 tocsection-47"><a href="#tcc_0.9.27_(musl_v3)"><span class="tocnumber">47</span> <span class="toctext">tcc 0.9.27 (musl v3)</span></a></li>
+<li class="toclevel-1 tocsection-48"><a href="#autoconf_2.53"><span class="tocnumber">48</span> <span class="toctext">autoconf 2.53</span></a></li>
+<li class="toclevel-1 tocsection-49"><a href="#automake_1.7"><span class="tocnumber">49</span> <span class="toctext">automake 1.7</span></a></li>
+<li class="toclevel-1 tocsection-50"><a href="#autoconf_2.54"><span class="tocnumber">50</span> <span class="toctext">autoconf 2.54</span></a></li>
+<li class="toclevel-1 tocsection-51"><a href="#automake_1.7_2"><span class="tocnumber">51</span> <span class="toctext">automake 1.7</span></a></li>
+<li class="toclevel-1 tocsection-52"><a href="#autoconf_2.55"><span class="tocnumber">52</span> <span class="toctext">autoconf 2.55</span></a></li>
+<li class="toclevel-1 tocsection-53"><a href="#automake_1.7.8"><span class="tocnumber">53</span> <span class="toctext">automake 1.7.8</span></a></li>
+<li class="toclevel-1 tocsection-54"><a href="#autoconf_2.57"><span class="tocnumber">54</span> <span class="toctext">autoconf 2.57</span></a></li>
+<li class="toclevel-1 tocsection-55"><a href="#autoconf_2.59"><span class="tocnumber">55</span> <span class="toctext">autoconf 2.59</span></a></li>
+<li class="toclevel-1 tocsection-56"><a href="#automake_1.8.5"><span class="tocnumber">56</span> <span class="toctext">automake 1.8.5</span></a></li>
+<li class="toclevel-1 tocsection-57"><a href="#help2man_1.36.4"><span class="tocnumber">57</span> <span class="toctext">help2man 1.36.4</span></a></li>
+<li class="toclevel-1 tocsection-58"><a href="#autoconf_2.61"><span class="tocnumber">58</span> <span class="toctext">autoconf 2.61</span></a></li>
+<li class="toclevel-1 tocsection-59"><a href="#automake_1.9.6"><span class="tocnumber">59</span> <span class="toctext">automake 1.9.6</span></a></li>
+<li class="toclevel-1 tocsection-60"><a href="#findutils_4.2.33"><span class="tocnumber">60</span> <span class="toctext">findutils 4.2.33</span></a></li>
+<li class="toclevel-1 tocsection-61"><a href="#libtool_2.2.4"><span class="tocnumber">61</span> <span class="toctext">libtool 2.2.4</span></a></li>
+<li class="toclevel-1 tocsection-62"><a href="#automake_1.10.3"><span class="tocnumber">62</span> <span class="toctext">automake 1.10.3</span></a></li>
+<li class="toclevel-1 tocsection-63"><a href="#autoconf_2.65"><span class="tocnumber">63</span> <span class="toctext">autoconf 2.65</span></a></li>
+<li class="toclevel-1 tocsection-64"><a href="#gcc_4.0.4"><span class="tocnumber">64</span> <span class="toctext">gcc 4.0.4</span></a></li>
+<li class="toclevel-1 tocsection-65"><a href="#musl_1.2.2"><span class="tocnumber">65</span> <span class="toctext">musl 1.2.2</span></a></li>
+<li class="toclevel-1 tocsection-66"><a href="#gcc_4.0.4_2"><span class="tocnumber">66</span> <span class="toctext">gcc 4.0.4</span></a></li>
+<li class="toclevel-1 tocsection-67"><a href="#util-linux_2.19.1"><span class="tocnumber">67</span> <span class="toctext">util-linux 2.19.1</span></a></li>
+<li class="toclevel-1 tocsection-68"><a href="#kbd-1.15"><span class="tocnumber">68</span> <span class="toctext">kbd-1.15</span></a></li>
+<li class="toclevel-1 tocsection-69"><a href="#make_3.82"><span class="tocnumber">69</span> <span class="toctext">make 3.82</span></a></li>
+<li class="toclevel-1 tocsection-70"><a href="#kexec-tools_2.0.22"><span class="tocnumber">70</span> <span class="toctext">kexec-tools 2.0.22</span></a></li>
+<li class="toclevel-1 tocsection-71"><a href="#create_sysb"><span class="tocnumber">71</span> <span class="toctext">create_sysb</span></a></li>
+<li class="toclevel-1 tocsection-72"><a href="#Linux_kernel_4.9.10"><span class="tocnumber">72</span> <span class="toctext">Linux kernel 4.9.10</span></a></li>
+<li class="toclevel-1 tocsection-73"><a href="#go_sysb"><span class="tocnumber">73</span> <span class="toctext">go_sysb</span></a></li>
+<li class="toclevel-1 tocsection-74"><a href="#sysb"><span class="tocnumber">74</span> <span class="toctext">sysb</span></a></li>
+<li class="toclevel-1 tocsection-75"><a href="#bash_5.1"><span class="tocnumber">75</span> <span class="toctext">bash 5.1</span></a></li>
+<li class="toclevel-1 tocsection-76"><a href="#xz_5.0.5"><span class="tocnumber">76</span> <span class="toctext">xz 5.0.5</span></a></li>
+<li class="toclevel-1 tocsection-77"><a href="#automake_1.11.2"><span class="tocnumber">77</span> <span class="toctext">automake 1.11.2</span></a></li>
+<li class="toclevel-1 tocsection-78"><a href="#autoconf_2.69"><span class="tocnumber">78</span> <span class="toctext">autoconf 2.69</span></a></li>
+<li class="toclevel-1 tocsection-79"><a href="#automake_1.15.1"><span class="tocnumber">79</span> <span class="toctext">automake 1.15.1</span></a></li>
+<li class="toclevel-1 tocsection-80"><a href="#tar_1.34"><span class="tocnumber">80</span> <span class="toctext">tar 1.34</span></a></li>
+<li class="toclevel-1 tocsection-81"><a href="#coreutils_8.32"><span class="tocnumber">81</span> <span class="toctext">coreutils 8.32</span></a></li>
+<li class="toclevel-1 tocsection-82"><a href="#pkg-config_0.29.2"><span class="tocnumber">82</span> <span class="toctext">pkg-config 0.29.2</span></a></li>
+<li class="toclevel-1 tocsection-83"><a href="#make_4.2.1"><span class="tocnumber">83</span> <span class="toctext">make 4.2.1</span></a></li>
+<li class="toclevel-1 tocsection-84"><a href="#gmp_6.2.1"><span class="tocnumber">84</span> <span class="toctext">gmp 6.2.1</span></a></li>
+<li class="toclevel-1 tocsection-85"><a href="#autoconf-archive_2021.02.19"><span class="tocnumber">85</span> <span class="toctext">autoconf-archive 2021.02.19</span></a></li>
+<li class="toclevel-1 tocsection-86"><a href="#mpfr_4.1.0"><span class="tocnumber">86</span> <span class="toctext">mpfr 4.1.0</span></a></li>
+<li class="toclevel-1 tocsection-87"><a href="#mpc_3.2.1"><span class="tocnumber">87</span> <span class="toctext">mpc 3.2.1</span></a></li>
+<li class="toclevel-1 tocsection-88"><a href="#flex_2.5.33"><span class="tocnumber">88</span> <span class="toctext">flex 2.5.33</span></a></li>
+<li class="toclevel-1 tocsection-89"><a href="#bison_2.3"><span class="tocnumber">89</span> <span class="toctext">bison 2.3</span></a></li>
+<li class="toclevel-1 tocsection-90"><a href="#bison_3.4.2"><span class="tocnumber">90</span> <span class="toctext">bison 3.4.2</span></a></li>
+<li class="toclevel-1 tocsection-91"><a href="#perl_5.10.1"><span class="tocnumber">91</span> <span class="toctext">perl 5.10.1</span></a></li>
+<li class="toclevel-1 tocsection-92"><a href="#dist_3.5-236"><span class="tocnumber">92</span> <span class="toctext">dist 3.5-236</span></a></li>
+<li class="toclevel-1 tocsection-93"><a href="#perl_5.32.1"><span class="tocnumber">93</span> <span class="toctext">perl 5.32.1</span></a></li>
+<li class="toclevel-1 tocsection-94"><a href="#automake_1.16.3"><span class="tocnumber">94</span> <span class="toctext">automake 1.16.3</span></a></li>
+<li class="toclevel-1 tocsection-95"><a href="#autoconf_2.71"><span class="tocnumber">95</span> <span class="toctext">autoconf 2.71</span></a></li>
+<li class="toclevel-1 tocsection-96"><a href="#patch_2.7.6"><span class="tocnumber">96</span> <span class="toctext">patch 2.7.6</span></a></li>
+<li class="toclevel-1 tocsection-97"><a href="#gettext_0.21"><span class="tocnumber">97</span> <span class="toctext">gettext 0.21</span></a></li>
+<li class="toclevel-1 tocsection-98"><a href="#texinfo_6.7"><span class="tocnumber">98</span> <span class="toctext">texinfo 6.7</span></a></li>
+<li class="toclevel-1 tocsection-99"><a href="#zlib_1.2.11"><span class="tocnumber">99</span> <span class="toctext">zlib 1.2.11</span></a></li>
+<li class="toclevel-1 tocsection-100"><a href="#gcc_4.7.4"><span class="tocnumber">100</span> <span class="toctext">gcc 4.7.4</span></a></li>
+<li class="toclevel-1 tocsection-101"><a href="#gperf_3.1"><span class="tocnumber">101</span> <span class="toctext">gperf 3.1</span></a></li>
+<li class="toclevel-1 tocsection-102"><a href="#libunistring_0.9.10"><span class="tocnumber">102</span> <span class="toctext">libunistring 0.9.10</span></a></li>
+<li class="toclevel-1 tocsection-103"><a href="#libffi_3.3"><span class="tocnumber">103</span> <span class="toctext">libffi 3.3</span></a></li>
+<li class="toclevel-1 tocsection-104"><a href="#libatomic_ops_7.6.10"><span class="tocnumber">104</span> <span class="toctext">libatomic_ops 7.6.10</span></a></li>
+<li class="toclevel-1 tocsection-105"><a href="#boehm-gc_8.0.4"><span class="tocnumber">105</span> <span class="toctext">boehm-gc 8.0.4</span></a></li>
+<li class="toclevel-1 tocsection-106"><a href="#guile_3.0.7"><span class="tocnumber">106</span> <span class="toctext">guile 3.0.7</span></a></li>
+</ul>
+</div>
+
+<h3><span class="mw-headline" id="stage0-posix">stage0-posix</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=1" title="Edit section: stage0-posix">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This is where all the magic begins. We start with our hex0 and kaem
+seeds and bootstrap our way up to M2-Planet, a subset of C, and mes-m2,
+an independent port of GNU Mes to M2-Planet. The following steps are
+taken here:
+</p>
+<ul><li>hex0 (seed)</li>
+<li>hex0 compiles hex1</li>
+<li>hex0 compiles catm</li>
+<li>hex1 compiles hex2 (v1)</li>
+<li>hex2 (v1) compiles M0</li>
+<li>M0 compiles cc_x86</li>
+<li>cc_x86 compiles M2-Planet (v1)</li>
+<li>M2-Planet (v1) compiles blood-elf (v1)</li>
+<li>M2-Planet (v1) compiles hex2 (final)</li>
+<li>M2-Planet (v1) compiles M1</li>
+<li>M2-Planet (v1) compiles kaem</li>
+<li>M2-Planet (v1) compiles blood-elf (final)</li>
+<li>M2-Planet (v1) compiles get_machine</li>
+<li>M2-Planet (v1) compiles M2-Planet (final)</li>
+<li>M2-Planet (final) compiles mescc-tools-extra (see next step)</li></ul>
+<p>This seems very intimidating, but becomes clearer when reading
+<a rel="nofollow" class="external text" href="https://github.com/oriansj/stage0-posix/blob/master/x86/">the source</a> 
+(start at <code>mescc-tools-seed-kaem.kaem</code>).
+</p><p>From here, we can move on from the lowest level stuff.
+</p>
+<h3><span class="mw-headline" id="mescc-tools-extra">mescc-tools-extra</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=2" title="Edit section: mescc-tools-extra">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>mescc-tools-extra contains some additional programs, namely filesystem
+utilities <code>cp</code> and <code>chown</code>. This allows us to have one unified
+directory for our binaries. Futhermore, we also build <code>sha256sum</code>, a
+checksumming tool, that we use to ensure reproducibility and authenticity
+of generated binaries. We also build initial <code>untar</code> and <code>ungz</code>
+utilities to deal with compressed archives.
+</p>
+<h3><span id=".2Fafter"></span><span class="mw-headline" id="/after"><code>/after</code></span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=3" title="Edit section: /after">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We now move into the <code>/after</code> directory. As stage0-posix has no
+concept of <code>chdir()</code> (not added until very late in stage0-posix),
+we have to copy a lot of files into the root of the initramfs, making it
+very messy. We get into the move ordered directory <code>/after</code> here,
+copying over all of the required binaries from <code>/</code>.
+</p>
+<h3><span class="mw-headline" id="mes">mes</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=4" title="Edit section: mes">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>mes</code> is a scheme interpreter. It runs the sister project <code>mescc</code>,
+which is a C compiler written in scheme, which links against the Mes C
+Library. All 3 are included in this same repository. Note that we are
+using the experimental <code>wip-m2</code> branch to jump over the gap between
+<code>M2-Planet</code> and <code>mes</code>. There are two stages to this part:
+</p>
+<ol><li>Compiling an initial mes using <code>M2-Planet</code>. Note that this is *only* the Mes interpreter, not the libc or anything else.</li>
+<li>We then use this to compile the Mes libc. We need the libc to compile all the programs until we get musl.</li></ol>
+<h3><span class="mw-headline" id="tinycc_0.9.26">tinycc 0.9.26</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=5" title="Edit section: tinycc 0.9.26">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>tinycc</code> is a minimal C compiler that aims to be small and fast. It
+complies with all C89 and most of C99 standards.
+</p><p>First, we compile janneke’s fork of tcc 0.9.26 using <code>mescc</code>,
+containing 27 patches to make it operate well in the bootstrap
+environment and make it compilable using <code>mescc</code>. This is a
+non-trivial process and as seen within tcc.kaem has many different parts
+within it: a. tcc 0.9.26 is first compiled using <code>mescc</code>. b. The mes
+libc is recompiled using tcc (<code>mescc</code> has a non-standard <code>.a</code>
+format), including some additions for later programs. c. tcc 0.9.26 is
+recompiled 5(!) times to add new features that are required for other
+features, namely <code>long long</code> and <code>float</code>. Each time, the libc is
+also recompiled.
+</p><p>Note that now we begin to delve into the realm of old GNU software,
+using older versions compilable by tinycc. Prior to this point, all tools
+have been adapted significantly for the bootstrap; now, we will be using
+old tooling instead.
+</p>
+<h3><span class="mw-headline" id="gzip_1.2.4">gzip 1.2.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=6" title="Edit section: gzip 1.2.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>gzip</code> is the most common compression format used for software source
+code. It is luckily distributed as a barebones uncompressed <code>.tar</code>,
+which we extract and then build.
+</p><p>Going forward, we can now use <code>.tar.gz</code> for source code.
+</p>
+<h3><span class="mw-headline" id="tar_1.12">tar 1.12</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=7" title="Edit section: tar 1.12">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We build GNU Tar 1.12, the last version compilable with mes libc.
+</p>
+<h3><span class="mw-headline" id="sed_4.0.9">sed 4.0.9</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=8" title="Edit section: sed 4.0.9">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>You are most likely aware of GNU <code>sed</code>, a line editor.
+</p>
+<h3><span class="mw-headline" id="patch_2.5.9">patch 2.5.9</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=9" title="Edit section: patch 2.5.9">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>patch</code> is a very useful tool at this stage, allowing us to make
+significantly more complex edits, including just changes to lines.
+Luckily, we are able to patch <code>patch</code> using <code>sed</code> only.
+</p>
+<h3><span class="mw-headline" id="make_3.80">make 3.80</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=10" title="Edit section: make 3.80">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU <code>make</code> is now built so we have a more robust building system.
+<code>make</code> allows us to do things like define rules for files rather than
+writing complex kaem scripts.
+</p>
+<h3><span class="mw-headline" id="bzip2_1.0.8">bzip2 1.0.8</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=11" title="Edit section: bzip2 1.0.8">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>bzip2</code> is a compression format that compresses more than <code>gzip</code>. It
+is preferred where we can use it, and makes source code sizes smaller.
+</p>
+<h3><span class="mw-headline" id="tinycc_0.9.27">tinycc 0.9.27</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=12" title="Edit section: tinycc 0.9.27">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Now, we compile upstream tcc 0.9.27, the latest release of tinycc, using
+the final version of tcc 0.9.26.
+</p><p>From this point onwards, until further notice, all programs are compiled
+using tinycc 0.9.27.
+</p><p>We patch tinycc to force static linking.
+</p>
+<h3><span class="mw-headline" id="coreutils_5.0">coreutils 5.0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=13" title="Edit section: coreutils 5.0">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Coreutils is a collection of widely used utilities such as <code>cat</code>,
+<code>chmod</code>, <code>chown</code>, <code>cp</code>, <code>install</code>, <code>ln</code>, <code>ls</code>, <code>mkdir</code>,
+<code>mknod</code>, <code>mv</code>, <code>rm</code>, <code>rmdir</code>, <code>tee</code>, <code>test</code>, <code>true</code>, and
+many others.
+</p><p>A few of the utilities cannot be easily compiled with Mes C library, so
+we skip them.
+</p><p>The <code>cp</code> in this stage replaces the <code>mescc-tools-extra</code> <code>cp</code>.
+</p>
+<h3><span class="mw-headline" id="heirloom_devtools">heirloom devtools</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=14" title="Edit section: heirloom devtools">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>lex</code> and <code>yacc</code> from the Heirloom project. The Heirloom project is
+a collection of standard UNIX utilities derived from code by Caldera and
+Sun. Differently from the analogous utilities from the GNU project, they
+can be compiled with a simple <code>Makefile</code>.
+</p>
+<h3><span class="mw-headline" id="bash_2.05b">bash 2.05b</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=15" title="Edit section: bash 2.05b">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU <code>bash</code> is the most well known shell and the most complex piece of
+software so far. However, it comes with a number of great benefits over
+kaem, including proper POSIX sh support, globbing, etc.
+</p><p>Bash ships with a bison pre-generated file here which we delete.
+Unfortunately, we have not bootstrapped bison but fortunately for us,
+heirloom yacc is able to cope here.
+</p>
+<h3><span class="mw-headline" id="flex_2.5.11">flex 2.5.11</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=16" title="Edit section: flex 2.5.11">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>flex</code> is a tool for generating lexers or scanners: programs that
+recognize lexical patters.
+</p><p>Unfortunately <code>flex</code> also depends on itself for compiling its own
+scanner, so first flex 2.5.11 is compiled, with its scanner definition
+manually modified so that it can be processed by lex for the Heirloom
+project (the required modifications are mostly syntactical, plus a few
+workarounds to avoid some flex advanced features).
+</p>
+<h3><span id="mes_0.23_.28libc.29"></span><span class="mw-headline" id="mes_0.23_(libc)">mes 0.23 (libc)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=17" title="Edit section: mes 0.23 (libc)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>In order to build musl we need tcc to support more than 255 command line
+arguments. Due to the bug in older mes libc this was not possible. Hence,
+we patch mes libc.
+</p>
+<h3><span class="mw-headline" id="tcc_0.9.27">tcc 0.9.27</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=18" title="Edit section: tcc 0.9.27">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Rebuild tcc 0.9.27 to get the fix from patched mes libc. We have to do
+it using older <code>tcc</code> because tcc-0.9.27 is not self hosting.
+</p>
+<h3><span class="mw-headline" id="musl_1.1.24">musl 1.1.24</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=19" title="Edit section: musl 1.1.24">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>musl</code> is a C standard library that is lightweight, fast, simple,
+free, and strives to be correct in the sense of standards-conformance
+and safety. <code>musl</code> is used by some distributions of GNU/Linux as their
+C library. Our previous Mes C library was incomplete which prevented us
+from building many newer or more complex programs.
+</p><p><code>tcc</code> has slight problems when building and linking <code>musl</code>, so we
+apply a few patches. In particular, we replace all weak symbols with
+strong symbols and will patch <code>tcc</code> in the next step to ignore
+duplicate symbols.
+</p>
+<h3><span id="tcc_0.9.27_.28musl.29"></span><span class="mw-headline" id="tcc_0.9.27_(musl)">tcc 0.9.27 (musl)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=20" title="Edit section: tcc 0.9.27 (musl)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We recompile <code>tcc</code> against musl. This is a two stage process. First we
+build tcc-0.9.27 using tcc-0.9.26  that itself links to Mes C library but produces
+binaries linked to musl. Then we recompile newly produced tcc with
+itself. Interestingly, tcc-0.9.27 linked against musl is self hosting.
+</p>
+<h3><span id="musl_1.1.24_.28tcc-musl.29"></span><span class="mw-headline" id="musl_1.1.24_(tcc-musl)">musl 1.1.24 (tcc-musl)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=21" title="Edit section: musl 1.1.24 (tcc-musl)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We now rebuild <code>musl</code> with the just built <code>tcc-musl</code>, which fixes a
+number of bugs, particularly regarding floats, in the first <code>musl</code>.
+</p>
+<h3><span id="tcc_0.9.27_.28musl_v2.29"></span><span class="mw-headline" id="tcc_0.9.27_(musl_v2)">tcc 0.9.27 (musl v2)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=22" title="Edit section: tcc 0.9.27 (musl v2)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Now that we have a ‘fixed’ <code>musl</code>, we now recompile <code>tcc</code> as <code>tcc</code>
+uses floats extensively.
+</p>
+<h3><span class="mw-headline" id="sed_4.0.9_2">sed 4.0.9</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=23" title="Edit section: sed 4.0.9">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>sed</code> is rebuilt against musl.
+</p>
+<h3><span class="mw-headline" id="bzip2_1.0.8_2">bzip2 1.0.8</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=24" title="Edit section: bzip2 1.0.8">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>bzip2</code> is rebuilt unpatched with the new tcc and musl fixing issues
+with reading files from stdin that existed in the previous build.
+</p>
+<h3><span class="mw-headline" id="m4_1.4.7">m4 1.4.7</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=25" title="Edit section: m4 1.4.7">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>m4</code> is the first piece of software we need in the autotools suite,
+flex 2.6.4 and bison. It allows macros to be defined and files to be
+generated from those macros.
+</p>
+<h3><span class="mw-headline" id="flex_2.6.14">flex 2.6.14</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=26" title="Edit section: flex 2.6.14">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We recompile unpatched GNU <code>flex</code> using older flex 2.5.11. This is
+again a two stage process, first compiling flex using <code>scan.c</code> (from
+<code>scan.l</code>) created by old flex, then recompile <code>scan.c</code> using the new
+version of flex to remove any buggy artifacts from the old flex.
+</p>
+<h3><span class="mw-headline" id="bison_3.4.1">bison 3.4.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=27" title="Edit section: bison 3.4.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU <code>bison</code> is a parser generator. With <code>m4</code> and <code>flex</code> we can now
+bootstrap it following <a rel="nofollow" class="external free" href="https://gitlab.com/giomasce/bison-bootstrap">https://gitlab.com/giomasce/bison-bootstrap</a>. It’s
+a 3 stage process:
+</p><p>1. Build bison using a handwritten grammar parser in C.
+2. Use bison from previous stage on a simplified bison grammar file.
+3. Build bison using original grammar file.
+</p><p>Finally we have a fully functional <code>bison</code> executable.
+</p>
+<h3><span class="mw-headline" id="grep_2.4">grep 2.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=28" title="Edit section: grep 2.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU <code>grep</code> is a pattern matching utility. Is is not immediately needed
+but will be useful later for autotools.
+</p>
+<h3><span class="mw-headline" id="diffutils_2.7">diffutils 2.7</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=29" title="Edit section: diffutils 2.7">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>diffutils</code> is useful for comparing two files. It is not immediately
+needed but is required later for autotools.
+</p>
+<h3><span class="mw-headline" id="coreutils_5.0_2">coreutils 5.0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=30" title="Edit section: coreutils 5.0">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>coreutils</code> is rebuilt against musl. Additional utilities are built
+including <code>comm</code>, <code>expr</code>, <code>dd</code>, <code>sort</code>, <code>sync</code>, <code>uname</code> and
+<code>uniq</code>. This fixes a variety of issues with existing <code>coreutils</code>.
+</p>
+<h3><span class="mw-headline" id="coreutils_6.10">coreutils 6.10</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=31" title="Edit section: coreutils 6.10">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We build <code>date</code>, <code>mktemp</code> and <code>sha256sum</code> from coreutils 6.10 which are
+either missing or don't build correctly in 5.0. Other utils are not built at
+this stage.
+</p>
+<h3><span class="mw-headline" id="gawk_3.0.4">gawk 3.0.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=32" title="Edit section: gawk 3.0.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>gawk</code> is the GNU implementation of <code>awk</code>, yet another pattern
+matching and data extraction utility. It is also required for autotools.
+</p>
+<h3><span class="mw-headline" id="perl_5.000">perl 5.000</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=33" title="Edit section: perl 5.000">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Perl is a general purpose programming language that is especially
+suitable for text processing. It is essential for autotools build system
+because automake and some other tools are written in Perl.
+</p><p>Perl itself is written in C but ships with some pre-generated files that
+need perl for processing, namely <code>embed.h</code> and <code>keywords.h</code>. To
+bootstrap Perl we will start with the oldest Perl 5 version which has
+the fewest number of pregenerated files. We reimplement two remaining
+perl scripts in awk and use our custom makefile instead of Perl’s
+pre-generated Configure script.
+</p><p>At this first step we build <code>miniperl</code> which is <code>perl</code> without
+support for loading modules.
+</p>
+<h3><span class="mw-headline" id="perl_5.003">perl 5.003</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=34" title="Edit section: perl 5.003">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We now use <code>perl</code> from the previous stage to recreate pre-generated
+files that are shipped in perl 5.003. But for now we still need to use
+handwritten makefile instead of <code>./Configure</code> script.
+</p>
+<h3><span class="mw-headline" id="perl_5.004_05">perl 5.004_05</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=35" title="Edit section: perl 5.004 05">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Yet another version of perl; the last version buildable with 5.003.
+</p>
+<h3><span class="mw-headline" id="perl_5.005_03">perl 5.005_03</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=36" title="Edit section: perl 5.005 03">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>More perl! This is the last version buildable with 5.004. It also
+introduces the new pregenerated files <code>regnodes.h</code> and
+<code>byterun.{h,c}</code>.
+</p>
+<h3><span class="mw-headline" id="perl_5.6.2">perl 5.6.2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=37" title="Edit section: perl 5.6.2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Even more perl. 5.6.2 is the last version buildable with 5.005.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.52">autoconf 2.52</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=38" title="Edit section: autoconf 2.52">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Autoconf is a tool for producing <code>configure</code> scripts for building, installing and
+packaging software on computer systems where a Bourne shell is available.
+</p><p>At this stage we still do not have a working autotools system, so we manually install
+<code>autoconf</code> script and replace a few placeholder variables with <code>sed</code>.
+</p><p>Autoconf 2.52 is the newest version of <code>autoconf</code> that does not need <code>perl</code>, and hence
+a bit easier to install.
+</p>
+<h3><span class="mw-headline" id="automake_1.6.3">automake 1.6.3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=39" title="Edit section: automake 1.6.3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Automake is a tool for automatically generating Makefile.in files. It is another major
+part of GNU Autotools build system and consists of <code>aclocal</code> and <code>automake</code> scripts.
+</p><p>We bootstrap it using a 3 stage process:
+</p><p>1. Use <code>sed</code> to replace a few placeholder variables in <code>aclocal.in</code> script.
+</p>
+<pre>  Then we manually install <code>aclocal</code> script and its dependencies.
+</pre>
+<p>2. Patch <code>configure.in</code> to create <code>automake</code> file but skip <code>Makefile.in</code> processing.
+</p>
+<pre>  Again we manually install <code>automake</code> script and its dependencies.
+</pre>
+<p>3. We now use <code>aclocal</code>, <code>autoconf</code>, and <code>automake</code> to do a proper build and install.
+</p>
+<h3><span class="mw-headline" id="automake_1.4-p6">automake 1.4-p6</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=40" title="Edit section: automake 1.4-p6">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This is an older version of GNU Automake. Various versions of GNU Autotools are not fully
+compatible, and we will need older <code>automake</code> to build some older software.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.52_2">autoconf 2.52</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=41" title="Edit section: autoconf 2.52">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We now properly rebuild <code>autoconf</code> using <code>automake-1.4</code> and manually installed <code>autoconf</code>.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.13">autoconf 2.13</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=42" title="Edit section: autoconf 2.13">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An older <code>autoconf</code> will be necessary to build GNU Binutils.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.12">autoconf 2.12</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=43" title="Edit section: autoconf 2.12">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Yet another old autoconf version that we will need for some parts of GNU Binutils.
+</p>
+<h3><span class="mw-headline" id="libtool_1.4">libtool 1.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=44" title="Edit section: libtool 1.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Libtool is the final part of GNU Autotools. It is a script used to hide away differences
+when compiling shared libraries on different platforms.
+</p>
+<h3><span class="mw-headline" id="binutils_2.14">binutils 2.14</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=45" title="Edit section: binutils 2.14">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The GNU Binary Utilities, or binutils, are a set of programming tools for creating and
+managing binary programs, object files, libraries, profile data, and assembly source code.
+</p><p>In particular we can now use full featured <code>ar</code> instead of <code>tcc -ar</code>,
+the GNU linker <code>ld</code>, which allows us building shared libraries,
+and the GNU assembler <code>as</code>.
+</p>
+<h3><span id="musl_1.1.24_.28v3.29"></span><span class="mw-headline" id="musl_1.1.24_(v3)">musl 1.1.24 (v3)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=46" title="Edit section: musl 1.1.24 (v3)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We rebuild musl for the third time. This time we use GNU ar rather than <code>tcc -ar</code>,
+so we can drop weak symbols patch. Also, we can use GNU as to build assembly source files,
+so those assembly files that tcc failed to compile no longer have to be patched.
+</p>
+<h3><span id="tcc_0.9.27_.28musl_v3.29"></span><span class="mw-headline" id="tcc_0.9.27_(musl_v3)">tcc 0.9.27 (musl v3)</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=47" title="Edit section: tcc 0.9.27 (musl v3)">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We rebuild tcc against new musl and without a patch to ignore duplicate symbols.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.53">autoconf 2.53</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=48" title="Edit section: autoconf 2.53">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We now start bootstrapping newer versions of autoconf. Version 2.53 now uses <code>perl</code>.
+In order to build it with <code>autoconf-2.52</code> we have to patch it a bit and then do
+a second unpatched build with newly built <code>autoconf-2.53</code>.
+</p>
+<h3><span class="mw-headline" id="automake_1.7">automake 1.7</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=49" title="Edit section: automake 1.7">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Automake 1.7 and Autoconf 2.54 depend on each other, so we patch out two offending
+autoconf macros to make it build with <code>autoconf-2.53</code>.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.54">autoconf 2.54</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=50" title="Edit section: autoconf 2.54">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>More <code>autoconf</code>.
+</p>
+<h3><span class="mw-headline" id="automake_1.7_2">automake 1.7</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=51" title="Edit section: automake 1.7">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Rebuild <code>automake</code> with <code>autoconf-2.54</code>.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.55">autoconf 2.55</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=52" title="Edit section: autoconf 2.55">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Even newer <code>autoconf</code>. This is the last version of <code>autoconf</code> that is buildable
+with <code>automake-1.7</code>.
+</p>
+<h3><span class="mw-headline" id="automake_1.7.8">automake 1.7.8</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=53" title="Edit section: automake 1.7.8">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Newer <code>automake</code>. This is the latest <code>automake</code> that is buildable with <code>autoconf-2.55</code>.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.57">autoconf 2.57</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=54" title="Edit section: autoconf 2.57">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Newer <code>autoconf</code>. This time we were able to skip version 2.56.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.59">autoconf 2.59</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=55" title="Edit section: autoconf 2.59">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Again, we managed to skip one version.
+</p>
+<h3><span class="mw-headline" id="automake_1.8.5">automake 1.8.5</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=56" title="Edit section: automake 1.8.5">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We need newer <code>automake</code> to proceed to newer <code>autoconf</code> versions. This is the latest
+automake version from 1.8 release series.
+</p>
+<h3><span class="mw-headline" id="help2man_1.36.4">help2man 1.36.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=57" title="Edit section: help2man 1.36.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>help2man</code> automatically generates manpages from programs <code>--help</code> and <code>--version</code>
+outputs. This is not strictly required for bootstrapping but will help us to avoid patching
+build process to skip generation of manpages. This is the newest version of <code>help2man</code> that
+does not require Perl 5.8.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.61">autoconf 2.61</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=58" title="Edit section: autoconf 2.61">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Yet another version of <code>autoconf</code>.
+</p>
+<h3><span class="mw-headline" id="automake_1.9.6">automake 1.9.6</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=59" title="Edit section: automake 1.9.6">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Latest GNU Automake from 1.9 series. Slightly annoyingly depends itself but it is easy to patch
+to make it buildable with 1.8.5. Then we rebuild <code>automake-1.9</code> with itself.
+</p>
+<h3><span class="mw-headline" id="findutils_4.2.33">findutils 4.2.33</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=60" title="Edit section: findutils 4.2.33">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Find Utilities can be used to search for files. We are mainly interested
+in <code>find</code> and <code>xargs</code> that are often used in scripts.
+</p>
+<h3><span class="mw-headline" id="libtool_2.2.4">libtool 2.2.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=61" title="Edit section: libtool 2.2.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Newer version of libtool which is more compatible with modern Autotools.
+</p>
+<h3><span class="mw-headline" id="automake_1.10.3">automake 1.10.3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=62" title="Edit section: automake 1.10.3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Automake from 1.10 series. <code>aclocal</code> is slightly patched to work
+with our <code>perl</code>.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.65">autoconf 2.65</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=63" title="Edit section: autoconf 2.65">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Slightly newer version of GNU Autoconf. At this stage Autoconf is mostly
+backwards compatible but newer versions need newer <code>automake</code>.
+</p>
+<h3><span class="mw-headline" id="gcc_4.0.4">gcc 4.0.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=64" title="Edit section: gcc 4.0.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The GNU Compiler Collection (GCC) is an optimizing compiler produced by the
+GNU Project. GCC is a key component of the GNU toolchain and the standard
+compiler for most projects related to GNU and the Linux kernel.
+</p><p>Only the C frontend is built at this stage.
+</p><p>At this stage we are not yet able to regenerate top-level <code>Makefile.in</code>
+which needs GNU Autogen and hence Guile. Luckily, building GCC without
+top-level <code>Makefile</code> is fairly easy.
+</p>
+<h3><span class="mw-headline" id="musl_1.2.2">musl 1.2.2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=65" title="Edit section: musl 1.2.2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GCC can build the latest as of the time of writing musl version.
+</p><p>We also don't need any of the TCC patches that we used before.
+</p>
+<h3><span class="mw-headline" id="gcc_4.0.4_2">gcc 4.0.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=66" title="Edit section: gcc 4.0.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Rebuild GCC with GCC and also against the latest musl.
+</p>
+<h3><span class="mw-headline" id="util-linux_2.19.1">util-linux 2.19.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=67" title="Edit section: util-linux 2.19.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>util-linux</code> contains a number of general system administration utilities.
+Most pressingly, we need these for being able to mount disks (for non-chroot
+mode, but it is built it in chroot mode anyway because it will likely be useful
+later). The latest version is not used because of autotools/GCC
+incompatibilities.
+</p>
+<h3><span class="mw-headline" id="kbd-1.15">kbd-1.15</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=68" title="Edit section: kbd-1.15">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>kbd</code> contains <code>loadkeys</code> which is required for building the Linux kernel.
+The 2.x series is not used because it requires particular features of autotools
+that we do not have available.
+</p>
+<h3><span class="mw-headline" id="make_3.82">make 3.82</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=69" title="Edit section: make 3.82">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Make is updated by .02. The most notable thing is this is now built properly
+using the build system and GCC, which means that it does not randomly segfault
+while building the Linux kernel.
+</p>
+<h3><span class="mw-headline" id="kexec-tools_2.0.22">kexec-tools 2.0.22</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=70" title="Edit section: kexec-tools 2.0.22">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>kexec</code> is a utility for the Linux kernel that allows the re-execution of the
+Linux kernel without a manual restart from within a running system. It is a
+kind of soft-restart. It is only built for non-chroot mode, as we only use it
+in non-chroot mode. It is used to go into sysb/sysc.
+</p>
+<h3><span class="mw-headline" id="create_sysb">create_sysb</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=71" title="Edit section: create sysb">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The next step is not a package, but the creation of the sysb rootfs, containing
+all of the scripts for sysb (which merely move to sysc). Again, this is only
+done in non-chroot mode, because sysb does not exist in chroot mode.
+</p>
+<h3><span class="mw-headline" id="Linux_kernel_4.9.10">Linux kernel 4.9.10</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=72" title="Edit section: Linux kernel 4.9.10">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A lot going on here. This is the first (and currently only) time the Linux kernel
+is built. Firstly, Linux kernel version 4.9.x is used because newer versions
+require much more stringent requirements on the make, GCC, binutils versions.
+However, the docs are also wrong, as the latest of the 4.9.x series does not
+work with our version of binutils. However, a much earlier 4.9.10 does
+(selected arbitarily, could go newer but did not test), with a small amount
+of patching. This is also modern enough for most hardware and to cause few
+problems with software built in sysc. Secondly, the linux-libre scripts are used
+to deblob the kernel. Unauditable, unbootstrappable binary blobs within our
+kernel are unacceptable. Our gawk is too buggy/old so we use sed instead for
+this operation. Every other pregenerated file is appended with <code>_shipped</code> so
+we use a <code>find</code> command to remove those, which are automatically regenerated.
+The kernel config was originally taken from Void Linux, and was then modified
+for the requirements of live-bootstrap, including compiler features, drivers,
+and removing modules. Speaking of which, modules cannot be used. These cannot
+be transferred to subsequent systems, and we do not have <code>modprobe</code>. Lastly,
+the initramfs of sysb is generated in this stage, using <code>gen_init_cpio</code> within
+the Linux kernel tree. This avoids the compilation of <code>cpio</code> as well.
+</p>
+<h3><span class="mw-headline" id="go_sysb">go_sysb</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=73" title="Edit section: go sysb">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This is the last step of sysa, run for non-chroot mode. It uses kexec to load
+the new Linux kernel into RAM and execute it, moving into sysb.
+</p>
+<h3><span class="mw-headline" id="sysb">sysb</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=74" title="Edit section: sysb">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>sysb is purely a transition to sysc, allowing binaries from sysa to get onto a
+disk (as sysa does not nessecarily have hard disk support in the kernel).
+It populates device nodes, mounts sysc, copies over data, and executes sysc.
+</p>
+<h3><span class="mw-headline" id="bash_5.1">bash 5.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=75" title="Edit section: bash 5.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Up to this point, our build of <code>bash</code> could run scripts but could not be used
+interactively.  This new version of <code>bash</code> compiles without any patches,
+provides new features, and is built with GNU readline support so it can be used
+as an interactive shell. <code>autoconf-2.61</code> is used to regenerate the configure
+script and <code>bison</code> is used to recreate some included generated files.
+</p>
+<h3><span class="mw-headline" id="xz_5.0.5">xz 5.0.5</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=76" title="Edit section: xz 5.0.5">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>XZ Utils is a set of free software command-line lossless data compressors,
+including lzma and xz. In most cases, xz achieves higher compression rates
+than alternatives like gzip and bzip2.
+</p>
+<h3><span class="mw-headline" id="automake_1.11.2">automake 1.11.2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=77" title="Edit section: automake 1.11.2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Automake from 1.11 series. This is not the latest point release as newer ones
+need Autoconf 2.68.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.69">autoconf 2.69</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=78" title="Edit section: autoconf 2.69">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This is a much newer version of GNU Autoconf.
+</p>
+<h3><span class="mw-headline" id="automake_1.15.1">automake 1.15.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=79" title="Edit section: automake 1.15.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Automake from 1.15 series. This is the last version that runs on Perl 5.6.
+</p>
+<h3><span class="mw-headline" id="tar_1.34">tar 1.34</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=80" title="Edit section: tar 1.34">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Newer tar has better support for decompressing .tar.bz2 and .tar.xz archives.
+It also deals better with modern tar archives with extra metadata.
+</p>
+<h3><span class="mw-headline" id="coreutils_8.32">coreutils 8.32</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=81" title="Edit section: coreutils 8.32">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We build the latest available coreutils 8.32 which adds needed options to make
+results of build metadata reproducible. For example, timestamps are changed with
+<code>touch --no-dereference</code>.
+</p>
+<h3><span class="mw-headline" id="pkg-config_0.29.2">pkg-config 0.29.2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=82" title="Edit section: pkg-config 0.29.2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>pkg-config is a helper tool that helps to insert compile and link time flags.
+</p>
+<h3><span class="mw-headline" id="make_4.2.1">make 4.2.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=83" title="Edit section: make 4.2.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>A newer version of make built using autotools is much more reliable and is
+compiled using a modern C compiler and C library. This removes a couple of
+segfaults encountered later in the process and allows more modern make features
+to be used. We do not go for the latest because of the use of automake 1.16
+which we do not have yet.
+</p>
+<h3><span class="mw-headline" id="gmp_6.2.1">gmp 6.2.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=84" title="Edit section: gmp 6.2.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Multiple Precision Arithmetic Library (GMP) is a free library for
+arbitrary-precision arithmetic, operating on signed integers, rational numbers,
+and floating-point numbers.
+</p><p>GMP is required by newer versions of GCC and Guile.
+</p>
+<h3><span class="mw-headline" id="autoconf-archive_2021.02.19">autoconf-archive 2021.02.19</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=85" title="Edit section: autoconf-archive 2021.02.19">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The GNU Autoconf Archive is a collection of Autoconf macros that are used by
+various projects and in particular GNU MPFR.
+</p>
+<h3><span class="mw-headline" id="mpfr_4.1.0">mpfr 4.1.0</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=86" title="Edit section: mpfr 4.1.0">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The GNU Multiple Precision Floating-Point Reliable Library (GNU MPFR) is a library
+for arbitrary-precision binary floating-point computation with correct rounding,
+based on GNU Multi-Precision Library.
+</p>
+<h3><span class="mw-headline" id="mpc_3.2.1">mpc 3.2.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=87" title="Edit section: mpc 3.2.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU MPC is a library for multiprecision complex arithmetic with exact rounding based
+on GNU MPFR.
+</p>
+<h3><span class="mw-headline" id="flex_2.5.33">flex 2.5.33</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=88" title="Edit section: flex 2.5.33">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>An older version of flex is required for bison 2.3. We cannot use 2.5.11 that
+was compiled much earlier, as it does not produce reproducible output when
+building bison 2.3.
+</p>
+<h3><span class="mw-headline" id="bison_2.3">bison 2.3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=89" title="Edit section: bison 2.3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>This is an older version of bison required for the bison files in perl 5.10.1.
+We backwards-bootstrap this from 3.4.1, using 3.4.1 to compile the bison files
+in 2.3. This parser works sufficiently well for perl 5.10.5.
+</p>
+<h3><span class="mw-headline" id="bison_3.4.2">bison 3.4.2</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=90" title="Edit section: bison 3.4.2">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Bison 3.4.1 is buggy and segfaults when perl 5.32.1 is built. This is probably
+because it was built with a hand-written makefile. We do not build the latest
+bison because perl 5.32.1 requires bison &lt;= 3.4.2.
+</p>
+<h3><span class="mw-headline" id="perl_5.10.1">perl 5.10.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=91" title="Edit section: perl 5.10.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Perl 5.10.1 is an intermediate version used before Perl 5.32. We require this
+version as it adds a couple of modules into lib/ required to regenerate files in
+Perl 5.32. We still use the Makefile instead of the metaconfig strategy, as
+metaconfig history becomes poor more than a few years back.
+</p>
+<h3><span class="mw-headline" id="dist_3.5-236">dist 3.5-236</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=92" title="Edit section: dist 3.5-236">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>dist is perl's package used for generating Perl's Configure (which is written in
+Perl itself). We 'compile' (aka generate) metaconfig and manifake only from dist.
+We do not use dist's build system because it itself uses dist.
+</p>
+<h3><span class="mw-headline" id="perl_5.32.1">perl 5.32.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=93" title="Edit section: perl 5.32.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>We finally compile a full version of Perl using Configure. This includes all base
+extensions required and is the latest version of Perl. We are now basically able
+to run any Perl application we want.
+</p>
+<h3><span class="mw-headline" id="automake_1.16.3">automake 1.16.3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=94" title="Edit section: automake 1.16.3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Automake from 1.16 series that required newer Perl.
+</p>
+<h3><span class="mw-headline" id="autoconf_2.71">autoconf 2.71</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=95" title="Edit section: autoconf 2.71">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Autoconf 2.71 is even newer version of autoconf. It does not build with miniperl,
+so we postponed it until full perl was built.
+</p>
+<h3><span class="mw-headline" id="patch_2.7.6">patch 2.7.6</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=96" title="Edit section: patch 2.7.6">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Our old patch was built with manual makefile and used mes libc.
+This is a newer version which we need in order to import gnulib into gettext.
+</p>
+<h3><span class="mw-headline" id="gettext_0.21">gettext 0.21</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=97" title="Edit section: gettext 0.21">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Gettext is an internationalization and localization system used for writing
+multilingual programs.
+</p>
+<h3><span class="mw-headline" id="texinfo_6.7">texinfo 6.7</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=98" title="Edit section: texinfo 6.7">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Texinfo is a typesetting syntax used for generating documentation. We can now use
+<code>makeinfo</code> script to convert <code>.texi</code> files into <code>.info</code> documentation format.
+</p>
+<h3><span class="mw-headline" id="zlib_1.2.11">zlib 1.2.11</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=99" title="Edit section: zlib 1.2.11">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>zlib is a software library used for data compression and implements an abstraction of
+DEFLATE algorithm that is also used in <code>gzip</code>.
+</p>
+<h3><span class="mw-headline" id="gcc_4.7.4">gcc 4.7.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=100" title="Edit section: gcc 4.7.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GCC 4.7.4 is the last version written in C. This time we build both C and C++ backends.
+C++ backend has some dependency on <code>gperf</code> which is written in C++. Fortunately, it is
+easy to patch it out and resulting <code>g++</code> compiler is capable of building <code>gperf</code>.
+</p>
+<h3><span class="mw-headline" id="gperf_3.1">gperf 3.1</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=101" title="Edit section: gperf 3.1">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>gperf</code> is a perfect hash function generator (hash function is injective).
+</p>
+<h3><span class="mw-headline" id="libunistring_0.9.10">libunistring 0.9.10</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=102" title="Edit section: libunistring 0.9.10">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Library for manipulating Unicode and C strings according to Unicode standard. This
+is a dependency of GNU Guile.
+</p>
+<h3><span class="mw-headline" id="libffi_3.3">libffi 3.3</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=103" title="Edit section: libffi 3.3">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The libffi library provides a portable, high level programming interface to various
+calling conventions.
+</p>
+<h3><span class="mw-headline" id="libatomic_ops_7.6.10">libatomic_ops 7.6.10</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=104" title="Edit section: libatomic ops 7.6.10">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p><code>libatomic_ops</code> provides semi-portable access to hardware-provided atomic memory
+update operations on a number of architectures.
+</p>
+<h3><span class="mw-headline" id="boehm-gc_8.0.4">boehm-gc 8.0.4</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=105" title="Edit section: boehm-gc 8.0.4">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>The Boehm-Demers-Weiser conservative garbage collector can be used as a garbage
+collecting replacement for C malloc or C++ new.
+</p>
+<h3><span class="mw-headline" id="guile_3.0.7">guile 3.0.7</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Live-bootstrap&amp;action=edit&amp;section=106" title="Edit section: guile 3.0.7">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>GNU Ubiquitous Intelligent Language for Extensions (GNU Guile) is the preferred
+extension language system for the GNU Project and features an implementation
+of the programming language Scheme.
+</p><p>We use <code><a rel="nofollow" class="external text" href="https://github.com/schierlm/guile-psyntax-bootstrapping">guile-psyntax-bootstrapping</a></code> project to bootstrap Guile's <code>psyntax.pp</code>
+without relying on pre-expanded code.
+</p>
+<!-- 
+NewPP limit report
+Parsed by mw122
+Cached time: 20220705111033
+Cache expiry: 864000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.074 seconds
+Real time usage: 0.079 seconds
+Preprocessor visited node count: 318/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/99
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key bootstrappingwiki:pcache:idhash:36-0!canonical and timestamp 20220705111032 and revision id 427. Serialized with JSON.
+ -->
+</div><noscript><img src="https://bootstrapping.miraheze.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=Live-bootstrap&amp;oldid=427">https://bootstrapping.miraheze.org/w/index.php?title=Live-bootstrap&amp;oldid=427</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+
+
+</main>
+<div id='mw-data-after-content'>
+	<div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Cookies help us deliver our services. By using our services, you agree to our use of cookies.</span></div><form method="POST"><div class='oo-ui-layout oo-ui-horizontalLayout'><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-progressive oo-ui-buttonWidget'><a role='button' tabindex='0' href='https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy#4._Cookies' rel='nofollow' class='oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-progressive'></span><span class='oo-ui-labelElement-label'>More information</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-progressive'></span></a></span><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-primary oo-ui-flaggedElement-progressive oo-ui-buttonInputWidget'><button type='submit' tabindex='0' name='disablecookiewarning' value='OK' class='oo-ui-inputWidget-input oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-invert'></span><span class='oo-ui-labelElement-label'>OK</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-invert'></span></button></span></div></form></div>
+</div>
+
+	</div> 
+</div> 
+
+<div class="mw-workspace-container mw-footer-container">
+	<div class="mw-content-container">
+		
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 13 June 2022, at 20:44.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy" class="extiw" title="m:Special:MyLanguage/Privacy Policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/bootstrapping:About" title="bootstrapping:About">About bootstrapping</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/bootstrapping:General_disclaimer" title="bootstrapping:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-termsofservice"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Terms_of_Use" class="extiw" title="m:Special:MyLanguage/Terms of Use">Terms of Use</a></li>
+	<li id="footer-places-donate"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Donate" class="extiw" title="m:Special:MyLanguage/Donate">Donate to Miraheze</a></li>
+	<li id="footer-places-mobileview"><a href="https://bootstrapping.miraheze.org/w/index.php?title=Live-bootstrap&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze"><img src="https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg" alt="Hosted by Miraheze" width="88" height="31" loading="lazy"/></a><a href="https://www.mediawiki.org/"><img src="/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-copyrightico"><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png" alt="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+	</div>
+</div>
+	</div> 
+</div> 
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.074","walltime":"0.079","ppvisitednodes":{"value":318,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":99},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"origin":"mw122","timestamp":"20220705111033","ttl":864000,"transientcontent":false}}});});</script>
+				<script>
+				var _paq = window._paq = window._paq || [];
+				if ( 1 ) {
+					_paq.push(['disableCookies']);
+				}
+				if ( 0 ) {
+					_paq.push(['setRequestMethod', 'GET']);
+				}
+				_paq.push(['trackPageView']);
+				_paq.push(['enableLinkTracking']);
+				(function() {
+					var u = "https://matomo.miraheze.org/";
+					_paq.push(['setTrackerUrl', u+'matomo.php']);
+					_paq.push(['setDocumentTitle', "bootstrappingwiki" + " - " + "Live-bootstrap"]);
+					_paq.push(['setSiteId', 498]);
+					_paq.push(['setCustomVariable', 1, 'userType', "Anonymous", "visit"]);
+					if ( 8590 ) {
+					    _paq.push(['addTracker', u + 'matomo.php', 8590]);
+					}
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+				})();
+				</script>
+				<noscript><p><img src="https://matomo.miraheze.org/matomo.php?idsite=498&amp;rec=1&amp;action_name=Live-bootstrap" style="border:0;" alt="" /></p></noscript>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":445,"wgHostname":"mw112"});});</script>
+</body>
+</html>

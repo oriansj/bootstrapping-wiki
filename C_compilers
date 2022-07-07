@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="client-nojs" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<title>C compilers - bootstrapping</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="skin-vector skin-vector-search-vue mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject mw-editable page-C_compilers rootpage-C_compilers skin-vector-2022 action-view"><div class="mw-page-container">
+	<a class="mw-jump-link" href="#content">Jump to content</a>
+	<div class="mw-page-container-inner ">
+
+<input
+	type="checkbox"
+	id="mw-sidebar-checkbox"
+	class="mw-checkbox-hack-checkbox"
+	checked>
+
+<header class="mw-header">
+	<label
+		id="mw-sidebar-button"
+		class="mw-checkbox-hack-button mw-ui-icon mw-ui-button mw-ui-quiet mw-ui-icon-element"
+		for="mw-sidebar-checkbox"
+		role="button"
+		aria-controls="mw-panel"
+		data-event-name="ui.sidebar"
+		tabindex="0"
+		title="Main menu">
+		Toggle sidebar
+	</label>
+	
+<a href="/wiki/Main_Page" class="mw-logo">
+	<span class="mw-logo-container">
+		<strong class="mw-logo-wordmark">bootstrapping</strong>
+	</span>
+</a>
+
+	
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses  vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<div>
+		<form action="/w/index.php" id="searchform"
+			class="vector-search-box-form">
+			<div id="simpleSearch"
+				class="vector-search-box-inner"
+				 data-search-loc="header-moved">
+				<input class="vector-search-box-input"
+					 type="search" name="search" placeholder="Search bootstrapping" aria-label="Search bootstrapping" autocapitalize="sentences" title="Search bootstrapping [f]" accesskey="f" id="searchInput"
+				/>
+				<input type="hidden" name="title" value="Special:Search"/>
+				<input id="mw-searchButton"
+					 class="searchButton mw-fallbackSearchButton" type="submit" name="fulltext" title="Search the pages for this text" value="Search" />
+				<input id="searchButton"
+					 class="searchButton" type="submit" name="go" title="Go to a page with this exact name if it exists" value="Go" />
+			</div>
+		</form>
+	</div>
+	<a href="/wiki/Special:Search"
+	
+		
+		
+		
+		class="mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-search search-toggle">
+		<span>Search</span>
+	</a>
+	
+</div>
+
+	<div class="vector-user-links">
+	
+<nav id="p-personal-more" class="mw-portlet mw-portlet-personal-more vector-menu vector-user-menu-more" aria-labelledby="p-personal-more-label" role="navigation" 
+	 >
+	<label id="p-personal-more-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">User links</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+	<li id="p-createaccount" class="user-links-collapsible-item">
+		<a href="/w/index.php?title=Special:CreateAccount&amp;returnto=C+compilers" class="mw-ui-button mw-ui-quiet" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a>
+	</li>
+</ul>
+		
+	</div>
+</nav>
+
+	
+<nav id="p-personal" class="mw-portlet mw-portlet-personal vector-user-menu vector-user-menu-logged-out vector-menu vector-menu-dropdown" aria-labelledby="p-personal-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-personal-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-personal"
+		class="vector-menu-checkbox" aria-labelledby="p-personal-label" />
+	<label id="p-personal-label" aria-label="" class="vector-menu-heading mw-ui-button mw-ui-quiet mw-ui-icon mw-ui-icon-element mw-ui-icon-wikimedia-ellipsis" aria-hidden="true">
+		<span class="vector-menu-heading-label">Personal tools</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		<div class="vector-user-menu-create-account"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=C+compilers" class="user-links-collapsible-item vector-menu-content-item mw-ui-icon mw-ui-icon-before" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></div>
+<div class="vector-user-menu-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=C+compilers" icon="logIn" class="vector-menu-content-item vector-menu-content-item-login mw-ui-icon mw-ui-icon-before mw-ui-icon-wikimedia-logIn" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></div>
+<div class="vector-user-menu-anon-editor">
+	<p>
+		Pages for logged out editors <a href="/wiki/Help:Introduction" aria-label="Learn more about editing"><span>learn more</span></a>
+	</p>
+</div>
+
+		<ul class="vector-menu-content-list"><li id="pt-anonuserpage" class="mw-list-item"><span>Not logged in</span></li><li id="pt-anontalk" class="mw-list-item"><a href="/wiki/Special:MyTalk" title="Discussion about edits from this IP address [n]" accesskey="n"><span>Talk</span></a></li><li id="pt-darkmode-toggle" class="darkmode-link mw-list-item"><a href="#"><span>Dark mode</span></a></li><li id="pt-anoncontribs" class="mw-list-item"><a href="/wiki/Special:MyContributions" title="A list of edits made from this IP address [y]" accesskey="y"><span>Contributions</span></a></li><li id="pt-createaccount" class="mw-list-item"><a href="/w/index.php?title=Special:CreateAccount&amp;returnto=C+compilers" title="You are encouraged to create an account and log in; however, it is not mandatory"><span>Create account</span></a></li><li id="pt-login" class="mw-list-item"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=C+compilers" title="You are encouraged to log in; however, it is not mandatory [o]" accesskey="o"><span>Log in</span></a></li></ul>
+		
+	</div>
+</nav>
+
+</div>
+
+</header>
+
+<div class="mw-workspace-container">
+	<div id="mw-navigation">
+		<div id="mw-head">
+			<div class="mw-article-toolbar-container">
+				<div id="left-navigation">
+					
+<nav id="p-namespaces" class="mw-portlet mw-portlet-namespaces vector-menu vector-menu-tabs" aria-labelledby="p-namespaces-label" role="navigation" 
+	 >
+	<label id="p-namespaces-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Namespaces</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-nstab-main" class="selected mw-list-item"><a href="/wiki/C_compilers" title="View the content page [c]" accesskey="c"><span>Page</span></a></li><li id="ca-talk" class="new mw-list-item"><a href="/w/index.php?title=Talk:C_compilers&amp;action=edit&amp;redlink=1" rel="discussion" title="Discussion about the content page (page does not exist) [t]" accesskey="t"><span>Discussion</span></a></li></ul>
+		
+	</div>
+</nav>
+
+					
+<nav id="p-variants" class="mw-portlet mw-portlet-variants emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-variants-label" role="navigation" 
+	 >
+	<input type="checkbox"
+		id="p-variants-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-variants"
+		class="vector-menu-checkbox" aria-labelledby="p-variants-label" />
+	<label id="p-variants-label" aria-label="Change language variant" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">English</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+				</div>
+				<div id="right-navigation">
+					
+<nav id="p-views" class="mw-portlet mw-portlet-views vector-menu vector-menu-tabs" aria-labelledby="p-views-label" role="navigation" 
+	 >
+	<label id="p-views-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Views</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="ca-view" class="selected mw-list-item"><a href="/wiki/C_compilers"><span>Read</span></a></li><li id="ca-edit" class="mw-list-item"><a href="/w/index.php?title=C_compilers&amp;action=edit" title="Edit this page [e]" accesskey="e"><span>Edit</span></a></li><li id="ca-history" class="mw-list-item"><a href="/w/index.php?title=C_compilers&amp;action=history" title="Past revisions of this page [h]" accesskey="h"><span>View history</span></a></li></ul>
+		
+	</div>
+</nav>
+
+					
+<nav id="p-cactions" class="mw-portlet mw-portlet-cactions emptyPortlet vector-menu-dropdown-noicon vector-menu vector-menu-dropdown" aria-labelledby="p-cactions-label" role="navigation"  title="More options"
+	 >
+	<input type="checkbox"
+		id="p-cactions-checkbox"
+		role="button"
+		aria-haspopup="true"
+		data-event-name="ui.dropdown-p-cactions"
+		class="vector-menu-checkbox" aria-labelledby="p-cactions-label" />
+	<label id="p-cactions-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">More</span>
+			<span class="vector-menu-checkbox-expanded">expanded</span>
+			<span class="vector-menu-checkbox-collapsed">collapsed</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"></ul>
+		
+	</div>
+</nav>
+
+				</div>
+			</div>
+		</div>
+		
+
+<div id="mw-panel" class="mw-sidebar">
+	
+<nav id="p-navigation" class="mw-portlet mw-portlet-navigation vector-menu vector-menu-portal portal" aria-labelledby="p-navigation-label" role="navigation" 
+	 >
+	<label id="p-navigation-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Navigation</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" icon="home" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" icon="recentChanges" title="A list of recent changes in the wiki [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" icon="die" title="Load a random page [x]" accesskey="x"><span>Random page</span></a></li><li id="n-help-mediawiki" class="mw-list-item"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents"><span>Help about MediaWiki</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+	
+<nav id="p-tb" class="mw-portlet mw-portlet-tb vector-menu vector-menu-portal portal" aria-labelledby="p-tb-label" role="navigation" 
+	 >
+	<label id="p-tb-label" aria-label="" class="vector-menu-heading" aria-hidden="true">
+		<span class="vector-menu-heading-label">Tools</span>
+	</label>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list"><li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/C_compilers" title="A list of all wiki pages that link here [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/C_compilers" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=C_compilers&amp;oldid=266" title="Permanent link to this revision of the page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=C_compilers&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fbootstrapping.miraheze.org%2Fwiki%2FC_compilers"><span>Get shortened URL</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=C_compilers&amp;id=266&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li></ul>
+		
+	</div>
+</nav>
+
+	
+</div>
+
+	</div>
+	<div class="mw-table-of-contents-container mw-sticky-header-element">
+		
+	</div>
+	<div class="mw-content-container">
+<main id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	<div id="siteNotice"><!-- CentralNotice --></div>
+
+
+	<header class="mw-body-header">
+			
+		<h1 id="firstHeading" class="firstHeading mw-first-heading">C compilers</h1>
+		<div class="mw-indicators">
+		</div>
+			<div id="siteSub" class="noprint">From bootstrapping</div>
+	</header>
+
+	<div id="bodyContent" class="vector-body">
+		<div id="contentSub"></div>
+		<div id="contentSub2"></div>
+		
+		<div id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr"><div class="mw-parser-output"><p>Getting GCC built is very important for the GNU project. It's written in C++ now but it can be built using earlier versions of GCC that are written in C. (e.g. 4.7)
+</p>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none" /><div class="toctitle" lang="en" dir="ltr"><h2 id="mw-toc-heading">Contents</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Questions"><span class="tocnumber">1</span> <span class="toctext">Questions</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Can_pcc_build_tcc_(mob)_[yes]"><span class="tocnumber">1.1</span> <span class="toctext">Can pcc build tcc (mob) [yes]</span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Can_pcc_build_gcc_4.7?_[no]"><span class="tocnumber">1.2</span> <span class="toctext">Can pcc build gcc 4.7? [no]</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Can_pcc_build_gcc_7.1.0_[unclear]"><span class="tocnumber">1.3</span> <span class="toctext">Can pcc build gcc 7.1.0 [unclear]</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Can_pcc_build_gcc_3.2_[no]"><span class="tocnumber">1.4</span> <span class="toctext">Can pcc build gcc 3.2 [no]</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Can_tcc_build_gcc_4.7.4?_[yes]"><span class="tocnumber">1.5</span> <span class="toctext">Can tcc build gcc 4.7.4? [yes]</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Can_tcc_build_pcc_[almost!]"><span class="tocnumber">1.6</span> <span class="toctext">Can tcc build pcc [almost!]</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Can_nwcc_build_gcc_4.7?_[no?]"><span class="tocnumber">1.7</span> <span class="toctext">Can nwcc build gcc 4.7? [no?]</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="#Can_nwcc_build_pcc?_[no]"><span class="tocnumber">1.8</span> <span class="toctext">Can nwcc build pcc? [no]</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="#Can_nwcc_build_tcc?_[yes]"><span class="tocnumber">1.9</span> <span class="toctext">Can nwcc build tcc? [yes]</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Can_ucc_build_pcc?_[no]"><span class="tocnumber">1.10</span> <span class="toctext">Can ucc build pcc? [no]</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Trouble"><span class="tocnumber">2</span> <span class="toctext">Trouble</span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#neatcc"><span class="tocnumber">2.1</span> <span class="toctext">neatcc</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#recc"><span class="tocnumber">2.2</span> <span class="toctext">recc</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="#ucc"><span class="tocnumber">2.3</span> <span class="toctext">ucc</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="#SmallerC"><span class="tocnumber">2.4</span> <span class="toctext">SmallerC</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#pcc"><span class="tocnumber">2.5</span> <span class="toctext">pcc</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#lacc"><span class="tocnumber">2.6</span> <span class="toctext">lacc</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-19"><a href="#Other"><span class="tocnumber">3</span> <span class="toctext">Other</span></a></li>
+<li class="toclevel-1 tocsection-20"><a href="#Links"><span class="tocnumber">4</span> <span class="toctext">Links</span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline" id="Questions">Questions</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=1" title="Edit section: Questions">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span id="Can_pcc_build_tcc_.28mob.29_.5Byes.5D"></span><span class="mw-headline" id="Can_pcc_build_tcc_(mob)_[yes]">Can pcc build tcc (mob) [yes]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=2" title="Edit section: Can pcc build tcc (mob) [yes]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>yes. <a rel="nofollow" class="external free" href="http://repo.or.cz/tinycc.git">http://repo.or.cz/tinycc.git</a>
+</p>
+<h3><span id="Can_pcc_build_gcc_4.7.3F_.5Bno.5D"></span><span class="mw-headline" id="Can_pcc_build_gcc_4.7?_[no]">Can pcc build gcc 4.7? [no]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=3" title="Edit section: Can pcc build gcc 4.7? [no]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>No:
+</p>
+<pre>../.././libdecnumber/bid/decimal128.c, line 73: compiler error: classifystruct
+error: /home/debbie/pcc-boot/libexec/ccom terminated with status 1
+</pre>
+<p>Line 73 of ./libdecnumber/bid/decimal128.c:
+</p>
+<pre>  /* __dpd128FromNumber returns in big endian. But _dpd_to_bid128 takes
+     host endian. */
+  __ieee_to_host_128 (*d128, &amp;u._Dec);</pre>
+<p>It would be good to figure out and why and make it work!
+</p>
+<h3><span id="Can_pcc_build_gcc_7.1.0_.5Bunclear.5D"></span><span class="mw-headline" id="Can_pcc_build_gcc_7.1.0_[unclear]">Can pcc build gcc 7.1.0 [unclear]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=4" title="Edit section: Can pcc build gcc 7.1.0 [unclear]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Unclear. Since pcc also has a c++ compiler there is a chance.
+</p>
+<pre>CC=pcc CPP=pcpp CXX=p++ CC_FOR_TARGET=pcc CPP_FOR_TARGET=pcpp CXX_FOR_TARGET=p++ ./configure --enable-languages=c,c++ --prefix=$HOME/gcc-out
+</pre>
+<p>but I got the error:
+</p>
+<pre>checking for uintmax_t... no
+checking for uintptr_t... no
+configure: error: uint64_t or int64_t not found
+Makefile:4277: recipe for target 'configure-stage1-gcc' failed
+make[2]: *** [configure-stage1-gcc] Error 1
+</pre>
+<h3><span id="Can_pcc_build_gcc_3.2_.5Bno.5D"></span><span class="mw-headline" id="Can_pcc_build_gcc_3.2_[no]">Can pcc build gcc 3.2 [no]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=5" title="Edit section: Can pcc build gcc 3.2 [no]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>No.
+</p>
+<pre>pcc -c -DIN_GCC    -g -W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wtraditional -pedantic -Wno-long-long  -DHAVE_CONFIG_H -DGENERATOR_FILE    -I. -I. -I/home/debbie/gcc-3.2/gcc -I/home/debbie/gcc-3.2/gcc/. -I/home/debbie/gcc-3.2/gcc/config -I/home/debbie/gcc-3.2/gcc/../include /home/debbie/gcc-3.2/gcc/read-rtl.c -o read-rtl.o
+/home/debbie/gcc-3.2/gcc/read-rtl.c, line 662: lvalue required
+/home/debbie/gcc-3.2/gcc/read-rtl.c, line 662: cannot recover from earlier errors: goodbye!
+error: /home/debbie/pcc-boot/libexec/ccom terminated with status 1
+Makefile:2177: recipe for target 'read-rtl.o' failed
+make[1]: *** [read-rtl.o] Error 1
+</pre>
+<h3><span id="Can_tcc_build_gcc_4.7.4.3F_.5Byes.5D"></span><span class="mw-headline" id="Can_tcc_build_gcc_4.7.4?_[yes]">Can tcc build gcc 4.7.4? [yes]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=6" title="Edit section: Can tcc build gcc 4.7.4? [yes]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Yes! Huge thanks to the tinycc mob: <a rel="nofollow" class="external free" href="http://lists.nongnu.org/archive/html/tinycc-devel/2017-05/msg00099.html">http://lists.nongnu.org/archive/html/tinycc-devel/2017-05/msg00099.html</a>
+</p>
+<pre>$ sha256sum gcc-4.7.4.tar.gz
+ddbaa583c5d4e4f0928bf15d9f6b6c283349e16eedc47bde71e1b813f6f37819  gcc-4.7.4.tar.gz
+
+tinycc (mob) commit 53c5fc2246270e0242903de0152a9a5d40f3d679
+</pre>
+<p><a rel="nofollow" class="external free" href="http://repo.or.cz/tinycc.git/commit/53c5fc2246270e0242903de0152a9a5d40f3d679">http://repo.or.cz/tinycc.git/commit/53c5fc2246270e0242903de0152a9a5d40f3d679</a>
+</p>
+<pre>MAKEINFO=missing CC=tcc $HOME/gcc-4.7.4/configure --prefix=$HOME/gcc-out --enable-languages=c --disable-multilib</pre>
+<p>it requires a lot of space, multiple gigabytes to build.
+</p><p>Build done on Debian 9.6, using gcc-4.7.4, gmp-4.2,4, mpc-0.8.1, mpfr-2.3.1. For gmp, mpc and mpfr, you have to extract them, rename to gmp, mpc and mpfr (i.e., remove the version number) and move inside the gcc-4.7.4 directory. The GCC build system will automatically find them. Trying the same operation on up-to-date Debian unstable (as of 2019-01-09) failed; maybe something has changed in the libc in an incompatible way.
+</p>
+<h3><span id="Can_tcc_build_pcc_.5Balmost.21.5D"></span><span class="mw-headline" id="Can_tcc_build_pcc_[almost!]">Can tcc build pcc [almost!]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=7" title="Edit section: Can tcc build pcc [almost!]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>No.
+</p><p>First of all CPP=tcc ./configure gives an error: preprocessor fails sanity check. If we just use the line
+</p>
+<pre>CC=tcc  ./configure --prefix=$HOME/pcc-tcc-out/</pre>
+<p>it compiles some of the way then fails with:
+</p>
+<pre>tcc  -g  -Wall -Wmissing-prototypes -Wstrict-prototypes -Wshadow -Wsign-compare -Wtruncate -D_BSD_SOURCE -DGCC_COMPAT -DPCC_DEBUG -DNATIVE_FLOATING_POINT -D_ISOC99_SOURCE -Dos_linux -Dmach_amd64 -I. -I. -I../.. -I../../mip -I../../arch/amd64 -I../../os/linux -I../../common -c -o local2.o ../../arch/amd64/local2.c
+../../arch/amd64/local2.c:44: error: unknown type size
+Makefile:148: recipe for target 'local2.o' failed
+make[2]: *** [local2.o] Error 1
+</pre>
+<p>UPDATE: We can actually make it build by hacking around this one issue!
+</p>
+<pre>Index: arch/amd64/local2.c
+===================================================================
+RCS file: /cvsroot/pcc/arch/amd64/local2.c,v
+retrieving revision 1.67
+diff -r1.67 local2.c
+44c44,46
+&lt; char *rbyte[], *rshort[], *rlong[];
+---
+&gt; char rbyte[44][44];
+&gt; char rshort[44][44];
+&gt; char rlong[44][44];
+145,148d146
+&lt;       /*
+&lt;        * We here know what register to save and how much to
+&lt;        * add to the stack.
+&lt;        */
+711c709
+&lt;                       rc = rbyte;
+---
+&gt;                       rc = (char**)rbyte;
+715c713
+&lt;                       rc = rshort;
+---
+&gt;                       rc = (char**)rshort;
+719c717
+&lt;                       rc = rlong;
+---
+&gt;                       rc = (char**)rlong;
+929c927
+&lt; char *rbyte[] = {
+---
+&gt; char rbyte[44][44] = {
+931c929
+&lt;       "%r8b", "%r9b", "%r10b", "%r11b", "%r12b", "%r13b", "%r14b", "%r15b",
+---
+&gt;       "%r8b", "%r9b", "%r10b", "%r11b", "%r12b", "%r13b", "%r14b", "%r15b"
+933c931
+&lt; char *rshort[] = {
+---
+&gt; char rshort[44][44] = {
+935c933
+&lt;       "%r8w", "%r9w", "%r10w", "%r11w", "%r12w", "%r13w", "%r14w", "%r15w",
+---
+&gt;       "%r8w", "%r9w", "%r10w", "%r11w", "%r12w", "%r13w", "%r14w", "%r15w"
+937c935
+&lt; char *rlong[] = {
+---
+&gt; char rlong[44][44] = {
+939c937
+&lt;       "%r8d", "%r9d", "%r10d", "%r11d", "%r12d", "%r13d", "%r14d", "%r15d",
+---
+&gt;       "%r8d", "%r9d", "%r10d", "%r11d", "%r12d", "%r13d", "%r14d", "%r15d"
+1245d1242
+&lt;
+</pre>
+<p>Unfortunately it isn't quite able to build pcc-libs (which is a required part of pcc)
+</p>
+<pre>tcc -O -I. -DTARGET_LITTLE_ENDIAN=1 -Dos_linux -Dmach_amd64 -isystem ../libpcc/include  -c fixunssfdi.c
+fixunssfdi.c:85: error: '__INT_MAX__' undeclared
+Makefile:52: recipe for target 'fixunssfdi.o' failed
+</pre>
+<h3><span id="Can_nwcc_build_gcc_4.7.3F_.5Bno.3F.5D"></span><span class="mw-headline" id="Can_nwcc_build_gcc_4.7?_[no?]">Can nwcc build gcc 4.7? [no?]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=8" title="Edit section: Can nwcc build gcc 4.7? [no?]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>It claims to be able to on the website: <a rel="nofollow" class="external free" href="http://nwcc.sourceforge.net/apps.html">http://nwcc.sourceforge.net/apps.html</a>
+</p><p>but I wasn't able to:
+</p>
+<pre>$ CC=$HOME/nwcc-out/bin/nwcc LDFLAGS=-fpic ./configure --enable-languages=c,c++ --disable-multilib --prefix=$HOME/gcc-out
+$ make
+...
+...
+...
+../.././lto-plugin/lto-plugin.c:748: Warning: Assignment from incompatible pointer type (illegal in ISO C, and very probably not what you want)
+  htab_t symtab = htab_create (t-&gt;nsyms, hash_sym, eq_sym, ((void *)0));
+                  ^^^^^^^^^^^ here
+/var/tmp/cpp0.cpp - 0 error(s), 1 warning(s)
+/bin/bash ./libtool --tag=CC --tag=disable-static  --mode=link /home/debbie/nwcc-out/bin/nwcc -Wall -g  -module -bindir /home/debbie/gcc-out/libexec/gcc/x86_64-unknown-linux-gnu/4.7.0  -fpic -o liblto_plugin.la -rpath /home/debbie/gcc-out/libexec/gcc/x86_64-unknown-linux-gnu/4.7.0 lto-plugin.lo -Wc,../libiberty/pic/libiberty.a
+libtool: link: /home/debbie/nwcc-out/bin/nwcc -shared  .libs/lto-plugin.o   -lc  ../libiberty/pic/libiberty.a   -soname liblto_plugin.so.0 -o .libs/liblto_plugin.so.0.0.0
+ld: .libs/lto-plugin.o: relocation R_X86_64_32S against `.rodata' can not be used when making a shared object; recompile with -fPIC
+.libs/lto-plugin.o: error adding symbols: Bad value
+Makefile:339: recipe for target 'liblto_plugin.la' failed
+</pre>
+<h3><span id="Can_nwcc_build_pcc.3F_.5Bno.5D"></span><span class="mw-headline" id="Can_nwcc_build_pcc?_[no]">Can nwcc build pcc? [no]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=9" title="Edit section: Can nwcc build pcc? [no]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<pre>configure: error: in `/home/debbie/pcc':
+configure: error: C preprocessor "/home/debbie/nwcc_0.8.3/out/bin/nwcpp" fails sanity check
+See `config.log' for more details
+
+
+configure:3780: checking whether we are using the GNU C compiler
+configure:3799: /home/debbie/nwcc_0.8.3/out/bin/nwcc -c   conftest.c &gt;&amp;5
+conftest.c:20: Error: Parse error at `me'(#2)
+^^ here
+/var/tmp/cpp0.cpp - 1 error(s), 0 warning(s)
+configure:3799: $? = 1
+configure: failed program was:
+| /* end confdefs.h.  */
+|
+| int
+| main ()
+| {
+| #ifndef __GNUC__
+|        choke me
+| #endif
+|
+|  &#160;;
+|   return 0;
+| }
+
+</pre>
+<p><br />
+tried again today and got a completely different error:
+</p>
+<pre>debbie@debian:~/pcc$ /home/debbie/nwcc-boot/bin/nwcc  mkext.lo common.lo table.lo -o mkext
+No valid files to link.
+</pre>
+<h3><span id="Can_nwcc_build_tcc.3F_.5Byes.5D"></span><span class="mw-headline" id="Can_nwcc_build_tcc?_[yes]">Can nwcc build tcc? [yes]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=10" title="Edit section: Can nwcc build tcc? [yes]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Hooray!
+</p>
+<h3><span id="Can_ucc_build_pcc.3F_.5Bno.5D"></span><span class="mw-headline" id="Can_ucc_build_pcc?_[no]">Can ucc build pcc? [no]</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=11" title="Edit section: Can ucc build pcc? [no]">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ucc makes it through ./configure, unlike most. but fails quickly:
+</p>
+<pre>make[2]: Entering directory '/home/debbie/pcc/cc/cc'
+/home/debbie/ucc-c-compiler/ucc -g  -Wall -Wmissing-prototypes -Wshadow -Wsign-compare -DLIBEXECDIR=\"/usr/local/libexec/\" -D_BSD_SOURCE -DGCC_COMPAT -DPCC_DEBUG -DNATIVE_FLOATING_POINT -DINCLUDEDIR=\"/usr/local/include/\" -DPCCINCDIR=\"/usr/local/lib/pcc/x86_64-unknown-linux-gnu/1.2.0.DEVEL/include/\" -DPCCLIBDIR=\"/usr/local/lib/pcc/x86_64-unknown-linux-gnu/1.2.0.DEVEL/lib/\" -Dos_linux -Dmach_amd64 -DTARGOSVER=0 -DCXXPROGNAME=\"p++\" -DCPPROGNAME=\"pcpp\" -I../../cc/driver -I../.. -I../../os/linux -I../../mip -I../../arch/amd64 -I../../common -c -o cc.o ./cc.c
+./cc.c:1596:1: error: unterminated function-macro 'assert'
+  "assert(sizeof(lists) / sizeof(lists[0]) =="
+  ^
+/home/debbie/ucc-c-compiler/ucc: cpp2/cpp returned 1
+</pre>
+<p>could it be fixed?
+</p><p>step 1: edit cc/cc/cc.c so the macro is only a single line long.
+</p><p>Now we get this error:
+</p>
+<pre>/usr/lib/gcc/x86_64-linux-gnu/4.9.2/include/stddef.h:212:23: warning: unused variable 'size_t'
+  "typedef unsigned long size_t;"
+                         ^~~~~~
+/usr/lib/gcc/x86_64-linux-gnu/4.9.2/include/stddef.h:147:23: warning: unused variable 'ptrdiff_t'
+  "typedef unsigned long ptrdiff_t;"
+                         ^~~~~~~~~
+/usr/lib/gcc/x86_64-linux-gnu/4.9.2/include/stddef.h:324:13: warning: unused variable 'wchar_t'
+  "typedef int wchar_t;"
+               ^~~~~~~
+</pre>
+<h2><span class="mw-headline" id="Trouble">Trouble</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=12" title="Edit section: Trouble">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<h3><span class="mw-headline" id="neatcc">neatcc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=13" title="Edit section: neatcc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>neatcc requires neatlibc (for stdarg.h and other things). neatlibc requires fasm which I didn't have, was not able to build it with nasm or yasm.
+</p>
+<h3><span class="mw-headline" id="recc">recc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=14" title="Edit section: recc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Unable to make the kernel:
+</p>
+<pre> #include "../generated/struct_type_description_memory_pool.h"
+</pre>
+<h3><span class="mw-headline" id="ucc">ucc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=15" title="Edit section: ucc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>ucc does not seem to be able to self-compile.
+</p>
+<h3><span class="mw-headline" id="SmallerC">SmallerC</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=16" title="Edit section: SmallerC">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Unable to compile a small test program with it:
+</p>
+<pre>$ smlrcc -SI/home/debbie/SmallerC/v0100/include/ t.c -o t
+
+Symbol '__start' not found
+
+Failed command 'smlrl -elf t.o -o t'
+</pre>
+<p>Author here: it can't find the library (lcl.a for Linux, lcm.a for MacOS). The documentation for smlrcc explains where searching for headers and libraries happens. Apparently, neither headers no libraries are there (normally you shouldn't need to use -SI and if you do, either you're doing something special or something's wrong). The easiest fix for Linux and MacOS is to simply do the usual make, sudo make install. Or you could also supply smlrcc with the full library name (that is, including the path).
+</p><p>Thank you very much I was able to compile hello world by passing in lcl.a&#160;!
+</p>
+<h3><span class="mw-headline" id="pcc">pcc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=17" title="Edit section: pcc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>Tried pcc again recently, Was able to build pcc and install to a local prefix with gcc but not self host. crt.o stuff. installing globally would probably fix it but it would be good to write full instructions for building and bootstrapping pcc.
+</p><p><br />
+</p>
+<h3><span class="mw-headline" id="lacc">lacc</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=18" title="Edit section: lacc">edit</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>TODO: try it. seems not to implement the posix cli.
+</p>
+<h2><span class="mw-headline" id="Other">Other</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=19" title="Edit section: Other">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li>Which C compilers can build which (other) C compilers?</li>
+<li>ACK <a rel="nofollow" class="external free" href="http://tack.sourceforge.net/">http://tack.sourceforge.net/</a></li>
+<li>Recc <a rel="nofollow" class="external free" href="http://recc.robertelder.org/">http://recc.robertelder.org/</a></li>
+<li>Cint (interpreter)?</li>
+<li>clang</li>
+<li><a rel="nofollow" class="external text" href="https://github.com/alexfru/SmallerC">SmallerC</a></li>
+<li><a rel="nofollow" class="external free" href="https://github.com/larmel/lacc">https://github.com/larmel/lacc</a> (segfault attempting to compile tinycc)</li></ul>
+<h2><span class="mw-headline" id="Links">Links</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=C_compilers&amp;action=edit&amp;section=20" title="Edit section: Links">edit</a><span class="mw-editsection-bracket">]</span></span></h2>
+<ul><li><a rel="nofollow" class="external free" href="http://wiki.osdev.org/Building_GCC">http://wiki.osdev.org/Building_GCC</a></li></ul>
+<!-- 
+NewPP limit report
+Parsed by mw111
+Cached time: 20220706181339
+Cache expiry: 864000
+Reduced expiry: false
+Complications: []
+CPU time usage: 0.022 seconds
+Real time usage: 0.025 seconds
+Preprocessor visited node count: 150/1000000
+Post‐expand include size: 0/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 2/100
+Expensive parser function count: 0/99
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 7299/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    0.000      1 -total
+-->
+
+<!-- Saved in parser cache with key bootstrappingwiki:pcache:idhash:5-0!canonical and timestamp 20220706181339 and revision id 266. Serialized with JSON.
+ -->
+</div><noscript><img src="https://bootstrapping.miraheze.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /></noscript>
+<div class="printfooter">Retrieved from "<a dir="ltr" href="https://bootstrapping.miraheze.org/w/index.php?title=C_compilers&amp;oldid=266">https://bootstrapping.miraheze.org/w/index.php?title=C_compilers&amp;oldid=266</a>"</div></div>
+		<div id="catlinks" class="catlinks catlinks-allhidden" data-mw="interface"></div>
+	</div>
+
+
+</main>
+<div id='mw-data-after-content'>
+	<div class="mw-cookiewarning-container"><div class="mw-cookiewarning-text"><span>Cookies help us deliver our services. By using our services, you agree to our use of cookies.</span></div><form method="POST"><div class='oo-ui-layout oo-ui-horizontalLayout'><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-progressive oo-ui-buttonWidget'><a role='button' tabindex='0' href='https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy#4._Cookies' rel='nofollow' class='oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-progressive'></span><span class='oo-ui-labelElement-label'>More information</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-progressive'></span></a></span><span class='oo-ui-widget oo-ui-widget-enabled oo-ui-inputWidget oo-ui-buttonElement oo-ui-buttonElement-framed oo-ui-labelElement oo-ui-flaggedElement-primary oo-ui-flaggedElement-progressive oo-ui-buttonInputWidget'><button type='submit' tabindex='0' name='disablecookiewarning' value='OK' class='oo-ui-inputWidget-input oo-ui-buttonElement-button'><span class='oo-ui-iconElement-icon oo-ui-iconElement-noIcon oo-ui-image-invert'></span><span class='oo-ui-labelElement-label'>OK</span><span class='oo-ui-indicatorElement-indicator oo-ui-indicatorElement-noIndicator oo-ui-image-invert'></span></button></span></div></form></div>
+</div>
+
+	</div> 
+</div> 
+
+<div class="mw-workspace-container mw-footer-container">
+	<div class="mw-content-container">
+		
+<footer id="footer" class="mw-footer" role="contentinfo" >
+	<ul id="footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 9 January 2019, at 20:54.</li>
+	<li id="footer-info-copyright">Content is available under <a class="external" rel="nofollow" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a> unless otherwise noted.</li>
+</ul>
+
+	<ul id="footer-places">
+	<li id="footer-places-privacy"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Privacy_Policy" class="extiw" title="m:Special:MyLanguage/Privacy Policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/bootstrapping:About" title="bootstrapping:About">About bootstrapping</a></li>
+	<li id="footer-places-disclaimer"><a href="/wiki/bootstrapping:General_disclaimer" title="bootstrapping:General disclaimer">Disclaimers</a></li>
+	<li id="footer-places-termsofservice"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Terms_of_Use" class="extiw" title="m:Special:MyLanguage/Terms of Use">Terms of Use</a></li>
+	<li id="footer-places-donate"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Donate" class="extiw" title="m:Special:MyLanguage/Donate">Donate to Miraheze</a></li>
+	<li id="footer-places-mobileview"><a href="https://bootstrapping.miraheze.org/w/index.php?title=C_compilers&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+	<ul id="footer-icons" class="noprint">
+	<li id="footer-poweredbyico"><a href="https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze"><img src="https://static.miraheze.org/commonswiki/f/ff/Powered_by_Miraheze.svg" alt="Hosted by Miraheze" width="88" height="31" loading="lazy"/></a><a href="https://www.mediawiki.org/"><img src="/w/resources/assets/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31" loading="lazy"/></a></li>
+	<li id="footer-copyrightico"><a href="https://creativecommons.org/licenses/by-sa/4.0/"><img src="https://meta.miraheze.org/w/resources/assets/licenses/cc-by-sa.png" alt="Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)" width="88" height="31" loading="lazy"/></a></li>
+</ul>
+
+</footer>
+
+	</div>
+</div>
+	</div> 
+</div> 
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.022","walltime":"0.025","ppvisitednodes":{"value":150,"limit":1000000},"postexpandincludesize":{"value":0,"limit":2097152},"templateargumentsize":{"value":0,"limit":2097152},"expansiondepth":{"value":2,"limit":100},"expensivefunctioncount":{"value":0,"limit":99},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":7299,"limit":5000000},"timingprofile":["100.00%    0.000      1 -total"]},"cachereport":{"origin":"mw111","timestamp":"20220706181339","ttl":864000,"transientcontent":false}}});});</script>
+				<script>
+				var _paq = window._paq = window._paq || [];
+				if ( 1 ) {
+					_paq.push(['disableCookies']);
+				}
+				if ( 0 ) {
+					_paq.push(['setRequestMethod', 'GET']);
+				}
+				_paq.push(['trackPageView']);
+				_paq.push(['enableLinkTracking']);
+				(function() {
+					var u = "https://matomo.miraheze.org/";
+					_paq.push(['setTrackerUrl', u+'matomo.php']);
+					_paq.push(['setDocumentTitle', "bootstrappingwiki" + " - " + "C compilers"]);
+					_paq.push(['setSiteId', 498]);
+					_paq.push(['setCustomVariable', 1, 'userType', "Anonymous", "visit"]);
+					if ( 8590 ) {
+					    _paq.push(['addTracker', u + 'matomo.php', 8590]);
+					}
+					var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+					g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+				})();
+				</script>
+				<noscript><p><img src="https://matomo.miraheze.org/matomo.php?idsite=498&amp;rec=1&amp;action_name=C_compilers" style="border:0;" alt="" /></p></noscript>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":311,"wgHostname":"mw121"});});</script>
+</body>
+</html>
